@@ -1,0 +1,80 @@
+{
+  "protocol_id": "coco_rknn_cavs_oqr_deployment_retrain_v1",
+  "dataset": "coco",
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "backends": ["fp16", "int8-heads"],
+  "seeds": [20260809, 20260810, 20260811],
+  "fold_count": 5,
+  "canonical_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260720_frozen_detector_multiranker_contextm2e/runs/canonical_v1",
+  "source_current_experiment": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260811_coco_currentoqr12_profile_scale_extension_v1",
+  "source_training_experiment": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1",
+  "board_root": "runs/board_raw",
+  "frozen_folds": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260806_coco_relational_actionvalue_oof_v1/runs/preflight/folds.json",
+  "cloud_model": {
+    "path": "/home/111_wcy/work/yolo26/ultralytics-main/yolo26x.pt",
+    "sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92"
+  },
+  "cloud_model_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+  "rknn_models": {
+    "fp16": {
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    },
+    "int8-heads": {
+      "sha256": "9da11e627d5086c99b089a59cfe1c8089046704aeebd7bf27fc675410d9a2ad5"
+    }
+  },
+  "actions": ["edge", "original", "q90", "current@640"],
+  "budgets": [0.1, 0.25, 0.4],
+  "fold_seed": 20260806,
+  "reward": {"metric": "contextual_ap50_95", "context_size": 32, "workers": 16, "fold_contained": true},
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 15,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "path_loss_weight": 0.5,
+    "boundary_path_loss_weight": 0.8,
+    "path_temperature": 0.03,
+    "boundary_temperature": 0.02,
+    "boundary_scale": 0.03,
+    "boundary_boost": 2.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0,
+    "gradient_clip": 5.0
+  },
+  "inference": {
+    "imgsz": 640,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "max_nms": 30000,
+    "single_image": true,
+    "rect": true,
+    "end2end": false,
+    "scaleup_full": false,
+    "scaleup_roi": true,
+    "device": 0,
+    "batch": 2,
+    "chunk_size": 128,
+    "half": true
+  },
+  "codec": {"quality": 90, "optimize": true, "subsampling": 2, "long_side": 640},
+  "roi": {"profile": "current", "confidence": 0.25, "max_area_ratio": 0.65},
+  "maur": {"duplicate_iou": 0.5, "nms_iou": 0.7},
+  "cpu": {"training_workers_per_backend": 8, "torch_threads_per_worker": 1, "reward_workers_per_backend": 16, "nice": 10},
+  "source_experiments_modified": false,
+  "old_learner_checkpoints_reused": false,
+  "final_used_for_training_or_selection": false
+}

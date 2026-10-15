@@ -1,0 +1,65 @@
+{
+  "protocol_id": "coco_actionconditioned_valuerisk_oof_v1",
+  "dataset": "coco",
+  "roles": {"fit": 9678, "calibration": 571},
+  "fold_count": 5,
+  "fold_seed": 20260805,
+  "actions": ["edge", "original", "q90", "roi"],
+  "methods": [
+    "CurrentDualHead-SharedAction",
+    "ActionValue-Joint",
+    "ActionValueRiskLCB-Joint"
+  ],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_call", "fixed_byte"],
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "current_dualhead": "paper/experiments/20260804_coco_dualhead_canonical9678_val2017_paper_v1",
+    "triaction": "paper/experiments/20260805_coco_dualhead_canonical9678_triaction_extension_v1",
+    "rewards": "paper/experiments/20260805_coco_selection_context_jointaction_teacher_v1",
+    "set_model": "paper/experiments/20260804_coco_budget_sharedaction_costeligible_v1",
+    "value_model": "paper/experiments/20260804_coco_budgetset_value_cost_oof_v1"
+  },
+  "canonical_common": "runs/canonical_v1/common/coco",
+  "canonical_benchmark": "runs/canonical_v1/benchmark/coco",
+  "reward_files": {
+    "fit": "runs/rewards/fit_static.pkl",
+    "calibration": "runs/rewards/calibration_static.pkl"
+  },
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 4,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 60,
+    "patience": 8,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "boundary_weight": 1.0,
+    "pairs_per_budget": 4000,
+    "quantile": 0.1,
+    "quantile_loss_weight": 0.5,
+    "crossing_loss_weight": 0.25,
+    "seeds": [20260805]
+  },
+  "gate": {
+    "minimum_fixed_byte_gain": 0.001,
+    "required_fixed_byte_gain_points": 2,
+    "maximum_other_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001,
+    "capacity_tolerance_bytes": 0.001
+  },
+  "reward_context_may_cross_oof_folds": true,
+  "fit_only_training": true,
+  "calibration_used_for_training": false,
+  "audit_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}

@@ -1,0 +1,135 @@
+{
+  "budgets": [
+    0.1,
+    0.25,
+    0.4
+  ],
+  "codec": {
+    "long_side": 640,
+    "optimize": true,
+    "quality": 90,
+    "subsampling": 2
+  },
+  "controller": {
+    "controls": "controls/cavs_oqr_primal_dual",
+    "controls_by_method": {
+      "cavs_oq": "controls/cavs_oq",
+      "cavs_oqr": "controls/cavs_oqr"
+    },
+    "id": "projected_primal_dual",
+    "update": "one update after every committed frame",
+    "upload": "selected payload is sent before the next image is opened"
+  },
+  "dataset": {
+    "expected_images": 5000,
+    "images_dir": "../yolo26n_coco_val/coco_val2017/images",
+    "sequence": "sequences/coco_val2017_sequence.json",
+    "sequence_file_sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67",
+    "sequence_records_sha256": "aa36e57fb97291562937947c9cebe221c330a0f8da89d5fc865cd8eee66d058b",
+    "source_annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+  },
+  "experiment_variant": "binary_transport_sanitized_immediate_upload_final_v2",
+  "final_used_for_training_or_control": false,
+  "global_plan": false,
+  "methods": {
+    "always_original": {
+      "actions": [
+        "original"
+      ],
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "b7d06bb45b8ca92f9df3989de27bd9bf57ed6b842f7b1a66378e49d1aa1eeb27",
+      "scope": "deterministic_full_upload_system_anchor"
+    },
+    "cavs_oq": {
+      "actions": [
+        "edge",
+        "original",
+        "q90"
+      ],
+      "policy": "policies/cavs_oq/manifest.json",
+      "policy_sha256": "279d5039e26dbe12ddb19fef3d7cd7fb65e9aa167c305ac34abf024d0c916aab",
+      "scope": "rknn_fp16_three_seed_fresh_training"
+    },
+    "cavs_oqr": {
+      "actions": [
+        "edge",
+        "original",
+        "q90",
+        "current@640"
+      ],
+      "policy": "policies/cavs_oqr/manifest.json",
+      "policy_sha256": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6"
+    },
+    "confidence": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253"
+    },
+    "edge_only": {
+      "actions": [
+        "edge"
+      ],
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "b7d06bb45b8ca92f9df3989de27bd9bf57ed6b842f7b1a66378e49d1aa1eeb27",
+      "scope": "deterministic_no_upload_system_anchor"
+    },
+    "moric": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/external/manifest.json",
+      "policy_sha256": "2cf88041b1886818cef599a09b04022b9ed88a5adbe07b8e3afdd69939c2e48e",
+      "scope": "rknn_fp16_three_seed_ensemble"
+    },
+    "oric": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/external/manifest.json",
+      "policy_sha256": "2cf88041b1886818cef599a09b04022b9ed88a5adbe07b8e3afdd69939c2e48e",
+      "scope": "rknn_fp16_three_seed_ensemble"
+    },
+    "random": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253",
+      "representative_seed": 20260720
+    }
+  },
+  "models": {
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+    "fp16": {
+      "path": "../yolo26n_coco_val/models/yolo26n-rk3588-fp16.rknn",
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    }
+  },
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_final_v2",
+  "runtime": {
+    "buffer_frames": 0,
+    "cloud_timeout_seconds": 60.0,
+    "core": "0",
+    "global_plan": false,
+    "progress_every": 100,
+    "request_retries": 3,
+    "rknn_helpers_dir": "../yolo26n_coco_val",
+    "zero_lookahead": true
+  },
+  "source_experiment": "20260817_coco_rknn_fp16_online_hil_v1",
+  "transport": {
+    "base64": false,
+    "budget_accounting": "jpeg_payload_bytes",
+    "magic_ascii": "CAVSHIL2",
+    "media_type": "application/vnd.cavs-hil.v2+octet-stream",
+    "schema": "cavs_hil_binary_request_v2",
+    "secondary_accounting": "http_request_body_bytes"
+  },
+  "zero_lookahead": true
+}

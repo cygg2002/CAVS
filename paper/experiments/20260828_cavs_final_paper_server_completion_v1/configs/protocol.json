@@ -1,0 +1,59 @@
+{
+  "protocol_id": "cavs_final_paper_server_completion_v1",
+  "created": "2026-08-28",
+  "source_experiments_modified": false,
+  "replicates_per_job": 1000,
+  "random_seed_count": 50,
+  "default_workers": 40,
+  "maximum_workers": 48,
+  "standard_chunk_replicates": 25,
+  "nested_chunk_replicates": 1,
+  "targets": {
+    "coco": {
+      "kind": "coco_oregon",
+      "dataset": "coco",
+      "experiment": "paper/experiments/20260813_coco_oregon_cavs_final_completion_v1",
+      "script": "scripts/run_experiment.py",
+      "script_sha256": "10f7204430cdd1157e2ced2374b7072a172754e4fce205df38973de52094fa1f",
+      "protocol": "configs/protocol.json",
+      "protocol_sha256": "51b74e2176ea725b67f448652e55eec208a4b1608dc8c4a8dd236d2d58c9a856",
+      "expected_jobs": 36,
+      "expected_nested_jobs": 6,
+      "resampling_units": ["image"]
+    },
+    "oregon": {
+      "kind": "coco_oregon",
+      "dataset": "oregon",
+      "experiment": "paper/experiments/20260813_coco_oregon_cavs_final_completion_v1",
+      "script": "scripts/run_experiment.py",
+      "script_sha256": "10f7204430cdd1157e2ced2374b7072a172754e4fce205df38973de52094fa1f",
+      "protocol": "configs/protocol.json",
+      "protocol_sha256": "51b74e2176ea725b67f448652e55eec208a4b1608dc8c4a8dd236d2d58c9a856",
+      "expected_jobs": 72,
+      "expected_nested_jobs": 12,
+      "resampling_units": ["event", "image"]
+    },
+    "voc": {
+      "kind": "voc",
+      "experiment": "paper/experiments/20260825_voc_torchvision_crossarchitecture_cavs_oqr_paper_v1",
+      "script": "scripts/bootstrap.py",
+      "script_sha256": "0a5a4e07b027db4013f83388077305e9cbc25fb7237261bca553057420b457cc",
+      "protocol": "configs/protocol.json",
+      "protocol_sha256": "2eccf96b46eaaa6e8329c15e7c8b93d0c18ceaa4ec7f371cd0fbd641fcd88b45",
+      "expected_jobs": 36,
+      "expected_nested_jobs": 6,
+      "resampling_units": ["image"]
+    },
+    "coco_native": {
+      "kind": "native",
+      "experiment": "paper/experiments/20260825_coco_native_oric_moric_baselines_paper_v1",
+      "script": "scripts/run_experiment.py",
+      "script_sha256": "cfa3cccfc582a9f1a7e2be1a18d28fde457bc4e87224c8a7032eabb1dd7aeb90",
+      "protocol": "configs/protocol.json",
+      "protocol_sha256": "2213308fb1dfe34b812971c84c9c6f5c45ae0dac0b7ff0abe0e465596fa1a60d",
+      "expected_jobs": 12,
+      "expected_nested_jobs": 3,
+      "resampling_units": ["image"]
+    }
+  }
+}

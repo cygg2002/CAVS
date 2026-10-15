@@ -1,0 +1,56 @@
+{
+  "action_ids": [
+    "edge",
+    "original"
+  ],
+  "artifacts": {
+    "bundle": {
+      "file": "BUNDLE_MANIFEST.json",
+      "sha256": "f19fb8323ac99703a282714295df23102ee86368e439058b646154f134ee12e1"
+    },
+    "control": {
+      "file": "25.json",
+      "sha256": "d2734d56a873fd9f95e44c3bff4db79f5818c0ffbe1e9f16c34405a5348a6bf4"
+    },
+    "policy": {
+      "file": "online_methods.py",
+      "sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253"
+    },
+    "rknn": {
+      "file": "yolo26n-rk3588-fp16.rknn",
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    },
+    "rknn_helpers": {
+      "file": "rknn_helpers_manifest.json",
+      "sha256": "e905b2b417f4d667a716fc9d49c46d520e08be451d6926bce27916aba364872f"
+    },
+    "sequence": {
+      "file": "coco_val2017_sequence.json",
+      "sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67"
+    }
+  },
+  "budget_denominator": 4,
+  "budget_numerator": 1,
+  "bundle_sha256": "f19fb8323ac99703a282714295df23102ee86368e439058b646154f134ee12e1",
+  "cloud_endpoint": {
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+    "retries": 3,
+    "timeout_seconds": 60.0,
+    "url": "http://127.0.0.1:8768/infer"
+  },
+  "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+  "control_sha256": "d2734d56a873fd9f95e44c3bff4db79f5818c0ffbe1e9f16c34405a5348a6bf4",
+  "global_plan": false,
+  "image_count": 5000,
+  "method": "confidence",
+  "policy_sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253",
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_v1",
+  "random_seed": null,
+  "rknn_helpers_manifest_sha256": "e905b2b417f4d667a716fc9d49c46d520e08be451d6926bce27916aba364872f",
+  "rknn_sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d",
+  "run_id": "formal-server-confidence-25-20260817-234001",
+  "schema_version": 1,
+  "sequence_records_sha256": "aa36e57fb97291562937947c9cebe221c330a0f8da89d5fc865cd8eee66d058b",
+  "sequence_sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67",
+  "zero_lookahead": true
+}

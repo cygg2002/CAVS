@@ -1,0 +1,31 @@
+{
+  "protocol_id": "coco_frontier_consensus_set_exploration_v6",
+  "result_type": "fit_only_oof_set_valued_frontier_consensus_screen",
+  "dataset": "coco",
+  "role": "fit",
+  "expected_images": 9678,
+  "action_space": ["edge", "original", "q90", "roi"],
+  "methods": ["AFPD-Mean", "ROI-FCS-2of3", "AltAction-FCS-2of3"],
+  "seeds": [20260809, 20260810, 20260811],
+  "minimum_seed_votes": 2,
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "primary_mode": "fixed_byte",
+  "relative_offset": 0.01,
+  "maximum_price": 5.0,
+  "evaluation_workers": 12,
+  "gate": {
+    "minimum_fixed_byte_gain": 0.001,
+    "required_fixed_byte_gain_points": 2,
+    "maximum_fixed_byte_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001
+  },
+  "source_experiment": "paper/experiments/20260809_coco_frontier_aligned_actionvalue_exploration_v1",
+  "detector_inference_required": false,
+  "fit_only": true,
+  "calibration_accessed": false,
+  "audit_accessed": false,
+  "val2017_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}

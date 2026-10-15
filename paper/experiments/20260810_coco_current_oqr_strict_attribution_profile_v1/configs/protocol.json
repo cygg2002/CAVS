@@ -1,0 +1,38 @@
+{
+  "protocol_id": "coco_current_oqr_strict_attribution_profile_v1",
+  "status": "posthoc_final_reuse_attribution_and_cpu_profile",
+  "dataset": "coco",
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "budgets": [0.1, 0.25, 0.4],
+  "current_methods": ["Current-OQ", "Current-OQR"],
+  "seeds": [20260809, 20260810, 20260811],
+  "action_spaces": {
+    "Current-OQ": ["edge", "original", "q90"],
+    "Current-OQR": ["edge", "original", "q90", "roi"]
+  },
+  "frozen_comparators": ["Confidence", "ORIC-MLP", "MORIC-MLP"],
+  "fixed_byte_comparator_policies": ["Original-only", "SharedAction-NoROI"],
+  "ranking_policy": "Original-only",
+  "profile": {
+    "torch_threads": 1,
+    "warmup_iterations": 100,
+    "batch1_iterations": 1000,
+    "batched_iterations": 100,
+    "batch_size": 192,
+    "scheduler_iterations": 5,
+    "linear_multiply_add_flops": 2
+  },
+  "sources": {
+    "current_fullval": "paper/experiments/20260810_coco_afpd_forced_fullval_posthoc_v1",
+    "current_definition": "paper/experiments/20260809_coco_frontier_aligned_actionvalue_exploration_v1",
+    "full_benchmark": "paper/experiments/20260809_coco_oregon_full_scheduler_benchmark_v1"
+  },
+  "fit_only_training": true,
+  "retraining_allowed": false,
+  "tuning_allowed": false,
+  "final_is_hidden": false,
+  "final_used_for_selection": false,
+  "detector_inference_required": false,
+  "gpu_required": false
+}
+

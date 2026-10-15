@@ -1,0 +1,54 @@
+{
+  "schema": "cavs_online_stateprice_burst_experiment_v1",
+  "burst_fraction_grid": [0.0, 0.0025, 0.005, 0.01, 0.02, 0.05],
+  "sources": {
+    "calibration_records": {
+      "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/host/calibration_records/cavs_oqr.json",
+      "sha256": "3750533c7af994d61f45b359a358e5796a31848efc4689027c4d968b906d568b"
+    },
+    "final_frames": {
+      "path": "../20260817_coco_rknn_fp16_online_hil_v1/results/formal-cavs-oqr-25-20260817-150111/raw/frames.jsonl",
+      "sha256": "df8d82d4d625b56a7aa1a6e1061326bea4ecc48ea4a0c2a60cf982c36d3a6868"
+    },
+    "sequence": {
+      "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/board_bundle/sequences/coco_val2017_sequence.json",
+      "sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67"
+    },
+    "policy": {
+      "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/board_bundle/policies/cavs_oqr/manifest.json",
+      "sha256": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6"
+    }
+  },
+  "budgets": {
+    "10": {
+      "base_control": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/board_bundle/controls/cavs_oqr/10.json",
+        "sha256": "635b742b195611045f17a65665fc009fc8379f0b0f1666ea2a83188758a802ee"
+      },
+      "expected_selections": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/runs/replay/final/10/selections.json",
+        "sha256": "1dd75f2cdbe1cf77ef70a5923aba8d6e59dfb2be0bb4e766f4986212e5f445f8"
+      }
+    },
+    "25": {
+      "base_control": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/board_bundle/controls/cavs_oqr/25.json",
+        "sha256": "05f338027f2f47a56e25895a4963fe7b6b5d92998fe62a2e5c781fb9bd4191e2"
+      },
+      "expected_selections": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/runs/replay/final/25/selections.json",
+        "sha256": "66cf7ed1e2072c2fd8d1f1b279e6f18d95030a3b37b904379e74685de6ac2648"
+      }
+    },
+    "40": {
+      "base_control": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/board_bundle/controls/cavs_oqr/40.json",
+        "sha256": "7e6c0b72d6ff87d28175e2c2db20236306918e51682353f14360610539c421e5"
+      },
+      "expected_selections": {
+        "path": "../20260818_coco_rknn_fp16_online_primal_dual_v1/runs/replay/final/40/selections.json",
+        "sha256": "785ab846d7a63b9a254ba73a3412c01a7986ef2d299edd8cbfcc8a27ec6f62ed"
+      }
+    }
+  }
+}

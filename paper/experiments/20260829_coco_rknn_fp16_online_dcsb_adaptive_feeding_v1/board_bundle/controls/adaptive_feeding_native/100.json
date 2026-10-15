@@ -1,0 +1,62 @@
+{
+  "budget": 1.0,
+  "budget_denominator": 1,
+  "budget_numerator": 1,
+  "calibration_frames": 571,
+  "calibration_objective": {
+    "direction": "maximize",
+    "name": "native_margin_sum",
+    "value": 279.3762393358338
+  },
+  "calibration_trials": [
+    {
+      "action_counts": {
+        "edge": 148,
+        "original": 423
+      },
+      "capacity_utilization": 0.7463144849794994,
+      "earned_bytes": 90552541.0,
+      "lambda": 0.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 279.3762393358338,
+      "spent_bytes": 67580673
+    }
+  ],
+  "diagnostics": {
+    "action_counts": {
+      "edge": 148,
+      "original": 423
+    },
+    "capacity_utilization": 0.7463144849794994,
+    "earned_bytes": 90552541.0,
+    "maximum_prefix_violation_bytes": 0,
+    "spent_bytes": 67580673
+  },
+  "final_used_for_tuning": false,
+  "formal": true,
+  "lambda": 0.0,
+  "lambda_grid": [
+    0.0
+  ],
+  "median_original_bytes": 150008.0,
+  "method": "adaptive_feeding_native",
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_final_v2",
+  "random_seed": null,
+  "schema": "cavs_online_control_v1",
+  "source_hashes": {
+    "build_controls": "a1f89fc76f9c44efc959dc2f21942b5abc1e3dfdd44999b7693fd4300a97849a",
+    "calibration_records": "3f62068e4b48562b19184bcfdc4e06c4722d05a5a9d2ca67b1da276a3b44ab5a",
+    "calibration_scores": "c2df81e008d79de75c0cac4fc3d48b9f12431e02606f99a993311168e0f73dc5",
+    "policy": "553253a00d14533e73c885137b25043304e7425037642980126ecc2ad5f822e5",
+    "protocol": "463b58ec8abda4c32a4242ca0e4d088434f7a3d0d3638871535129b87b2336ea",
+    "rknn_calibration_candidates": "4a8bdef2092a2b87320f35906c39feddbe67eff1ad0cbdc2221a5440985bc719",
+    "rknn_calibration_report": "465e40f5b429f696fb044677e6f831b1fc9df4e843a54e5082fc36ee5a2685c3",
+    "training_report": "753c31e423bca94fc8b2db9d174d5aa87b60c599c5a96fe96ce3fd56b6539d19"
+  },
+  "source_split": "calibration",
+  "tie_break": [
+    "objective_desc",
+    "spent_bytes_asc",
+    "lambda_asc"
+  ]
+}

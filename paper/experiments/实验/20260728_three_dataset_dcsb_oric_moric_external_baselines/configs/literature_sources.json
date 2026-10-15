@@ -1,0 +1,46 @@
+{
+  "retrieved_on": "2026-07-28",
+  "dcsb": {
+    "title": "Edge-Cloud Collaborated Object Detection via Difficult-Case Discriminator",
+    "doi": "10.1109/ICDCS57875.2023.00062",
+    "arxiv": "2108.12858",
+    "evidence": [
+      "paper Sections V-A through V-D",
+      "Qiu et al. official comparison implementation baseline.py::fit_dcsb"
+    ],
+    "faithful": [
+      "difficult label from cloud count greater than edge count at confidence 0.5",
+      "confidence count-matching objective",
+      "object-count and minimum-area thresholds",
+      "binary native decision"
+    ],
+    "adaptations": [
+      "exact observed-breakpoint search replaces potentially non-terminating binary search",
+      "continuous DCSB-Score-Adapted is added only for common budget evaluation",
+      "current frozen detectors and dataset-specific category spaces are used"
+    ]
+  },
+  "oric_moric": {
+    "title": "Optimizing Edge Offloading Decisions for Object Detection",
+    "doi": "10.1109/SEC62691.2024.00021",
+    "arxiv": "2410.18919",
+    "official_repository": "https://github.com/qiujiaming315/edgeml-object-detection",
+    "official_repository_commit": "859f70240aa090359ba827b374b68ca7821b7d55",
+    "faithful": [
+      "ORIC contextual mAP reward and context-size normalization",
+      "top-25 weak-detector output features",
+      "four hidden layers with 16 units",
+      "MORIC empirical-CDF targets",
+      "target-weighted MSE for MORIC",
+      "threshold-based deployment"
+    ],
+    "adaptations": [
+      "fit/calibration/final roles replace five-fold cross-validation",
+      "fit-internal holdout selects training epoch before all-fit retraining",
+      "COCO-format top-left xywh boxes are converted to normalized center-xywh features used by the official code",
+      "current final evaluation uses Official AP@[.5:.95] and actual request bytes",
+      "SharedAction is a controlled payload diagnostic and not part of the original method"
+    ],
+    "known_source_discrepancy": "The paper defines MORIC as an empirical CDF. The public training script assigns ordinal ranks to fit ties but uses a right-continuous CDF on validation. This reimplementation follows the paper equation and gives tied rewards equal CDF values."
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "protocol_id": "coco_oric_current_oqr_hybrid_diagnostic_v1",
+  "status": "posthoc_final_reuse_hybrid_diagnostic",
+  "dataset": "coco",
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "methods": ["ORIC-Current-OQ", "ORIC-Current-OQR", "Current-OQ", "Current-OQR"],
+  "action_spaces": {
+    "ORIC-Current-OQ": ["original", "q90"],
+    "ORIC-Current-OQR": ["original", "q90", "roi"],
+    "Current-OQ": ["original", "q90"],
+    "Current-OQR": ["original", "q90", "roi"]
+  },
+  "comparisons": [
+    ["ORIC-Current-OQ", "Current-OQ"],
+    ["ORIC-Current-OQR", "Current-OQR"],
+    ["ORIC-Current-OQR", "ORIC-Current-OQ"],
+    ["Current-OQR", "Current-OQ"]
+  ],
+  "current_seeds": [20260809, 20260810, 20260811],
+  "bootstrap": {"replicates": 1000, "seed": 20260811, "workers": 24, "unit": "image"},
+  "sources": {
+    "strict_current": "paper/experiments/20260810_coco_current_oqr_strict_attribution_profile_v1",
+    "current_fullval": "paper/experiments/20260810_coco_afpd_forced_fullval_posthoc_v1",
+    "external": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines",
+    "full_benchmark": "paper/experiments/20260809_coco_oregon_full_scheduler_benchmark_v1",
+    "active_oregon": "paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1"
+  },
+  "hybrid_definition": "oric_original_anchor_plus_current_action_advantage",
+  "detector_inference_required": false,
+  "retraining_allowed": false,
+  "tuning_allowed": false,
+  "final_is_hidden": false,
+  "final_used_for_selection": false,
+  "confirmatory": false
+}

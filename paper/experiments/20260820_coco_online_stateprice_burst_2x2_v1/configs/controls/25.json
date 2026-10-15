@@ -1,0 +1,33 @@
+{
+  "budget_denominator": 4,
+  "budget_numerator": 1,
+  "buffer_frames": 0,
+  "burst_fraction_by_price": {
+    "fixed": 0.0,
+    "state_aware": 0.0025
+  },
+  "burst_fraction_grid": [
+    0.0,
+    0.0025,
+    0.005,
+    0.01,
+    0.02,
+    0.05
+  ],
+  "calibration_frames": 571,
+  "final_used_for_tuning": false,
+  "formal": true,
+  "global_plan": false,
+  "lambda_fixed": 0.3,
+  "median_original_bytes": 150008.0,
+  "schema": "cavs_online_stateprice_burst_control_v1",
+  "source_hashes": {
+    "base_control": "05f338027f2f47a56e25895a4963fe7b6b5d92998fe62a2e5c781fb9bd4191e2",
+    "calibration_records": "3750533c7af994d61f45b359a358e5796a31848efc4689027c4d968b906d568b",
+    "demand_curve": "c3fa688920e8de68130d96faeaacc0fcca68c20784b42057720142203c167096",
+    "policy": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6"
+  },
+  "source_split": "calibration",
+  "state_price": "empirical_inverse_demand_remaining_capacity_per_frame",
+  "zero_lookahead": true
+}

@@ -1,0 +1,44 @@
+{
+  "protocol_id": "oregon_cloudv3_oq_advantage_calibration_diagnostic_v1",
+  "status": "posthoc_exploratory_final_reuse",
+  "source_experiment": "paper/experiments/20260813_coco_oregon_cavs_final_completion_v1",
+  "reference_experiment": "paper/experiments/20260814_oregon_cloudv3_current640_maur_point_only_v1",
+  "source_cloud_sha256": "d3890a57fc7d567880a5b01b7eb949387d9b7058ce7ee25bdb9471d9bb4642d9",
+  "source_method": "CAVS-OQR-MAUR",
+  "roles": {
+    "fit": 9923,
+    "calibration": 4961,
+    "final": 4962
+  },
+  "fit_source": "fit_oof_only",
+  "folds": 5,
+  "seeds": [20260810, 20260811, 20260812],
+  "budgets": [0.1, 0.25, 0.4],
+  "mode": "fixed_byte",
+  "fusion": "MAUR",
+  "isotonic_bins": 64,
+  "methods": [
+    "Raw-CAVS-OQR",
+    "PerAction-Isotonic-OQR",
+    "Advantage-Isotonic-Midpoint-OQR",
+    "Advantage-Isotonic-QAnchor-OQR",
+    "Calibration-Frozen-OQMargin-OQR",
+    "Q90-Preferred-Diagnostic"
+  ],
+  "deployable_methods": [
+    "PerAction-Isotonic-OQR",
+    "Advantage-Isotonic-Midpoint-OQR",
+    "Advantage-Isotonic-QAnchor-OQR",
+    "Calibration-Frozen-OQMargin-OQR"
+  ],
+  "margin_quantiles": [0.0, 0.25, 0.5, 0.65, 0.75, 0.85, 0.9, 0.95, 0.99, 1.0],
+  "margin_selection_role": "calibration",
+  "final_already_consumed": true,
+  "final_used_for_fit_or_selection": false,
+  "detector_training": false,
+  "learner_training": false,
+  "source_modification_allowed": false,
+  "minimum_capacity_utilization": 0.98,
+  "maximum_low_budget_loss": 0.001,
+  "minimum_40_gain": 0.001
+}

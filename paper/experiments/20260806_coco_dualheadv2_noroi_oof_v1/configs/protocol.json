@@ -1,0 +1,48 @@
+{
+  "protocol_id": "coco_dualheadv2_noroi_oof_v1",
+  "dataset": "coco",
+  "result_type": "single_seed_five_fold_oof_selector_diagnostic",
+  "roles": {"fit": 9678, "calibration": 571},
+  "actions": ["edge", "original", "q90"],
+  "candidate_actions": ["original", "q90"],
+  "methods": ["ActionValue-OQ", "RiskMean-OQ", "DualHeadV2-OQ"],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_call", "fixed_byte"],
+  "primary_mode": "fixed_byte",
+  "alpha_grid": [0.0, 0.05, 0.1, 0.2, 0.35, 0.5, 0.75, 1.0],
+  "minimum_capacity_utilization": 0.98,
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "teacher": "paper/experiments/20260805_coco_selection_context_jointaction_teacher_v1",
+    "action_value": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1"
+  },
+  "canonical_common": "runs/canonical_v1/common/coco",
+  "source_scores": {
+    "fit": "runs/oof/scores.pkl",
+    "calibration": "runs/calibration_scores/scores.pkl"
+  },
+  "teacher_rewards": {
+    "static_fit": "runs/rewards/fit_static.pkl",
+    "static_calibration": "runs/rewards/calibration_static.pkl",
+    "selection_context_calibration_pattern": "runs/rewards/calibration_selection_context_{budget}.pkl"
+  },
+  "selection_context_gate": {
+    "minimum_gain": 0.002,
+    "required_gain_points": 2,
+    "maximum_other_loss": 0.001
+  },
+  "dualheadv2_gate": {
+    "minimum_gain": 0.001,
+    "required_gain_points": 2,
+    "maximum_other_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001,
+    "capacity_tolerance_bytes": 0.001
+  },
+  "cpu_workers": 24,
+  "reward_context_may_cross_oof_folds": true,
+  "fit_only_parameter_selection": true,
+  "calibration_used_for_training_or_selection": false,
+  "audit_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}

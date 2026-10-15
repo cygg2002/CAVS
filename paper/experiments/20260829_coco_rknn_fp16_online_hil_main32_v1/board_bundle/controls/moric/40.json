@@ -1,0 +1,2711 @@
+{
+  "budget": 0.4,
+  "budget_denominator": 5,
+  "budget_numerator": 2,
+  "calibration_frames": 571,
+  "calibration_objective": {
+    "direction": "maximize",
+    "name": "predicted_action_value",
+    "value": 197.32834001382187
+  },
+  "calibration_trials": [
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.01,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.02,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.03,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.04,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.05,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.06,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.07,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.08,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.09,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.1,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.11,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.12,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.13,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.14,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.15,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.16,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.17,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.18,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.19,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.2,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.21,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.22,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.23,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9968738480789844,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.24,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 164.85270896553996,
+      "spent_bytes": 36107784
+    },
+    {
+      "action_counts": {
+        "edge": 299,
+        "original": 272
+      },
+      "capacity_utilization": 0.9999501284011456,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.25,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 166.40487774213153,
+      "spent_bytes": 36219210
+    },
+    {
+      "action_counts": {
+        "edge": 299,
+        "original": 272
+      },
+      "capacity_utilization": 0.9999501284011456,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.26,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 166.40487774213153,
+      "spent_bytes": 36219210
+    },
+    {
+      "action_counts": {
+        "edge": 299,
+        "original": 272
+      },
+      "capacity_utilization": 0.9999501284011456,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.27,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 166.40487774213153,
+      "spent_bytes": 36219210
+    },
+    {
+      "action_counts": {
+        "edge": 298,
+        "original": 273
+      },
+      "capacity_utilization": 0.9999776814656146,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.28,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 167.44004482030866,
+      "spent_bytes": 36220208
+    },
+    {
+      "action_counts": {
+        "edge": 295,
+        "original": 276
+      },
+      "capacity_utilization": 0.9995991167161173,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.29,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 169.90043355027834,
+      "spent_bytes": 36206496
+    },
+    {
+      "action_counts": {
+        "edge": 297,
+        "original": 274
+      },
+      "capacity_utilization": 0.9969521175557073,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.3,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 170.24297417203593,
+      "spent_bytes": 36110619
+    },
+    {
+      "action_counts": {
+        "edge": 301,
+        "original": 270
+      },
+      "capacity_utilization": 0.9969563416227051,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.31,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 166.45097322265312,
+      "spent_bytes": 36110772
+    },
+    {
+      "action_counts": {
+        "edge": 299,
+        "original": 272
+      },
+      "capacity_utilization": 0.9999499351431784,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.32,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 169.7090165714423,
+      "spent_bytes": 36219203
+    },
+    {
+      "action_counts": {
+        "edge": 299,
+        "original": 272
+      },
+      "capacity_utilization": 0.9944909497349169,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.33,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 170.63344247142473,
+      "spent_bytes": 36021473
+    },
+    {
+      "action_counts": {
+        "edge": 297,
+        "original": 274
+      },
+      "capacity_utilization": 0.9949235714986728,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.34,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 171.2624648610751,
+      "spent_bytes": 36037143
+    },
+    {
+      "action_counts": {
+        "edge": 297,
+        "original": 274
+      },
+      "capacity_utilization": 0.9944898730119567,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.35,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 171.64722023407623,
+      "spent_bytes": 36021434
+    },
+    {
+      "action_counts": {
+        "edge": 298,
+        "original": 273
+      },
+      "capacity_utilization": 0.9999787581885747,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.36,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 171.36384090781212,
+      "spent_bytes": 36220247
+    },
+    {
+      "action_counts": {
+        "edge": 296,
+        "original": 275
+      },
+      "capacity_utilization": 0.9999849148352447,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.37,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 173.5638697346052,
+      "spent_bytes": 36220470
+    },
+    {
+      "action_counts": {
+        "edge": 295,
+        "original": 276
+      },
+      "capacity_utilization": 0.996814766357578,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.38,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 173.94177081187573,
+      "spent_bytes": 36105644
+    },
+    {
+      "action_counts": {
+        "edge": 293,
+        "original": 278
+      },
+      "capacity_utilization": 0.9990905445712451,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.39,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 176.16284710168847,
+      "spent_bytes": 36188075
+    },
+    {
+      "action_counts": {
+        "edge": 285,
+        "original": 286
+      },
+      "capacity_utilization": 0.9990909586954606,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.4,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 181.85064762830737,
+      "spent_bytes": 36188090
+    },
+    {
+      "action_counts": {
+        "edge": 285,
+        "original": 286
+      },
+      "capacity_utilization": 0.9990909586954606,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.41,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 181.85064762830737,
+      "spent_bytes": 36188090
+    },
+    {
+      "action_counts": {
+        "edge": 290,
+        "original": 281
+      },
+      "capacity_utilization": 0.9988319101945466,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.42,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 180.5533549288909,
+      "spent_bytes": 36178707
+    },
+    {
+      "action_counts": {
+        "edge": 291,
+        "original": 280
+      },
+      "capacity_utilization": 0.9983104173741519,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.43,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 180.79074714581182,
+      "spent_bytes": 36159818
+    },
+    {
+      "action_counts": {
+        "edge": 291,
+        "original": 280
+      },
+      "capacity_utilization": 0.9945499486314802,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.44,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 180.62562856078154,
+      "spent_bytes": 36023610
+    },
+    {
+      "action_counts": {
+        "edge": 288,
+        "original": 283
+      },
+      "capacity_utilization": 0.9948100186387923,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.45,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 182.33938697973892,
+      "spent_bytes": 36033030
+    },
+    {
+      "action_counts": {
+        "edge": 288,
+        "original": 283
+      },
+      "capacity_utilization": 0.9948100186387923,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.46,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 182.33938697973892,
+      "spent_bytes": 36033030
+    },
+    {
+      "action_counts": {
+        "edge": 284,
+        "original": 287
+      },
+      "capacity_utilization": 0.994857808573257,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.47,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 185.04506256182987,
+      "spent_bytes": 36034761
+    },
+    {
+      "action_counts": {
+        "edge": 286,
+        "original": 285
+      },
+      "capacity_utilization": 0.9981115273176046,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.48,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 185.37897242108988,
+      "spent_bytes": 36152614
+    },
+    {
+      "action_counts": {
+        "edge": 287,
+        "original": 284
+      },
+      "capacity_utilization": 0.9981886096382431,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.49,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 183.013292392095,
+      "spent_bytes": 36155406
+    },
+    {
+      "action_counts": {
+        "edge": 284,
+        "original": 287
+      },
+      "capacity_utilization": 0.9948229117060338,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.5,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 186.70141108830774,
+      "spent_bytes": 36033497
+    },
+    {
+      "action_counts": {
+        "edge": 280,
+        "original": 291
+      },
+      "capacity_utilization": 0.9947826588322906,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.51,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 190.22596268852544,
+      "spent_bytes": 36032039
+    },
+    {
+      "action_counts": {
+        "edge": 279,
+        "original": 292
+      },
+      "capacity_utilization": 0.9991006768103835,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.52,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 190.8119687636693,
+      "spent_bytes": 36188442
+    },
+    {
+      "action_counts": {
+        "edge": 279,
+        "original": 292
+      },
+      "capacity_utilization": 0.9997758373229969,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.53,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 191.3165238996346,
+      "spent_bytes": 36212897
+    },
+    {
+      "action_counts": {
+        "edge": 274,
+        "original": 297
+      },
+      "capacity_utilization": 0.9951936909202802,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.54,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 193.9273529152075,
+      "spent_bytes": 36046927
+    },
+    {
+      "action_counts": {
+        "edge": 277,
+        "original": 294
+      },
+      "capacity_utilization": 0.9936732200590594,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.55,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 193.8038830359777,
+      "spent_bytes": 35991854
+    },
+    {
+      "action_counts": {
+        "edge": 273,
+        "original": 298
+      },
+      "capacity_utilization": 0.9959801128054485,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.56,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 195.90611908833185,
+      "spent_bytes": 36075412
+    },
+    {
+      "action_counts": {
+        "edge": 272,
+        "original": 299
+      },
+      "capacity_utilization": 0.9955394570319126,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.57,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 196.93292317787805,
+      "spent_bytes": 36059451
+    },
+    {
+      "action_counts": {
+        "edge": 272,
+        "original": 299
+      },
+      "capacity_utilization": 0.987611463051048,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.58,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 197.32834001382187,
+      "spent_bytes": 35772291
+    },
+    {
+      "action_counts": {
+        "edge": 273,
+        "original": 298
+      },
+      "capacity_utilization": 0.9730231369211385,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.59,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 195.71556740005806,
+      "spent_bytes": 35243887
+    },
+    {
+      "action_counts": {
+        "edge": 280,
+        "original": 291
+      },
+      "capacity_utilization": 0.9363741101423095,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.6,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 192.4225770334402,
+      "spent_bytes": 33916422
+    },
+    {
+      "action_counts": {
+        "edge": 286,
+        "original": 285
+      },
+      "capacity_utilization": 0.9120124801357038,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.61,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 188.88029177983594,
+      "spent_bytes": 33034019
+    },
+    {
+      "action_counts": {
+        "edge": 292,
+        "original": 279
+      },
+      "capacity_utilization": 0.8838134094989119,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.62,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 184.68193199237183,
+      "spent_bytes": 32012620
+    },
+    {
+      "action_counts": {
+        "edge": 302,
+        "original": 269
+      },
+      "capacity_utilization": 0.8419102507570716,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.63,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 178.37417492270464,
+      "spent_bytes": 30494845
+    },
+    {
+      "action_counts": {
+        "edge": 309,
+        "original": 262
+      },
+      "capacity_utilization": 0.8124251311732931,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.64,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 173.85958706339193,
+      "spent_bytes": 29426864
+    },
+    {
+      "action_counts": {
+        "edge": 314,
+        "original": 257
+      },
+      "capacity_utilization": 0.7912545215048135,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.65,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 170.5480233530203,
+      "spent_bytes": 28660043
+    },
+    {
+      "action_counts": {
+        "edge": 322,
+        "original": 249
+      },
+      "capacity_utilization": 0.7564252669618625,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.66,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 165.0416294038295,
+      "spent_bytes": 27398492
+    },
+    {
+      "action_counts": {
+        "edge": 334,
+        "original": 237
+      },
+      "capacity_utilization": 0.7087325136464144,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.67,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 157.39248693982756,
+      "spent_bytes": 25671012
+    },
+    {
+      "action_counts": {
+        "edge": 344,
+        "original": 227
+      },
+      "capacity_utilization": 0.6715214374823563,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.68,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 151.33548827966044,
+      "spent_bytes": 24323189
+    },
+    {
+      "action_counts": {
+        "edge": 352,
+        "original": 219
+      },
+      "capacity_utilization": 0.6443316151669339,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.69,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 146.8509840369224,
+      "spent_bytes": 23338346
+    },
+    {
+      "action_counts": {
+        "edge": 359,
+        "original": 212
+      },
+      "capacity_utilization": 0.6168601607767141,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.7,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 142.24394388000158,
+      "spent_bytes": 22343302
+    },
+    {
+      "action_counts": {
+        "edge": 369,
+        "original": 202
+      },
+      "capacity_utilization": 0.5779931951329781,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.71,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 135.63617960611973,
+      "spent_bytes": 20935501
+    },
+    {
+      "action_counts": {
+        "edge": 374,
+        "original": 197
+      },
+      "capacity_utilization": 0.558496834451062,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.72,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 132.26339342196778,
+      "spent_bytes": 20229323
+    },
+    {
+      "action_counts": {
+        "edge": 377,
+        "original": 194
+      },
+      "capacity_utilization": 0.5494098724407965,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.73,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 130.6801268557707,
+      "spent_bytes": 19900184
+    },
+    {
+      "action_counts": {
+        "edge": 382,
+        "original": 189
+      },
+      "capacity_utilization": 0.5293854757758814,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.74,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 127.11688422163327,
+      "spent_bytes": 19174880
+    },
+    {
+      "action_counts": {
+        "edge": 390,
+        "original": 181
+      },
+      "capacity_utilization": 0.5017403652979766,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.75,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 122.152889808019,
+      "spent_bytes": 18173546
+    },
+    {
+      "action_counts": {
+        "edge": 396,
+        "original": 175
+      },
+      "capacity_utilization": 0.481558049265564,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.76,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 118.47369983792305,
+      "spent_bytes": 17442522
+    },
+    {
+      "action_counts": {
+        "edge": 399,
+        "original": 172
+      },
+      "capacity_utilization": 0.4708306860212791,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.77,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 116.49486136436464,
+      "spent_bytes": 17053966
+    },
+    {
+      "action_counts": {
+        "edge": 407,
+        "original": 164
+      },
+      "capacity_utilization": 0.44549009397759476,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.78,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 111.75028718511265,
+      "spent_bytes": 16136104
+    },
+    {
+      "action_counts": {
+        "edge": 408,
+        "original": 163
+      },
+      "capacity_utilization": 0.44123756284210736,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.79,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 110.9429617424806,
+      "spent_bytes": 15982073
+    },
+    {
+      "action_counts": {
+        "edge": 414,
+        "original": 157
+      },
+      "capacity_utilization": 0.4196605316685702,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.8,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 106.80661355455719,
+      "spent_bytes": 15200531
+    },
+    {
+      "action_counts": {
+        "edge": 419,
+        "original": 152
+      },
+      "capacity_utilization": 0.4015849207367908,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.81,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 103.2867813607057,
+      "spent_bytes": 14545814
+    },
+    {
+      "action_counts": {
+        "edge": 424,
+        "original": 147
+      },
+      "capacity_utilization": 0.38538195189906377,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.82,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 100.1053565343221,
+      "spent_bytes": 13958926
+    },
+    {
+      "action_counts": {
+        "edge": 426,
+        "original": 145
+      },
+      "capacity_utilization": 0.37825089855844024,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.83,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 98.6848714351654,
+      "spent_bytes": 13700632
+    },
+    {
+      "action_counts": {
+        "edge": 430,
+        "original": 141
+      },
+      "capacity_utilization": 0.3660041687841758,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.84,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 96.20873128374419,
+      "spent_bytes": 13257043
+    },
+    {
+      "action_counts": {
+        "edge": 434,
+        "original": 137
+      },
+      "capacity_utilization": 0.35387008079651794,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.85,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 93.73585718870164,
+      "spent_bytes": 12817534
+    },
+    {
+      "action_counts": {
+        "edge": 438,
+        "original": 133
+      },
+      "capacity_utilization": 0.3404471278172084,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.86,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 90.95882399876913,
+      "spent_bytes": 12331341
+    },
+    {
+      "action_counts": {
+        "edge": 444,
+        "original": 127
+      },
+      "capacity_utilization": 0.32364721272702884,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.87,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 87.45559154947598,
+      "spent_bytes": 11722831
+    },
+    {
+      "action_counts": {
+        "edge": 449,
+        "original": 122
+      },
+      "capacity_utilization": 0.3078826633920742,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.88,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 84.13022233049074,
+      "spent_bytes": 11151823
+    },
+    {
+      "action_counts": {
+        "edge": 456,
+        "original": 115
+      },
+      "capacity_utilization": 0.2865720245222053,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.89,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 79.57579539219537,
+      "spent_bytes": 10379930
+    },
+    {
+      "action_counts": {
+        "edge": 460,
+        "original": 111
+      },
+      "capacity_utilization": 0.27400437608923645,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.9,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 76.85879174868265,
+      "spent_bytes": 9924717
+    },
+    {
+      "action_counts": {
+        "edge": 462,
+        "original": 109
+      },
+      "capacity_utilization": 0.2669755286049897,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.91,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 75.31750027338663,
+      "spent_bytes": 9670125
+    },
+    {
+      "action_counts": {
+        "edge": 465,
+        "original": 106
+      },
+      "capacity_utilization": 0.2588722220395781,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.92,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 73.52524781227112,
+      "spent_bytes": 9376615
+    },
+    {
+      "action_counts": {
+        "edge": 467,
+        "original": 104
+      },
+      "capacity_utilization": 0.253071694586682,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.93,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 72.22726720571518,
+      "spent_bytes": 9166514
+    },
+    {
+      "action_counts": {
+        "edge": 472,
+        "original": 99
+      },
+      "capacity_utilization": 0.2394522810795558,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.94,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 69.1564305027326,
+      "spent_bytes": 8673205
+    },
+    {
+      "action_counts": {
+        "edge": 480,
+        "original": 91
+      },
+      "capacity_utilization": 0.21513057264732086,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.95,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 63.604523817698166,
+      "spent_bytes": 7792248
+    },
+    {
+      "action_counts": {
+        "edge": 482,
+        "original": 89
+      },
+      "capacity_utilization": 0.21038702823369695,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.96,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 62.51091839869817,
+      "spent_bytes": 7620432
+    },
+    {
+      "action_counts": {
+        "edge": 483,
+        "original": 88
+      },
+      "capacity_utilization": 0.20681070672550206,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.97,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 61.679387708505,
+      "spent_bytes": 7490894
+    },
+    {
+      "action_counts": {
+        "edge": 485,
+        "original": 86
+      },
+      "capacity_utilization": 0.2026887351510103,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.98,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 60.712418079376214,
+      "spent_bytes": 7341592
+    },
+    {
+      "action_counts": {
+        "edge": 488,
+        "original": 83
+      },
+      "capacity_utilization": 0.19417174610263008,
+      "earned_bytes": 36221016.4,
+      "lambda": 0.99,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 58.68344845374425,
+      "spent_bytes": 7033098
+    },
+    {
+      "action_counts": {
+        "edge": 490,
+        "original": 81
+      },
+      "capacity_utilization": 0.18739004795017294,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 57.0524694720904,
+      "spent_bytes": 6787458
+    },
+    {
+      "action_counts": {
+        "edge": 493,
+        "original": 78
+      },
+      "capacity_utilization": 0.17894682822870758,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.01,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 55.001340528329216,
+      "spent_bytes": 6481636
+    },
+    {
+      "action_counts": {
+        "edge": 496,
+        "original": 75
+      },
+      "capacity_utilization": 0.1713613977988757,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.02,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 53.14146016041438,
+      "spent_bytes": 6206884
+    },
+    {
+      "action_counts": {
+        "edge": 499,
+        "original": 72
+      },
+      "capacity_utilization": 0.1624394228760516,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.03,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 50.93339065710704,
+      "spent_bytes": 5883721
+    },
+    {
+      "action_counts": {
+        "edge": 502,
+        "original": 69
+      },
+      "capacity_utilization": 0.15283574427800983,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.04,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 48.53163661559424,
+      "spent_bytes": 5535866
+    },
+    {
+      "action_counts": {
+        "edge": 505,
+        "original": 66
+      },
+      "capacity_utilization": 0.14322555012564475,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.05,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 46.11207946141562,
+      "spent_bytes": 5187775
+    },
+    {
+      "action_counts": {
+        "edge": 506,
+        "original": 65
+      },
+      "capacity_utilization": 0.13996396302120334,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.06,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 45.28205573558809,
+      "spent_bytes": 5069637
+    },
+    {
+      "action_counts": {
+        "edge": 510,
+        "original": 61
+      },
+      "capacity_utilization": 0.12851958511026212,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.07,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 42.33658180634181,
+      "spent_bytes": 4655110
+    },
+    {
+      "action_counts": {
+        "edge": 512,
+        "original": 59
+      },
+      "capacity_utilization": 0.12370828997498812,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.08,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 41.08981533845267,
+      "spent_bytes": 4480840
+    },
+    {
+      "action_counts": {
+        "edge": 512,
+        "original": 59
+      },
+      "capacity_utilization": 0.12370828997498812,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.09,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 41.08981533845267,
+      "spent_bytes": 4480840
+    },
+    {
+      "action_counts": {
+        "edge": 514,
+        "original": 57
+      },
+      "capacity_utilization": 0.11829781231649811,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.1,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 39.6582608819008,
+      "spent_bytes": 4284867
+    },
+    {
+      "action_counts": {
+        "edge": 516,
+        "original": 55
+      },
+      "capacity_utilization": 0.11232114403062417,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.11,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 38.05746767918269,
+      "spent_bytes": 4068386
+    },
+    {
+      "action_counts": {
+        "edge": 517,
+        "original": 54
+      },
+      "capacity_utilization": 0.10960136944141634,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.12,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 37.32845421632131,
+      "spent_bytes": 3969873
+    },
+    {
+      "action_counts": {
+        "edge": 521,
+        "original": 50
+      },
+      "capacity_utilization": 0.0995078647213224,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.13,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 34.58342184623083,
+      "spent_bytes": 3604276
+    },
+    {
+      "action_counts": {
+        "edge": 521,
+        "original": 50
+      },
+      "capacity_utilization": 0.0995078647213224,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.14,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 34.58342184623083,
+      "spent_bytes": 3604276
+    },
+    {
+      "action_counts": {
+        "edge": 522,
+        "original": 49
+      },
+      "capacity_utilization": 0.09756774798843028,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.15,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 34.04836525519689,
+      "spent_bytes": 3534003
+    },
+    {
+      "action_counts": {
+        "edge": 523,
+        "original": 48
+      },
+      "capacity_utilization": 0.09542029306499528,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.16,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 33.4470489025116,
+      "spent_bytes": 3456220
+    },
+    {
+      "action_counts": {
+        "edge": 523,
+        "original": 48
+      },
+      "capacity_utilization": 0.09542029306499528,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.17,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 33.4470489025116,
+      "spent_bytes": 3456220
+    },
+    {
+      "action_counts": {
+        "edge": 524,
+        "original": 47
+      },
+      "capacity_utilization": 0.09305017735504519,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.18,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 32.774079600969955,
+      "spent_bytes": 3370372
+    },
+    {
+      "action_counts": {
+        "edge": 526,
+        "original": 45
+      },
+      "capacity_utilization": 0.08841193092527354,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.19,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 31.445019463698074,
+      "spent_bytes": 3202370
+    },
+    {
+      "action_counts": {
+        "edge": 531,
+        "original": 40
+      },
+      "capacity_utilization": 0.076383223746311,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.2,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 27.97581473986308,
+      "spent_bytes": 2766678
+    },
+    {
+      "action_counts": {
+        "edge": 531,
+        "original": 40
+      },
+      "capacity_utilization": 0.076383223746311,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.21,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 27.97581473986308,
+      "spent_bytes": 2766678
+    },
+    {
+      "action_counts": {
+        "edge": 536,
+        "original": 35
+      },
+      "capacity_utilization": 0.06619267591839306,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.22,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 24.987773338953648,
+      "spent_bytes": 2397566
+    },
+    {
+      "action_counts": {
+        "edge": 537,
+        "original": 34
+      },
+      "capacity_utilization": 0.06339673008182067,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.23,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 24.161816696325932,
+      "spent_bytes": 2296294
+    },
+    {
+      "action_counts": {
+        "edge": 537,
+        "original": 34
+      },
+      "capacity_utilization": 0.06339673008182067,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.24,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 24.161816696325932,
+      "spent_bytes": 2296294
+    },
+    {
+      "action_counts": {
+        "edge": 538,
+        "original": 33
+      },
+      "capacity_utilization": 0.06187117929689019,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.25,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 23.70492134491602,
+      "spent_bytes": 2241037
+    },
+    {
+      "action_counts": {
+        "edge": 540,
+        "original": 31
+      },
+      "capacity_utilization": 0.057215732908036235,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.26,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 22.29479231437047,
+      "spent_bytes": 2072412
+    },
+    {
+      "action_counts": {
+        "edge": 540,
+        "original": 31
+      },
+      "capacity_utilization": 0.057215732908036235,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.27,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 22.29479231437047,
+      "spent_bytes": 2072412
+    },
+    {
+      "action_counts": {
+        "edge": 541,
+        "original": 30
+      },
+      "capacity_utilization": 0.05488062449843346,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.28,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 21.57350424925486,
+      "spent_bytes": 1987832
+    },
+    {
+      "action_counts": {
+        "edge": 541,
+        "original": 30
+      },
+      "capacity_utilization": 0.05488062449843346,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.29,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 21.57350424925486,
+      "spent_bytes": 1987832
+    },
+    {
+      "action_counts": {
+        "edge": 541,
+        "original": 30
+      },
+      "capacity_utilization": 0.05488062449843346,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.3,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 21.57350424925486,
+      "spent_bytes": 1987832
+    },
+    {
+      "action_counts": {
+        "edge": 543,
+        "original": 28
+      },
+      "capacity_utilization": 0.049919085097788696,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.31,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 20.008746325969692,
+      "spent_bytes": 1808120
+    },
+    {
+      "action_counts": {
+        "edge": 544,
+        "original": 27
+      },
+      "capacity_utilization": 0.04770633658971536,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.32,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 19.30669647455215,
+      "spent_bytes": 1727972
+    },
+    {
+      "action_counts": {
+        "edge": 544,
+        "original": 27
+      },
+      "capacity_utilization": 0.04770633658971536,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.33,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 19.30669647455215,
+      "spent_bytes": 1727972
+    },
+    {
+      "action_counts": {
+        "edge": 546,
+        "original": 25
+      },
+      "capacity_utilization": 0.04377737450791138,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.34,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 18.041215976079304,
+      "spent_bytes": 1585661
+    },
+    {
+      "action_counts": {
+        "edge": 547,
+        "original": 24
+      },
+      "capacity_utilization": 0.04130204363895211,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.35,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 17.237485587596893,
+      "spent_bytes": 1496002
+    },
+    {
+      "action_counts": {
+        "edge": 549,
+        "original": 22
+      },
+      "capacity_utilization": 0.03696605266990796,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.36,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 15.818985323111216,
+      "spent_bytes": 1338948
+    },
+    {
+      "action_counts": {
+        "edge": 551,
+        "original": 20
+      },
+      "capacity_utilization": 0.03208935351687149,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.37,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 14.213233828544615,
+      "spent_bytes": 1162309
+    },
+    {
+      "action_counts": {
+        "edge": 551,
+        "original": 20
+      },
+      "capacity_utilization": 0.03208935351687149,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.38,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 14.213233828544615,
+      "spent_bytes": 1162309
+    },
+    {
+      "action_counts": {
+        "edge": 553,
+        "original": 18
+      },
+      "capacity_utilization": 0.027611980540667547,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.39,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 12.71410596370697,
+      "spent_bytes": 1000134
+    },
+    {
+      "action_counts": {
+        "edge": 553,
+        "original": 18
+      },
+      "capacity_utilization": 0.027611980540667547,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.4,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 12.71410596370697,
+      "spent_bytes": 1000134
+    },
+    {
+      "action_counts": {
+        "edge": 553,
+        "original": 18
+      },
+      "capacity_utilization": 0.027611980540667547,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.41,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 12.71410596370697,
+      "spent_bytes": 1000134
+    },
+    {
+      "action_counts": {
+        "edge": 553,
+        "original": 18
+      },
+      "capacity_utilization": 0.027611980540667547,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.42,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 12.71410596370697,
+      "spent_bytes": 1000134
+    },
+    {
+      "action_counts": {
+        "edge": 554,
+        "original": 17
+      },
+      "capacity_utilization": 0.025385924841137258,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.43,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.946759045124056,
+      "spent_bytes": 919504
+    },
+    {
+      "action_counts": {
+        "edge": 554,
+        "original": 17
+      },
+      "capacity_utilization": 0.025385924841137258,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.44,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.946759045124056,
+      "spent_bytes": 919504
+    },
+    {
+      "action_counts": {
+        "edge": 554,
+        "original": 17
+      },
+      "capacity_utilization": 0.025385924841137258,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.45,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.946759045124056,
+      "spent_bytes": 919504
+    },
+    {
+      "action_counts": {
+        "edge": 554,
+        "original": 17
+      },
+      "capacity_utilization": 0.025385924841137258,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.46,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.946759045124056,
+      "spent_bytes": 919504
+    },
+    {
+      "action_counts": {
+        "edge": 555,
+        "original": 16
+      },
+      "capacity_utilization": 0.023072626973548983,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.47,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.129454692204794,
+      "spent_bytes": 835714
+    },
+    {
+      "action_counts": {
+        "edge": 555,
+        "original": 16
+      },
+      "capacity_utilization": 0.023072626973548983,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.48,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 11.129454692204794,
+      "spent_bytes": 835714
+    },
+    {
+      "action_counts": {
+        "edge": 556,
+        "original": 15
+      },
+      "capacity_utilization": 0.020943145041065165,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.49,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 10.364753584067028,
+      "spent_bytes": 758582
+    },
+    {
+      "action_counts": {
+        "edge": 556,
+        "original": 15
+      },
+      "capacity_utilization": 0.020943145041065165,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.5,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 10.364753584067028,
+      "spent_bytes": 758582
+    },
+    {
+      "action_counts": {
+        "edge": 556,
+        "original": 15
+      },
+      "capacity_utilization": 0.020943145041065165,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.51,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 10.364753584067028,
+      "spent_bytes": 758582
+    },
+    {
+      "action_counts": {
+        "edge": 557,
+        "original": 14
+      },
+      "capacity_utilization": 0.018667173569430814,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.52,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 9.533569018046062,
+      "spent_bytes": 676144
+    },
+    {
+      "action_counts": {
+        "edge": 558,
+        "original": 13
+      },
+      "capacity_utilization": 0.01655991630317696,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.53,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 8.756214837233227,
+      "spent_bytes": 599817
+    },
+    {
+      "action_counts": {
+        "edge": 558,
+        "original": 13
+      },
+      "capacity_utilization": 0.01655991630317696,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.54,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 8.756214837233227,
+      "spent_bytes": 599817
+    },
+    {
+      "action_counts": {
+        "edge": 558,
+        "original": 13
+      },
+      "capacity_utilization": 0.01655991630317696,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.55,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 8.756214837233227,
+      "spent_bytes": 599817
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.56,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.57,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.58,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.59,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.6,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.61,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.62,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.63,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.64,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.65,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.66,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.67,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.68,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.69,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 560,
+        "original": 11
+      },
+      "capacity_utilization": 0.012458098773837833,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.7,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 7.212923129399617,
+      "spent_bytes": 451245
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.71,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.72,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.73,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.74,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.75,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.76,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.77,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.78,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.79,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.8,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.81,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 561,
+        "original": 10
+      },
+      "capacity_utilization": 0.010523420872308818,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.82,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 6.417668938636779,
+      "spent_bytes": 381169
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.83,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.84,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.85,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.86,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.87,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.88,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 562,
+        "original": 9
+      },
+      "capacity_utilization": 0.009068160770883283,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.89,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.7760132749875375,
+      "spent_bytes": 328458
+    },
+    {
+      "action_counts": {
+        "edge": 563,
+        "original": 8
+      },
+      "capacity_utilization": 0.007709998993843807,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.9,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.155026376247405,
+      "spent_bytes": 279264
+    },
+    {
+      "action_counts": {
+        "edge": 563,
+        "original": 8
+      },
+      "capacity_utilization": 0.007709998993843807,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.91,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.155026376247405,
+      "spent_bytes": 279264
+    },
+    {
+      "action_counts": {
+        "edge": 563,
+        "original": 8
+      },
+      "capacity_utilization": 0.007709998993843807,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.92,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.155026376247405,
+      "spent_bytes": 279264
+    },
+    {
+      "action_counts": {
+        "edge": 563,
+        "original": 8
+      },
+      "capacity_utilization": 0.007709998993843807,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.93,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 5.155026376247405,
+      "spent_bytes": 279264
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.94,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.95,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.96,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.97,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.98,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 1.99,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 564,
+        "original": 7
+      },
+      "capacity_utilization": 0.006170561243554723,
+      "earned_bytes": 36221016.4,
+      "lambda": 2.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 4.4373380939165745,
+      "spent_bytes": 223504
+    },
+    {
+      "action_counts": {
+        "edge": 566,
+        "original": 5
+      },
+      "capacity_utilization": 0.004098394102491282,
+      "earned_bytes": 36221016.4,
+      "lambda": 2.5,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 3.3080976208051047,
+      "spent_bytes": 148448
+    },
+    {
+      "action_counts": {
+        "edge": 568,
+        "original": 3
+      },
+      "capacity_utilization": 0.0016569662026380905,
+      "earned_bytes": 36221016.4,
+      "lambda": 3.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 1.8073498010635376,
+      "spent_bytes": 60017
+    },
+    {
+      "action_counts": {
+        "edge": 570,
+        "original": 1
+      },
+      "capacity_utilization": 0.00032552924163663173,
+      "earned_bytes": 36221016.4,
+      "lambda": 4.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 0.6661710739135742,
+      "spent_bytes": 11791
+    },
+    {
+      "action_counts": {
+        "edge": 570,
+        "original": 1
+      },
+      "capacity_utilization": 0.00032552924163663173,
+      "earned_bytes": 36221016.4,
+      "lambda": 5.0,
+      "maximum_prefix_violation_bytes": 0,
+      "objective_value": 0.6661710739135742,
+      "spent_bytes": 11791
+    }
+  ],
+  "diagnostics": {
+    "action_counts": {
+      "edge": 272,
+      "original": 299
+    },
+    "capacity_utilization": 0.987611463051048,
+    "earned_bytes": 36221016.4,
+    "maximum_prefix_violation_bytes": 0,
+    "spent_bytes": 35772291
+  },
+  "final_used_for_tuning": false,
+  "formal": true,
+  "lambda": 0.58,
+  "lambda_grid": [
+    0.0,
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05,
+    0.06,
+    0.07,
+    0.08,
+    0.09,
+    0.1,
+    0.11,
+    0.12,
+    0.13,
+    0.14,
+    0.15,
+    0.16,
+    0.17,
+    0.18,
+    0.19,
+    0.2,
+    0.21,
+    0.22,
+    0.23,
+    0.24,
+    0.25,
+    0.26,
+    0.27,
+    0.28,
+    0.29,
+    0.3,
+    0.31,
+    0.32,
+    0.33,
+    0.34,
+    0.35,
+    0.36,
+    0.37,
+    0.38,
+    0.39,
+    0.4,
+    0.41,
+    0.42,
+    0.43,
+    0.44,
+    0.45,
+    0.46,
+    0.47,
+    0.48,
+    0.49,
+    0.5,
+    0.51,
+    0.52,
+    0.53,
+    0.54,
+    0.55,
+    0.56,
+    0.57,
+    0.58,
+    0.59,
+    0.6,
+    0.61,
+    0.62,
+    0.63,
+    0.64,
+    0.65,
+    0.66,
+    0.67,
+    0.68,
+    0.69,
+    0.7,
+    0.71,
+    0.72,
+    0.73,
+    0.74,
+    0.75,
+    0.76,
+    0.77,
+    0.78,
+    0.79,
+    0.8,
+    0.81,
+    0.82,
+    0.83,
+    0.84,
+    0.85,
+    0.86,
+    0.87,
+    0.88,
+    0.89,
+    0.9,
+    0.91,
+    0.92,
+    0.93,
+    0.94,
+    0.95,
+    0.96,
+    0.97,
+    0.98,
+    0.99,
+    1.0,
+    1.01,
+    1.02,
+    1.03,
+    1.04,
+    1.05,
+    1.06,
+    1.07,
+    1.08,
+    1.09,
+    1.1,
+    1.11,
+    1.12,
+    1.13,
+    1.14,
+    1.15,
+    1.16,
+    1.17,
+    1.18,
+    1.19,
+    1.2,
+    1.21,
+    1.22,
+    1.23,
+    1.24,
+    1.25,
+    1.26,
+    1.27,
+    1.28,
+    1.29,
+    1.3,
+    1.31,
+    1.32,
+    1.33,
+    1.34,
+    1.35,
+    1.36,
+    1.37,
+    1.38,
+    1.39,
+    1.4,
+    1.41,
+    1.42,
+    1.43,
+    1.44,
+    1.45,
+    1.46,
+    1.47,
+    1.48,
+    1.49,
+    1.5,
+    1.51,
+    1.52,
+    1.53,
+    1.54,
+    1.55,
+    1.56,
+    1.57,
+    1.58,
+    1.59,
+    1.6,
+    1.61,
+    1.62,
+    1.63,
+    1.64,
+    1.65,
+    1.66,
+    1.67,
+    1.68,
+    1.69,
+    1.7,
+    1.71,
+    1.72,
+    1.73,
+    1.74,
+    1.75,
+    1.76,
+    1.77,
+    1.78,
+    1.79,
+    1.8,
+    1.81,
+    1.82,
+    1.83,
+    1.84,
+    1.85,
+    1.86,
+    1.87,
+    1.88,
+    1.89,
+    1.9,
+    1.91,
+    1.92,
+    1.93,
+    1.94,
+    1.95,
+    1.96,
+    1.97,
+    1.98,
+    1.99,
+    2.0,
+    2.5,
+    3.0,
+    4.0,
+    5.0
+  ],
+  "median_original_bytes": 150008.0,
+  "method": "moric",
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_final_v2",
+  "random_seed": null,
+  "schema": "cavs_online_control_v1",
+  "source_hashes": {
+    "calibration_records": "f13166d5717acc006928d82ae1ba2d6869fd8bc25c3e4c3ba4c7395cf5c02c5a",
+    "candidate_report": "465e40f5b429f696fb044677e6f831b1fc9df4e843a54e5082fc36ee5a2685c3",
+    "candidates": "4a8bdef2092a2b87320f35906c39feddbe67eff1ad0cbdc2221a5440985bc719",
+    "policy": "2cf88041b1886818cef599a09b04022b9ed88a5adbe07b8e3afdd69939c2e48e",
+    "protocol": "d296fec2329d3288a174cc663e9cc2db9e90c08b3de328790adc2c37055f6a61"
+  },
+  "source_split": "calibration",
+  "tie_break": [
+    "objective_desc",
+    "spent_bytes_asc",
+    "lambda_asc"
+  ]
+}

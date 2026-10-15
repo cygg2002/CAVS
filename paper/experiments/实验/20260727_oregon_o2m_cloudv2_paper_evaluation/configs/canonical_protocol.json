@@ -1,0 +1,63 @@
+{
+  "protocol_id": "oregon_o2m_cloudv2_posthoc_final_reuse_v1",
+  "seed": 20260720,
+  "detector_training_allowed": false,
+  "registered_final_allowed": false,
+  "final_claim": "posthoc_detector_update_final_reuse",
+  "datasets": {
+    "oregon": {
+      "protocol_root": "/home/111_wcy/work/datasets/oregon-critters/derived/oregon_full_45class_leakfree_seed20260717/protocols/same_camera_event_disjoint",
+      "assignments": "/home/111_wcy/work/datasets/oregon-critters/derived/oregon_full_45class_leakfree_seed20260717/protocols/same_camera_event_disjoint/assignments.jsonl",
+      "assignments_sha256": "db0353c3b98c02c6d8f250e05acb6ae1fd7b22fc50a9ce4935b5fc7b48ef944a",
+      "expected_counts": {
+        "detector_train": 69462,
+        "detector_val": 9923,
+        "selector_train": 9923,
+        "selector_calibration": 4961,
+        "final_test": 4962
+      },
+      "role_counts": {
+        "fit": 9923,
+        "calibration": 4961,
+        "audit": 9923,
+        "final": 4962
+      },
+      "edge_model": {
+        "path": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260717_oregon_full_leakfree_protocol/runs/same_camera_event_disjoint/detectors/yolo26n/weights/best.pt",
+        "sha256": "b975f9f8035ddeb7c3f66e0ffa62d4030d40ec6c8c9d75c08ba517312f0a2c4b"
+      },
+      "cloud_model": {
+        "path": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_o2m_finetune/finetune20_batch8_from_e18_restart2/weights/best.pt",
+        "sha256": "8944137e1a1324b064ed487ab780c1a410ac55f5be36d0c95192bdfdb52f1fdd",
+        "selected_epoch": 20,
+        "detector_val_map50_95": 0.52760,
+        "end2end": false
+      }
+    }
+  },
+  "evaluation": {
+    "imgsz": 640,
+    "official_conf": 0.001,
+    "deploy_conf": 0.25,
+    "iou": 0.7,
+    "max_det": 300,
+    "end2end": false,
+    "parity_tolerance": 0.001,
+    "fixed_call_budgets": [0.05, 0.1, 0.15, 0.25, 0.4, 0.5, 0.65, 0.8],
+    "primary_call_budgets": [0.1, 0.25, 0.4],
+    "fixed_byte_budgets": [0.05, 0.1, 0.2, 0.4],
+    "online_targets": [0.1, 0.25, 0.4],
+    "random_seeds": 50,
+    "paired_bootstrap_replicates": 200,
+    "estimated_e2e_network_mbps": [1, 5, 10, 20]
+  },
+  "execution": {
+    "edge_batch": 32,
+    "cloud_batch": 4,
+    "workers": 2,
+    "encode_workers": 4,
+    "device": 0,
+    "half": false
+  }
+}
+

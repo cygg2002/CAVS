@@ -1,0 +1,15 @@
+{
+  "files": [
+    {
+      "path": "coco_val_rknn.py",
+      "sha256": "86329917db6cc0f8e4a32860697834d362198a595388207197ec12699bbf671d",
+      "size": 20600
+    },
+    {
+      "path": "yolo26_decode.py",
+      "sha256": "0d547c4107ef01eaaacbfc9b33d65e0f950398ae81b0c1795cd11c5ffddaa452",
+      "size": 4225
+    }
+  ],
+  "schema": "cavs_rknn_helpers_manifest_v1"
+}

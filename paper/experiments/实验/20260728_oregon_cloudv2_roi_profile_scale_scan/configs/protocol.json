@@ -1,0 +1,65 @@
+{
+  "protocol_id": "oregon_cloudv2_roi_profile_scale_scan_v1",
+  "dataset": "oregon",
+  "source_cloudv2_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260727_oregon_o2m_cloudv2_paper_evaluation",
+  "output_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260728_oregon_cloudv2_roi_profile_scale_scan",
+  "cloud_model": {
+    "path": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_o2m_finetune/finetune20_batch8_from_e18_restart2/weights/best.pt",
+    "sha256": "8944137e1a1324b064ed487ab780c1a410ac55f5be36d0c95192bdfdb52f1fdd"
+  },
+  "roles": {
+    "calibration": 4961,
+    "audit": 9923
+  },
+  "profiles": [
+    "current",
+    "moderate",
+    "historical_cost",
+    "fixed_1_8"
+  ],
+  "imgsz": [
+    160,
+    320,
+    640
+  ],
+  "geometry": {
+    "edge_conf": 0.25,
+    "max_area_ratio": 0.65,
+    "jpeg_quality": 90,
+    "encode_workers": 4
+  },
+  "inference": {
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "rect": true,
+    "end2end": false,
+    "device": 0,
+    "batch": 4,
+    "chunk_size": 256,
+    "half": false
+  },
+  "evaluation": {
+    "epsilon": 0.02,
+    "ap_tolerance": 0.001,
+    "roi_ratios": [
+      0.0,
+      0.005,
+      0.01,
+      0.02,
+      0.04,
+      0.075,
+      0.1,
+      0.15,
+      0.2,
+      0.3,
+      0.4
+    ]
+  },
+  "resource_gate": {
+    "minimum_free_gpu_mib": 6144,
+    "poll_seconds": 30
+  },
+  "final_used_for_selection": false,
+  "registered_final_allowed": false
+}

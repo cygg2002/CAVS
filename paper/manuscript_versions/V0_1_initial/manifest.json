@@ -1,0 +1,90 @@
+{
+  "version": "V0_1_initial",
+  "source_file": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_ZH.md",
+  "organized_dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_1_initial",
+  "manuscript_files": [
+    "manuscript.md",
+    "JRTIP_MANUSCRIPT_DRAFT_ZH.md"
+  ],
+  "figures": [],
+  "mermaid_blocks": [],
+  "tables": [
+    {
+      "index": 1,
+      "caption": "",
+      "line_start": 291,
+      "line_end": 298,
+      "copied_to": "tables/table_01_table_01.md"
+    },
+    {
+      "index": 2,
+      "caption": "",
+      "line_start": 339,
+      "line_end": 347,
+      "copied_to": "tables/table_02_table_02.md"
+    },
+    {
+      "index": 3,
+      "caption": "",
+      "line_start": 360,
+      "line_end": 365,
+      "copied_to": "tables/table_03_table_03.md"
+    },
+    {
+      "index": 4,
+      "caption": "",
+      "line_start": 370,
+      "line_end": 375,
+      "copied_to": "tables/table_04_table_04.md"
+    },
+    {
+      "index": 5,
+      "caption": "",
+      "line_start": 380,
+      "line_end": 383,
+      "copied_to": "tables/table_05_table_05.md"
+    },
+    {
+      "index": 6,
+      "caption": "",
+      "line_start": 388,
+      "line_end": 394,
+      "copied_to": "tables/table_06_table_06.md"
+    },
+    {
+      "index": 7,
+      "caption": "",
+      "line_start": 399,
+      "line_end": 405,
+      "copied_to": "tables/table_07_table_07.md"
+    },
+    {
+      "index": 8,
+      "caption": "",
+      "line_start": 412,
+      "line_end": 419,
+      "copied_to": "tables/table_08_table_08.md"
+    },
+    {
+      "index": 9,
+      "caption": "",
+      "line_start": 424,
+      "line_end": 431,
+      "copied_to": "tables/table_09_table_09.md"
+    },
+    {
+      "index": 10,
+      "caption": "",
+      "line_start": 438,
+      "line_end": 448,
+      "copied_to": "tables/table_10_table_10.md"
+    },
+    {
+      "index": 11,
+      "caption": "",
+      "line_start": 457,
+      "line_end": 463,
+      "copied_to": "tables/table_11_table_11.md"
+    }
+  ]
+}

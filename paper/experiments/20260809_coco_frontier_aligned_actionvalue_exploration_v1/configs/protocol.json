@@ -1,0 +1,83 @@
+{
+  "protocol_id": "coco_frontier_aligned_actionvalue_exploration_v1",
+  "result_type": "development_three_stage_action_frontier_path_diagnostic",
+  "dataset": "coco",
+  "roles": {"fit": 9678, "calibration": 571},
+  "action_spaces": {
+    "OQ": ["edge", "original", "q90"],
+    "OQR": ["edge", "original", "q90", "roi"]
+  },
+  "screen_methods": [
+    "CurrentActionValue",
+    "PathDistill",
+    "BoundaryPathDistill"
+  ],
+  "fold_count": 5,
+  "fold_seed": 20260806,
+  "screen_seed": 20260809,
+  "confirm_seeds": [20260809, 20260810, 20260811],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "primary_mode": "fixed_byte",
+  "frontier_budgets": [0.05, 0.1, 0.2, 0.25, 0.4, 0.6, 0.8],
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 4,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "path_loss_weight": 0.5,
+    "boundary_path_loss_weight": 0.8,
+    "path_temperature": 0.03,
+    "boundary_temperature": 0.02,
+    "boundary_scale": 0.03,
+    "boundary_boost": 2.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0,
+    "gradient_clip": 5.0
+  },
+  "reward": {
+    "context_size": 32,
+    "seed": 20260806,
+    "roi_workers": 28,
+    "fold_contained": true
+  },
+  "cpu": {
+    "screen_workers": 15,
+    "confirm_workers": 15,
+    "evaluation_workers": 12,
+    "torch_threads_per_worker": 1
+  },
+  "gate": {
+    "minimum_fixed_byte_gain": 0.001,
+    "required_fixed_byte_gain_points": 2,
+    "maximum_other_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001,
+    "minimum_capacity_utilization": 0.98,
+    "minimum_supporting_seeds": 2
+  },
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "fold_contained_oq": "paper/experiments/20260806_coco_relational_actionvalue_oof_v1",
+    "oqr_loader": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1",
+    "scheduler": "paper/experiments/GAIR_v5"
+  },
+  "fit_only_parameter_selection": true,
+  "calibration_used_for_training_or_selection": false,
+  "detector_inference_required": false,
+  "audit_accessed": false,
+  "val2017_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}

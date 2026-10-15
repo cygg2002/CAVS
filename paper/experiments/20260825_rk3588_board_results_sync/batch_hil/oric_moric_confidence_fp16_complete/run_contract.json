@@ -1,0 +1,18 @@
+{
+  "protocol_id": "rk3588_external_original_only_baselines_v1",
+  "model": "fp16",
+  "model_sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d",
+  "source_run_id": "formal_fp16_20260816_110906",
+  "source_candidates_sha256": "2685aa87963c3b6c2492ec0d4744741e01a4d14ae78794320a06a90380035ed8",
+  "baseline_policy_sha256": "3a8e2327bef05e6f16d8a5364b2d3651e5fdb32003b6994f2b4e322a5bbc86f6",
+  "methods": [
+    "oric",
+    "moric",
+    "confidence"
+  ],
+  "actions": [
+    "edge",
+    "original"
+  ],
+  "two_pass_global_scheduler": true
+}

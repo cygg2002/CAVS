@@ -1,0 +1,59 @@
+{
+  "protocol_id": "coco_dualhead_val2017_paper_v1",
+  "dataset": "coco_val2017",
+  "train_role": "coco_train2017_development_5000",
+  "test_images": 5000,
+  "paths": {
+    "annotations": "/home/111_wcy/work/datasets/coco/annotations/instances_val2017.json",
+    "canonical_common": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260720_frozen_detector_multiranker_contextm2e/runs/canonical_v1/common/coco",
+    "training_experiment": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260804_coco_dualhead_fixedbyte_registered_v1"
+  },
+  "hashes": {
+    "checkpoint": "54fa714a837cf2c24a809835951ba722bf7f38ce880ab2b43a47b55baa36029e",
+    "samples": "ee719048aab8dbd47f7a7d4c9316629adfbd4d6dbea7725dc5eaed041165d1a1",
+    "ground_truth": "d63389c153dccb0af01fad2b15a549bb50650ef0d1c47aa644ac0f211649e807",
+    "edge_predictions": "e36a00b50c33f427721dd4a9e3f69228efbea8b581391eb95675d64d48dcbe35",
+    "cloud_predictions": "ae49d9de9c551a9fc6d9de4793aedfd7a981f8b6a65512fc7f7f3d1f0dc936e5"
+  },
+  "methods": [
+    "ORIC-AP50",
+    "MORIC-AP50",
+    "ORIC-AP5095",
+    "MORIC-AP5095",
+    "Current-BudgetSet",
+    "SetValue",
+    "DualHead"
+  ],
+  "modes": ["fixed_call", "fixed_byte"],
+  "primary_mode": "fixed_byte",
+  "primary_candidate": "DualHead",
+  "frozen_comparators": {
+    "fixed_byte:0.1": "ORIC-AP5095",
+    "fixed_byte:0.25": "ORIC-AP5095",
+    "fixed_byte:0.4": "ORIC-AP5095"
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260805,
+    "confidence": 0.95
+  },
+  "detector": {
+    "edge_gflops": 22.8,
+    "cloud_gflops": 232.3
+  },
+  "network": {
+    "uplink_mbps": 10.0,
+    "downlink_mbps": 20.0,
+    "rtt_ms": 40.0,
+    "edge_ms": 18.23,
+    "router_ms": 1.0,
+    "codec_ms": 2.0,
+    "cloud_ms": 18.0,
+    "fusion_ms": 1.0,
+    "response_bytes_per_detection": 24
+  },
+  "baseline_mlp": {"top_k": 25},
+  "val_used_for_training": false,
+  "val_used_for_selection": false
+}

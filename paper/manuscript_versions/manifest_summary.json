@@ -1,0 +1,52 @@
+[
+  {
+    "version": "V0_0_edge_cloud_concept",
+    "source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/EDGE_CLOUD_DETECTION_PAPER_DRAFT_ZH.md",
+    "status": "ok",
+    "figures": 0,
+    "figures_copied": 0,
+    "mermaid": 0,
+    "tables": 3,
+    "dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_0_edge_cloud_concept"
+  },
+  {
+    "version": "V0_1_initial",
+    "source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_ZH.md",
+    "status": "ok",
+    "figures": 0,
+    "figures_copied": 0,
+    "mermaid": 0,
+    "tables": 11,
+    "dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_1_initial"
+  },
+  {
+    "version": "V0_2",
+    "source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_V0_2_ZH.md",
+    "status": "ok",
+    "figures": 0,
+    "figures_copied": 0,
+    "mermaid": 0,
+    "tables": 14,
+    "dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_2"
+  },
+  {
+    "version": "V0_3",
+    "source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_V0_3_ZH.md",
+    "status": "ok",
+    "figures": 6,
+    "figures_copied": 6,
+    "mermaid": 2,
+    "tables": 17,
+    "dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_3"
+  },
+  {
+    "version": "V0_4_speciesnet_gt",
+    "source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_V0_4_ZH.md",
+    "status": "ok",
+    "figures": 7,
+    "figures_copied": 7,
+    "mermaid": 2,
+    "tables": 20,
+    "dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_4_speciesnet_gt"
+  }
+]

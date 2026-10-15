@@ -1,0 +1,26 @@
+{
+  "protocol_id": "coco_transition_balanced_afpd_exploration_v5",
+  "result_type": "fit_only_frontier_transition_mass_diagnostic",
+  "dataset": "coco",
+  "role": "fit",
+  "expected_images": 9678,
+  "action_space": ["edge", "original", "q90", "roi"],
+  "relative_offset": 0.01,
+  "maximum_price": 5.0,
+  "boundary_scale": 0.03,
+  "boundary_boost": 2.0,
+  "go_no_go": {
+    "minimum_roi_frontier_rate_given_available": 0.40,
+    "maximum_global_roi_target_weight_rate": 0.15,
+    "maximum_conditional_roi_pair_weight_rate": 0.35
+  },
+  "source_experiment": "paper/experiments/20260809_coco_frontier_aligned_actionvalue_exploration_v1",
+  "fit_only": true,
+  "detector_inference_required": false,
+  "calibration_accessed": false,
+  "audit_accessed": false,
+  "val2017_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}
+

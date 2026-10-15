@@ -1,0 +1,65 @@
+{
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_v1",
+  "dataset": {
+    "sequence": "sequences/coco_val2017_sequence.json",
+    "sequence_file_sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67",
+    "sequence_records_sha256": "aa36e57fb97291562937947c9cebe221c330a0f8da89d5fc865cd8eee66d058b",
+    "source_annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f",
+    "expected_images": 5000,
+    "images_dir": "../yolo26n_coco_val/coco_val2017/images"
+  },
+  "models": {
+    "fp16": {
+      "path": "../yolo26n_coco_val/models/yolo26n-rk3588-fp16.rknn",
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    },
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92"
+  },
+  "methods": {
+    "cavs_oqr": {
+      "policy": "policies/cavs_oqr/manifest.json",
+      "policy_sha256": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6",
+      "actions": ["edge", "original", "q90", "current@640"]
+    },
+    "confidence": {
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253",
+      "actions": ["edge", "original"]
+    },
+    "random": {
+      "policy": "scripts/online_methods.py",
+      "policy_sha256": "4143d4ab7dc6f34aaf6821244dfb8a8ac51d91d0b507ede14c5ebe4892a0a253",
+      "actions": ["edge", "original"],
+      "representative_seed": 20260720
+    },
+    "oric": {
+      "policy": "policies/external/manifest.json",
+      "policy_sha256": "b5725ab6ab692340bac3bbfaf5e041f795bcfb59ad85d2b8e6414da830b0b996",
+      "actions": ["edge", "original"],
+      "scope": "score_adapted_historical_single_model"
+    },
+    "moric": {
+      "policy": "policies/external/manifest.json",
+      "policy_sha256": "b5725ab6ab692340bac3bbfaf5e041f795bcfb59ad85d2b8e6414da830b0b996",
+      "actions": ["edge", "original"],
+      "scope": "score_adapted_historical_single_model"
+    }
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "runtime": {
+    "rknn_helpers_dir": "../yolo26n_coco_val",
+    "core": "0",
+    "cloud_timeout_seconds": 60.0,
+    "request_retries": 3,
+    "progress_every": 100
+  },
+  "codec": {
+    "quality": 90,
+    "optimize": true,
+    "subsampling": 2,
+    "long_side": 640
+  },
+  "final_used_for_training_or_control": false,
+  "global_plan": false,
+  "zero_lookahead": true
+}

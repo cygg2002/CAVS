@@ -1,0 +1,63 @@
+{
+  "protocol_id": "coco_oric_moric_ac_oqr_paper_v1",
+  "status": "posthoc_val2017_paper_domain_external_representation_ablation",
+  "dataset": "coco",
+  "runtime_domain": "pytorch_paper_cache",
+  "forbidden_path_tokens": ["rk3588", "rknn", "online_hil", "deployment_retrain", "perframe_deployment"],
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "source_factorial_experiment": "paper/experiments/20260812_coco_profile_fusion_2x2_controlled_retrain_v2",
+  "source_completion_experiment": "paper/experiments/20260813_coco_oregon_cavs_final_completion_v1",
+  "source_hashes": {
+    "factorial_protocol": "c878931764a623131cf4327b634dde083e98ba2867cd7e4467aa6a1231070247",
+    "factorial_results": "c9b5a863c7c3aa1fee2813d412134dad09b1630aecdfd04317b7ce7edeef9e45",
+    "factorial_selections": "865be36191d4d4c429be0d2f0d0591f9f91ae2638b4d1480bcbba90ddba15ce0",
+    "fit_rewards": "a99907928ec58ac37a62353a064dd2a1d92833ad5d101916c66b359556a12ed6",
+    "fit_folds": "e04858ab870acb64981d320cef64d37a33bd7adcb0870b88d0a3bc9e361eafb9",
+    "completion_protocol": "51b74e2176ea725b67f448652e55eec208a4b1608dc8c4a8dd236d2d58c9a856",
+    "completion_results": "05b9d22257f7935d3c6eaa4adb44d05a0dac75832be8ea36b660bb7ab5783326",
+    "completion_selections": "e1aa0928e97e5807b9a3a08073805bccb13bb94db0e1a3995ac2186e957f3211"
+  },
+  "cloud_model_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+  "cavs_source_method": "CAVS-Current-MAUR",
+  "cavs_report_name": "CAVS-OQR",
+  "cavs_seed_source": {"source_method": "CAVS-OQR-MAUR", "source_policy": "Joint-OQR"},
+  "cavs_expected_fixed_byte": {"0.1": 0.48027713207508005, "0.25": 0.5329001188407024, "0.4": 0.5601780940076753},
+  "methods": {
+    "ORIC-AC-OQR": {"target": "raw_reward"},
+    "MORIC-AC-OQR": {"target": "unified_empirical_cdf"}
+  },
+  "scalar_controls": {
+    "ORIC-SharedAction-OQR-MAUR": {"source_method": "ORIC-AP5095", "source_policy": "SharedAction-OQR-MAUR"},
+    "MORIC-SharedAction-OQR-MAUR": {"source_method": "MORIC-AP5095", "source_policy": "SharedAction-OQR-MAUR"}
+  },
+  "action_space": ["edge", "original", "q90", "current@640"],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "fold_count": 5,
+  "model_seeds": [20260809, 20260810, 20260811],
+  "external_mlp": {"top_k": 25, "hidden_dims": [16, 16, 16, 16], "dropout": 0.1},
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 15,
+    "deploy_confidence": 0.001,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "gradient_clip": 5.0
+  },
+  "bootstrap": {"replicates": 1000, "seed": 20260817, "unit": "image"},
+  "cpu": {"training_workers": 8, "evaluation_workers": 6, "bootstrap_workers": 8, "torch_threads_per_worker": 1, "nice": 19},
+  "training_is_fit_only": true,
+  "detector_inference_required": false,
+  "final_is_hidden": false,
+  "final_used_for_training_gate_or_selection": false,
+  "source_experiments_modified": false
+}

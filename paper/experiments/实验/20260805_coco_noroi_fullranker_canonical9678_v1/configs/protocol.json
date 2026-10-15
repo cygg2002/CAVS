@@ -1,0 +1,71 @@
+{
+  "protocol_id": "coco_noroi_fullranker_canonical9678_v1",
+  "dataset": "coco",
+  "result_status": "posthoc_canonical_val2017_noroi_extension",
+  "source_experiments": {
+    "canonical_rankers": "paper/experiments/20260804_coco_dualhead_canonical9678_val2017_paper_v1",
+    "canonical_actions": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "historical_rankers": "paper/experiments/20260723_three_dataset_nineranker_triaction_paper_exploration",
+    "external_scheduler": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines"
+  },
+  "roles": {
+    "fit": 9678,
+    "calibration": 571,
+    "registered_final": 5000
+  },
+  "historical_methods": [
+    "Random",
+    "Confidence",
+    "ClassGainPrior",
+    "M2E",
+    "Confidence-Residual M2E",
+    "SemanticRank",
+    "MORIC-style",
+    "GEC-style",
+    "Current-Controlled-32D"
+  ],
+  "internal_methods": [
+    "Current-BudgetSet",
+    "SetValue",
+    "DualHead"
+  ],
+  "external_methods": [
+    "ORIC-AP50",
+    "MORIC-AP50",
+    "ORIC-AP5095",
+    "MORIC-AP5095"
+  ],
+  "primary_candidate": "DualHead",
+  "payload_policies": [
+    "Original-only",
+    "SharedAction-NoROI"
+  ],
+  "allowed_actions": ["edge", "original", "q90"],
+  "work_points": {
+    "fixed_call": [0.1, 0.25, 0.4],
+    "fixed_byte": [0.1, 0.25, 0.4]
+  },
+  "expected_rows_per_role": 192,
+  "primary_mode": "fixed_byte",
+  "fixed_byte_lambda_source": "calibration_only_per_method_policy_budget",
+  "ranker_checkpoints_retrained": false,
+  "action_models_retrained": false,
+  "registered_final_used_for_selection": false,
+  "random_seed": 20260720,
+  "cpu_workers": {
+    "point": 32,
+    "bootstrap": 32
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260805,
+    "confidence": 0.95,
+    "mode": "fixed_byte",
+    "comparison_types": [
+      "strongest_external",
+      "strongest_historical",
+      "SetValue"
+    ],
+    "expected_comparisons": 18
+  }
+}

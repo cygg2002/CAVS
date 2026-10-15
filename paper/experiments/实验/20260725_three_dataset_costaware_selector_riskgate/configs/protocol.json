@@ -1,0 +1,103 @@
+{
+  "protocol_id": "three_dataset_costaware_selector_riskgate_v1",
+  "output_role": "exploratory_paper_level",
+  "source_experiment": "20260723_three_dataset_nineranker_triaction_paper_exploration",
+  "datasets": [
+    "coco",
+    "ena24",
+    "oregon"
+  ],
+  "selectable_rankers": [
+    "Confidence",
+    "ClassGainPrior",
+    "M2E",
+    "Confidence-Residual M2E",
+    "SemanticRank",
+    "MORIC-style",
+    "GEC-style",
+    "Current-Controlled-32D"
+  ],
+  "reference_only_rankers": [
+    "Random"
+  ],
+  "policies": [
+    "SharedAction",
+    "CostEligible-AllROI",
+    "GBDT-Hierarchical"
+  ],
+  "policy_tie_break_order": [
+    "SharedAction",
+    "GBDT-Hierarchical",
+    "CostEligible-AllROI"
+  ],
+  "work_points": {
+    "fixed_call": [
+      0.1,
+      0.25,
+      0.4
+    ],
+    "online": [
+      0.1,
+      0.25,
+      0.4
+    ],
+    "fixed_byte": [
+      0.05,
+      0.1,
+      0.2,
+      0.4
+    ]
+  },
+  "ap_tolerance": 0.001,
+  "bootstrap_replicates": 200,
+  "bootstrap_seed": 20260720,
+  "bootstrap_unit": "image",
+  "bootstrap_ci": 0.95,
+  "gate_rule": "two_sided_ci_low_gte_negative_ap_tolerance",
+  "gate_failure_action": "reference_fallback_without_second_candidate",
+  "selection_objectives": {
+    "fixed_call": "minimum_request_kb_within_reference_ap_tolerance",
+    "online": "minimum_request_kb_within_reference_ap_tolerance",
+    "fixed_byte": "maximum_official_ap_within_reference_ap_tolerance"
+  },
+  "gate_roles": {
+    "coco": "audit",
+    "ena24": "near_duplicate_grouped_gate",
+    "oregon": "audit"
+  },
+  "selection_and_gate_share_calibration": {
+    "coco": false,
+    "ena24": false,
+    "oregon": false
+  },
+  "ena24_calibration_split": {
+    "source_role": "calibration",
+    "selector_role": "near_duplicate_grouped_selector",
+    "gate_role": "near_duplicate_grouped_gate",
+    "hash": "grayscale_dhash_16x16_256bit",
+    "hamming_threshold": 6,
+    "component_algorithm": "union_find_connected_components",
+    "assignment": "whole_component_rare_class_and_size_balance",
+    "target_selector_images": 200,
+    "target_gate_images": 200,
+    "seed": 20260725,
+    "near_duplicate_group_disjoint": true,
+    "event_camera_disjoint": "unknown",
+    "recalibrate_on_selector_only": [
+      "roi_threshold",
+      "online_frame_threshold",
+      "fixed_byte_lambda"
+    ]
+  },
+  "fixed_call_online_cost_gate": "request_kb_delta_ci_high_lte_zero",
+  "bootstrap_interpretation": "exploratory_pointwise_not_simultaneous",
+  "final_used_for_selection": false,
+  "random_selectable": false,
+  "try_second_candidate_after_gate_failure": false,
+  "final_oracle_diagnostic_only": true,
+  "expected_candidates_per_work_point": 24,
+  "expected_work_points_per_dataset": 10,
+  "expected_frozen_rows_per_dataset": 10,
+  "real_system_claim_requires_distinct_hosts": true,
+  "estimated_e2e_must_not_be_labeled_measured": true
+}

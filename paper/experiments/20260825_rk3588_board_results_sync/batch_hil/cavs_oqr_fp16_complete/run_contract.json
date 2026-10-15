@@ -1,0 +1,8 @@
+{
+  "protocol_id": "rk3588_cavs_oqr_edge_cloud_v1",
+  "model": "fp16",
+  "model_sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d",
+  "policy_sha256": "c259377646e808547d260dfc28926414152249814c9ef14244cf2de3be521621",
+  "limit": 0,
+  "two_pass_global_scheduler": true
+}

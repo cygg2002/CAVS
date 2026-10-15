@@ -1,0 +1,53 @@
+{
+  "protocol_id": "coco_frontier_occupancy_gate_exploration_v2",
+  "result_type": "posthoc_fit_oof_frontier_occupancy_diagnostic",
+  "dataset": "coco",
+  "roles": {"fit": 9678},
+  "methods": ["CostFree-FrontierGate", "CostAware-FrontierGate"],
+  "reference_methods": ["Ungated-AFPD", "GT-AnyFrontier-Gate"],
+  "fold_count": 5,
+  "seed": 20260809,
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "probability_threshold": 0.5,
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 4,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "gradient_clip": 5.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0
+  },
+  "cpu": {
+    "training_workers": 10,
+    "evaluation_workers": 12,
+    "torch_threads_per_worker": 1
+  },
+  "gate": {
+    "minimum_fixed_byte_gain": 0.001,
+    "required_fixed_byte_gain_points": 2,
+    "maximum_other_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001,
+    "minimum_capacity_utilization": 0.98
+  },
+  "source_v1": "paper/experiments/20260809_coco_frontier_aligned_actionvalue_exploration_v1",
+  "fit_only_training": true,
+  "threshold_selected_on_oof": false,
+  "detector_inference_required": false,
+  "calibration_accessed": false,
+  "val2017_accessed": false,
+  "audit_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}

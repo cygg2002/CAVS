@@ -1,0 +1,111 @@
+{
+  "version": "V0_2",
+  "source_file": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_V0_2_ZH.md",
+  "organized_dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_2",
+  "manuscript_files": [
+    "manuscript.md",
+    "JRTIP_MANUSCRIPT_DRAFT_V0_2_ZH.md"
+  ],
+  "figures": [],
+  "mermaid_blocks": [],
+  "tables": [
+    {
+      "index": 1,
+      "caption": "",
+      "line_start": 297,
+      "line_end": 304,
+      "copied_to": "tables/table_01_table_01.md"
+    },
+    {
+      "index": 2,
+      "caption": "",
+      "line_start": 343,
+      "line_end": 348,
+      "copied_to": "tables/table_02_table_02.md"
+    },
+    {
+      "index": 3,
+      "caption": "",
+      "line_start": 358,
+      "line_end": 366,
+      "copied_to": "tables/table_03_table_03.md"
+    },
+    {
+      "index": 4,
+      "caption": "",
+      "line_start": 379,
+      "line_end": 384,
+      "copied_to": "tables/table_04_table_04.md"
+    },
+    {
+      "index": 5,
+      "caption": "",
+      "line_start": 389,
+      "line_end": 394,
+      "copied_to": "tables/table_05_table_05.md"
+    },
+    {
+      "index": 6,
+      "caption": "",
+      "line_start": 399,
+      "line_end": 402,
+      "copied_to": "tables/table_06_table_06.md"
+    },
+    {
+      "index": 7,
+      "caption": "",
+      "line_start": 407,
+      "line_end": 413,
+      "copied_to": "tables/table_07_table_07.md"
+    },
+    {
+      "index": 8,
+      "caption": "",
+      "line_start": 418,
+      "line_end": 424,
+      "copied_to": "tables/table_08_table_08.md"
+    },
+    {
+      "index": 9,
+      "caption": "",
+      "line_start": 431,
+      "line_end": 438,
+      "copied_to": "tables/table_09_table_09.md"
+    },
+    {
+      "index": 10,
+      "caption": "",
+      "line_start": 443,
+      "line_end": 450,
+      "copied_to": "tables/table_10_table_10.md"
+    },
+    {
+      "index": 11,
+      "caption": "",
+      "line_start": 457,
+      "line_end": 467,
+      "copied_to": "tables/table_11_table_11.md"
+    },
+    {
+      "index": 12,
+      "caption": "",
+      "line_start": 476,
+      "line_end": 482,
+      "copied_to": "tables/table_12_table_12.md"
+    },
+    {
+      "index": 13,
+      "caption": "",
+      "line_start": 493,
+      "line_end": 499,
+      "copied_to": "tables/table_13_table_13.md"
+    },
+    {
+      "index": 14,
+      "caption": "",
+      "line_start": 503,
+      "line_end": 508,
+      "copied_to": "tables/table_14_table_14.md"
+    }
+  ]
+}

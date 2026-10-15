@@ -1,0 +1,27 @@
+{
+  "protocol_id": "coco_oregon_cavs_paper_completeness_v1",
+  "datasets": {
+    "coco": {"fit": 9678, "calibration": 571, "final": 5000, "bootstrap_primary": "image"},
+    "oregon": {"fit": 9923, "calibration": 4961, "final": 4962, "bootstrap_primary": "event"}
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20260811,
+  "expected_bootstrap_jobs": {"coco": 12, "oregon": 24},
+  "action_masks": {
+    "Edge-Original": ["edge", "original"],
+    "Edge-Q90": ["edge", "q90"],
+    "OQ-Joint": ["edge", "original", "q90"]
+  },
+  "source_experiments": {
+    "benchmark": "paper/experiments/20260809_coco_oregon_full_scheduler_benchmark_v1",
+    "oregon_cloudv3": "paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1",
+    "external": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines"
+  },
+  "forbidden_paths": ["20260811_coco_currentoqr12_profile_scale_extension_v1"],
+  "final_used_for_training_or_selection": false,
+  "detector_inference": false,
+  "gpu_required": false,
+  "dcsb_fit_only": true,
+  "posthoc": true
+}

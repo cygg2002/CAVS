@@ -1,0 +1,70 @@
+{
+  "protocol_id": "coco_afpd_occupancy_paper_protocol_v1",
+  "dataset": "coco_canonical_train9678_cal571_val2017_5000",
+  "result_status": "posthoc_val2017_reuse_pre_registered_extension",
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "action_spaces": {
+    "OQ": ["edge", "original", "q90"],
+    "OQR": ["edge", "original", "q90", "roi"]
+  },
+  "action_methods": [
+    "Current-OQ",
+    "Current-OQR",
+    "AFPD-OQ",
+    "AFPD-OQR"
+  ],
+  "reported_methods": [
+    "Current-OQ",
+    "Current-OQR",
+    "AFPD-OQ",
+    "AFPD-OQR",
+    "AFPD-OQR+OccupancyFree",
+    "AFPD-OQR+OccupancyAware"
+  ],
+  "primary_method": "AFPD-OQR",
+  "primary_same_space_baseline": "Current-OQR",
+  "system_baseline": "Current-OQ",
+  "occupancy_methods": ["OccupancyFree", "OccupancyAware"],
+  "occupancy_threshold": 0.5,
+  "fold_count": 5,
+  "fold_seed": 20260806,
+  "seeds": [20260809, 20260810, 20260811],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "primary_mode": "fixed_byte",
+  "cpu": {
+    "training_workers": 24,
+    "evaluation_workers": 16,
+    "bootstrap_workers": 16,
+    "torch_threads_per_worker": 1
+  },
+  "gate": {
+    "minimum_fixed_byte_gain": 0.001,
+    "required_fixed_byte_gain_points": 2,
+    "maximum_other_loss": 0.001,
+    "maximum_fixed_call_loss": 0.001,
+    "minimum_capacity_utilization": 0.98,
+    "minimum_supporting_seeds": 2
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260810,
+    "confidence": 0.95
+  },
+  "source_experiments": {
+    "afpd_v1": "paper/experiments/20260809_coco_frontier_aligned_actionvalue_exploration_v1",
+    "occupancy_v2": "paper/experiments/20260809_coco_frontier_occupancy_gate_exploration_v2",
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "noroi_reference": "paper/experiments/20260805_coco_noroi_fullranker_canonical9678_v1",
+    "full_benchmark": "paper/experiments/20260809_coco_oregon_full_scheduler_benchmark_v1",
+    "bootstrap_core": "paper/experiments/20260804_coco_dualhead_canonical9678_val2017_paper_v1/scripts/canonical_core.py"
+  },
+  "fit_only_training": true,
+  "calibration_used_for_training_or_selection": false,
+  "occupancy_can_replace_primary": false,
+  "final_used_for_training_or_selection": false,
+  "final_is_hidden": false,
+  "detector_inference_required": false,
+  "gpu_required": false
+}
+

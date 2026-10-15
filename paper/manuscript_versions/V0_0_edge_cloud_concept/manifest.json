@@ -1,0 +1,34 @@
+{
+  "version": "V0_0_edge_cloud_concept",
+  "source_file": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/EDGE_CLOUD_DETECTION_PAPER_DRAFT_ZH.md",
+  "organized_dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_0_edge_cloud_concept",
+  "manuscript_files": [
+    "manuscript.md",
+    "EDGE_CLOUD_DETECTION_PAPER_DRAFT_ZH.md"
+  ],
+  "figures": [],
+  "mermaid_blocks": [],
+  "tables": [
+    {
+      "index": 1,
+      "caption": "",
+      "line_start": 241,
+      "line_end": 247,
+      "copied_to": "tables/table_01_table_01.md"
+    },
+    {
+      "index": 2,
+      "caption": "",
+      "line_start": 251,
+      "line_end": 262,
+      "copied_to": "tables/table_02_table_02.md"
+    },
+    {
+      "index": 3,
+      "caption": "",
+      "line_start": 266,
+      "line_end": 275,
+      "copied_to": "tables/table_03_table_03.md"
+    }
+  ]
+}

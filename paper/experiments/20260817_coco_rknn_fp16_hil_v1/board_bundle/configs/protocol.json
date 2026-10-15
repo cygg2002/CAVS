@@ -1,0 +1,42 @@
+{
+  "protocol_id": "rk3588_cavs_oqr_deployment_aligned_fp16_v1",
+  "dataset": {
+    "root": "../yolo26n_coco_val/coco_val2017",
+    "images": "images",
+    "annotations": "annotations/instances_val2017.json",
+    "expected_images": 5000,
+    "native_jpeg_total_bytes": 814705164
+  },
+  "models": {
+    "fp16": {
+      "path": "../yolo26n_coco_val/models/yolo26n-rk3588-fp16.rknn",
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    },
+    "policy": "policy/manifest.json",
+    "policy_sha256": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6",
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92"
+  },
+  "runtime": {
+    "imgsz": 640,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "max_nms": 30000,
+    "core": "0",
+    "cloud_timeout_seconds": 60.0,
+    "request_retries": 3,
+    "progress_every": 100
+  },
+  "codec": {
+    "quality": 90,
+    "optimize": true,
+    "subsampling": 2,
+    "long_side": 640
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "cloud_protocols": {
+    "original": {"end2end": false, "rect": true, "scaleup": false, "half": false, "multi_label": true},
+    "q90": {"end2end": false, "rect": true, "scaleup": false, "half": false, "multi_label": true},
+    "current@640": {"end2end": false, "rect": true, "scaleup": true, "half": true, "multi_label": false}
+  }
+}

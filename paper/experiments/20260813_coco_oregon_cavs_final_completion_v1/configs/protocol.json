@@ -1,0 +1,116 @@
+{
+  "protocol_id": "coco_oregon_cavs_final_completion_v1",
+  "status": "posthoc_paper_completion_final_reuse",
+  "primary_method": "CAVS-OQ-Core",
+  "roi_extension": "CAVS-OQR-MAUR",
+  "forbidden_aliases": {
+    "CAVS-OQ-from-OQR": "CAVS-OQ-Core",
+    "Raw-ActionValue-OQ": "CAVS-OQ-Core"
+  },
+  "datasets": {
+    "coco": {
+      "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+      "model_seeds": [20260809, 20260810, 20260811],
+      "fold_seed": 20260806,
+      "category_count": 80,
+      "cloud_model_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+      "bootstrap_units": ["image"],
+      "dedicated_oq_source": "paper/experiments/20260810_coco_afpd_forced_fullval_posthoc_v1",
+      "maur_source": "paper/experiments/20260812_coco_profile_fusion_2x2_controlled_retrain_v2",
+      "unified_source": "paper/experiments/20260812_coco_oregon_cavs_oqr_unified_paper_v1",
+      "canonical_source": "paper/experiments/20260811_coco_currentoqr12_profile_scale_extension_v1"
+    },
+    "oregon": {
+      "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+      "model_seeds": [20260810, 20260811, 20260812],
+      "fold_seed": 20260810,
+      "category_count": 45,
+      "cloud_model_sha256": "d3890a57fc7d567880a5b01b7eb949387d9b7058ce7ee25bdb9471d9bb4642d9",
+      "bootstrap_units": ["event", "image"],
+      "dedicated_oq_source": "paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1",
+      "maur_action_source": "paper/experiments/20260812_coco_oregon_cavs_oqr_same_selection_maur_ablation_v1",
+      "unified_source": "paper/experiments/20260812_coco_oregon_cavs_oqr_unified_paper_v1",
+      "canonical_source": "paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1"
+    }
+  },
+  "fold_count": 5,
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "action_spaces": {
+    "O": ["edge", "original"],
+    "OQ": ["edge", "original", "q90"],
+    "OQR": ["edge", "original", "q90", "current@640"]
+  },
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 15,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "relation_hidden_dim": 64,
+    "relation_heads": 4,
+    "relation_layers": 2,
+    "relation_ff_dim": 128,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "path_loss_weight": 0.5,
+    "boundary_path_loss_weight": 0.8,
+    "path_temperature": 0.03,
+    "boundary_temperature": 0.02,
+    "boundary_scale": 0.03,
+    "boundary_boost": 2.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0,
+    "gradient_clip": 5.0
+  },
+  "external_mlp": {
+    "top_k": 25,
+    "hidden_dims": [16, 16, 16, 16],
+    "dropout": 0.1,
+    "epochs": 100,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.00005,
+    "milestones": [60, 75, 90],
+    "gamma": 0.5,
+    "fit_validation_fraction": 0.1
+  },
+  "training": {
+    "methods": ["CostInValue-OQ", "CAVS-OQR-MAUR", "ORIC-AP5095", "MORIC-AP5095"],
+    "cost_in_value_datasets": ["coco", "oregon"],
+    "maur_retrain_datasets": ["oregon"],
+    "external_retrain_datasets": ["coco"],
+    "final_role_forbidden": true
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260813,
+    "random_seeds": 50,
+    "random_base_seed": {"coco": 20260720, "oregon": 20260810},
+    "nested_random": true
+  },
+  "resource": {
+    "nice": 19,
+    "initial_workers": 8,
+    "maximum_workers": 16,
+    "torch_threads_per_worker": 1,
+    "poll_seconds": 30,
+    "minimum_idle_cpus_per_new_worker": 1.5,
+    "protected_completion_markers": [
+      "paper/experiments/20260812_coco_oregon_cavs_oqr_unified_paper_v1/runs/oregon/bootstrap/completion.json",
+      "paper/experiments/20260812_coco_oregon_cavs_oqr_same_selection_maur_ablation_v1/runs/oregon/bootstrap/completion.json",
+      "paper/experiments/20260812_coco_profile_fusion_2x2_controlled_retrain_v2/runs/bootstrap/completion.json"
+    ]
+  },
+  "final_is_hidden": false,
+  "final_used_for_training_or_selection": false
+}

@@ -1,0 +1,21 @@
+{
+  "protocol_id": "coco_afpd_same_run_baseline_bootstrap_v1",
+  "status": "posthoc_same_run_attribution_bootstrap",
+  "parent_experiment": "paper/experiments/20260810_coco_afpd_forced_fullval_posthoc_v1",
+  "parent_completion": "runs/bootstrap/completion.json",
+  "candidate": "AFPD-OQR",
+  "comparators": ["Current-OQ", "Current-OQR"],
+  "mode": "fixed_byte",
+  "budgets": [0.1, 0.25, 0.4],
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20260810,
+  "bootstrap_workers": 16,
+  "wait_poll_seconds": 30,
+  "expected_comparisons": 6,
+  "confirmatory": false,
+  "final_is_hidden": false,
+  "final_used_for_selection": false,
+  "training_allowed": false,
+  "tuning_allowed": false,
+  "detector_inference_allowed": false
+}

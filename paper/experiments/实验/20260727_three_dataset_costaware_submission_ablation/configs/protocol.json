@@ -1,0 +1,42 @@
+{
+  "protocol_id": "three_dataset_costaware_submission_ablation_v1",
+  "output_role": "posthoc_diagnostic_not_confirmatory",
+  "datasets": ["coco", "ena24", "oregon"],
+  "ranker_order": [
+    "Confidence",
+    "ClassGainPrior",
+    "M2E",
+    "Confidence-Residual M2E",
+    "SemanticRank",
+    "MORIC-style",
+    "GEC-style",
+    "Current-Controlled-32D"
+  ],
+  "policy_order": [
+    "SharedAction",
+    "GBDT-Hierarchical",
+    "CostEligible-AllROI"
+  ],
+  "work_points": {
+    "fixed_call": [0.1, 0.25, 0.4],
+    "online": [0.1, 0.25, 0.4],
+    "fixed_byte": [0.05, 0.1, 0.2, 0.4]
+  },
+  "ap_tolerance": 0.001,
+  "shared_scope": "same_ranker_family_and_policy_with_dataset_specific_frozen_parameters",
+  "cross_dataset_cost": "mean_request_kb_divided_by_dataset_reference_kb",
+  "strict_feasibility": "candidate_ap_gte_dataset_reference_ap_minus_epsilon_for_every_dataset",
+  "infeasible_fallback": "diagnostic_least_violating_pair_without_epsilon_relaxation",
+  "final_used_for_selection": false,
+  "final_output_interpretation": "posthoc_diagnostic_only",
+  "source_experiments": [
+    "20260723_three_dataset_nineranker_triaction_paper_exploration",
+    "20260725_three_dataset_costaware_selector_riskgate"
+  ],
+  "blocked_without_new_assets": [
+    "audit_bootstrap_1000_2000_bca",
+    "ena24_independent_gate_expansion",
+    "faithful_external_offloading_baseline",
+    "measured_end_to_end_testbed"
+  ]
+}

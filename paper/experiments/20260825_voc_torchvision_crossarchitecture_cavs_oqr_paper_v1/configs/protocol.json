@@ -1,0 +1,71 @@
+{
+  "protocol_id": "voc_torchvision_crossarchitecture_cavs_oqr_paper_v1",
+  "status": "preregistered_torchvision_coco_crossarchitecture_cavs_oqr_benchmark",
+  "confirmatory": false,
+  "dataset": "voc2007_2012",
+  "roles": {"fit": 15629, "calibration": 922, "final": 4952},
+  "role_contracts": {
+    "fit": {"gt_sha256": "90b38673ac9bc2721099b813de925e947884bfc8ec7d7fd935b8c90909dd7f00", "images_sha256": "5c81a38801638d44a407066b33dd63e951ac80f35af143295cb958bb8a2057f2", "identity_sha256": "392c4e32b841da57f64945fab06bd6d199538a0960b7cba11f02a4789cf8f8da"},
+    "calibration": {"gt_sha256": "2ce145110cb50bf9929e339ffab2a97773b17add278a6d446ae1b34dd16a913b", "images_sha256": "81f8e431e4528f5b6d6b2705a5b150964009ee97f5e2511230b0e9f8df235c5a", "identity_sha256": "a603dab0af9bbc79cfeb9a6f446c12590e4c5b8a73090da7ab9adfa79c8009ec"},
+    "final": {"gt_sha256": "6fff9b80fd971c747f8be14d6360bfa6b6e4675f8b86c31138f15b73ecf8bd01", "images_sha256": "6a403f0fd922d8d2012422fcbbf39b75f933e80f95f891b5a7aeed0dfef04bc6", "identity_sha256": "a2eed3b890a6264466a6bd448811ffb1b9525842366497c193c75f93dbce9fac"}
+  },
+  "source_data_experiment": "../20260824_voc_gluoncv_crossarchitecture_cavs_paper_v1",
+  "source_gate_experiment": "../20260825_voc_torchvision_coco_crossarchitecture_gate_v1",
+  "source_gate_protocol_sha256": "7999eb035564b14401676a0f22ed39c113dcefbba1d0bb4298e67bb041866fe5",
+  "source_gate_rows": {
+    "fit": {"edge": "089339fa3f29bc023ca4d1ce26a9b24233cf16d62f714b700ea82c62a992398f", "original": "19e6773e84a7acf114b183a8c658230a5728922c0d50b9e4659ffa63ca57aa6d", "q90": "46721eeaab73529274b4bbd8de0f07afad79059f31b81601d47e9f5801b70dac"},
+    "calibration": {"edge": "57cc1c0b739efdf973b0c308d104ab66a3d0139f62a4873f7f816665767d3c63", "original": "97fb3ce9851d784a1514dd4cd7fde278bd94f8643705f1849db36bf0eac0cb41", "q90": "17c2f9ddfbf52eadd02d4dafdd214a0160c5f02364809f3898eec793fcdcf21d"}
+  },
+  "fold_count": 5,
+  "fold_seed": 20260825,
+  "model_seeds": [20260825, 20260826, 20260827],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "action_spaces": {
+    "O": ["edge", "original"],
+    "OQ": ["edge", "original", "q90"],
+    "OQR": ["edge", "original", "q90", "current@official"]
+  },
+  "detectors": {
+    "edge": {"builder": "ssdlite320_mobilenet_v3_large", "weights_enum": "SSDLite320_MobileNet_V3_Large_Weights.COCO_V1", "weights_sha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2", "training_dataset": "COCO train2017"},
+    "cloud": {"builder": "fasterrcnn_resnet50_fpn_v2", "weights_enum": "FasterRCNN_ResNet50_FPN_V2_Weights.COCO_V1", "weights_sha256": "dd69338a24b8d7381807e247652bdc356325bcbaf1cd3e092e00e0a1a58706bf", "training_dataset": "COCO train2017", "transform": "official_default"}
+  },
+  "category_mapping": {
+    "airplane": "aeroplane",
+    "bicycle": "bicycle",
+    "bird": "bird",
+    "boat": "boat",
+    "bottle": "bottle",
+    "bus": "bus",
+    "car": "car",
+    "cat": "cat",
+    "chair": "chair",
+    "cow": "cow",
+    "dining table": "diningtable",
+    "dog": "dog",
+    "horse": "horse",
+    "motorcycle": "motorbike",
+    "person": "person",
+    "potted plant": "pottedplant",
+    "sheep": "sheep",
+    "couch": "sofa",
+    "train": "train",
+    "tv": "tvmonitor"
+  },
+  "runtime": {"python": "3.10", "torch": "2.6.0+cu124", "torchvision": "0.21.0+cu124", "device": "cuda:0", "batch_size": 1, "score_threshold": 0.001, "detections_per_image": 300},
+  "jpeg_q90": {"quality": 90, "optimize": true, "subsampling": 2},
+  "roi": {"action_id": "current@official", "profile": "current", "edge_confidence": 0.25, "maximum_area_ratio": 0.65, "jpeg_quality": 90, "jpeg_optimize": true, "jpeg_subsampling": 2, "encode_workers": 16, "require_bytes_below_original": true},
+  "fusion": {"name": "MAUR", "duplicate_iou": 0.5, "nms_iou": 0.7},
+  "metric": {"iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95], "primary_interpolation_points": 101, "voc07_interpolation_points": 11, "ignore_difficult": true},
+  "reward": {"context_size": 32, "fold_contained": true, "workers": 24, "checkpoint_interval": 100},
+  "model": {"max_boxes": 64, "max_actions": 4, "deploy_confidence": 0.001, "class_embedding_dim": 8, "box_hidden_dim": 32, "relation_hidden_dim": 64, "relation_heads": 4, "relation_layers": 2, "relation_ff_dim": 128, "action_hidden_dim": 32, "joint_hidden_dim": 64, "dropout": 0.05, "epochs": 50, "patience": 8, "batch_size": 192, "learning_rate": 0.001, "weight_decay": 0.0001, "validation_fraction": 0.1, "reward_loss_weight": 0.5, "within_action_weight": 0.5, "path_loss_weight": 0.5, "boundary_path_loss_weight": 0.8, "path_temperature": 0.03, "boundary_temperature": 0.02, "boundary_scale": 0.03, "boundary_boost": 2.0, "frontier_relative_offset": 0.01, "frontier_maximum_price": 5.0, "gradient_clip": 5.0},
+  "external_mlp": {"top_k": 25, "hidden_dims": [16, 16, 16, 16], "dropout": 0.1, "epochs": 100, "batch_size": 64, "learning_rate": 0.005, "weight_decay": 0.00005, "milestones": [60, 75, 90], "gamma": 0.5, "fit_validation_fraction": 0.1},
+  "shared_action": {"epsilon": 0.001, "action_fractions": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0], "maximum_calibration_ap_loss": 0.001},
+  "dcsb": {"detector_confidence": 0.25, "count_thresholds": [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20], "area_threshold_start": 0.0001, "area_threshold_stop": 0.05, "area_threshold_step": 0.0005},
+  "random": {"seeds": 50, "base_seed": 20260825},
+  "bootstrap": {"replicates": 1000, "seed": 20260825, "primary_mode": "fixed_byte", "nested_random": true, "workers": 24},
+  "resource": {"nice": 19, "training_workers": 12, "torch_threads_per_worker": 1, "gpu_contention_allowed": true, "latency_claim_allowed": false},
+  "final_is_hidden": false,
+  "final_used_for_training_or_selection": false,
+  "old_learner_checkpoints_allowed": false
+}

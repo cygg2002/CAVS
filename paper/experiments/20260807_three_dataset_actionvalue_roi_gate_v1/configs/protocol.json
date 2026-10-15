@@ -1,0 +1,87 @@
+{
+  "protocol_id": "three_dataset_actionvalue_roi_gate_v1",
+  "result_status": "development_oof_and_frozen_calibration",
+  "datasets": {
+    "coco": {
+      "canonical_run": "canonical_v1",
+      "roles": {"fit": 9678, "calibration": 571},
+      "score_source": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1"
+    },
+    "ena24": {
+      "canonical_run": "canonical_v1",
+      "roles": {"fit": 1400, "calibration": 400},
+      "score_source": "paper/experiments/20260807_ena24_oregon_dualhead_crossdataset_v1"
+    },
+    "oregon": {
+      "canonical_run": "canonical_oregon_event_v1",
+      "roles": {"fit": 9923, "calibration": 4961},
+      "score_source": "paper/experiments/20260807_ena24_oregon_dualhead_crossdataset_v1"
+    }
+  },
+  "methods": [
+    "ActionValue-OQ-Joint",
+    "ActionValue-OQR-Naive",
+    "ActionValue-OQR-AdvantageGate"
+  ],
+  "actions": ["edge", "original", "q90", "roi"],
+  "roles": ["fit_oof", "calibration"],
+  "modes": ["fixed_byte", "fixed_call"],
+  "budgets": [0.1, 0.25, 0.4],
+  "fold_count": 5,
+  "fold_seed": 20260805,
+  "reward": {
+    "context_size": 32,
+    "context_seed": 20260804,
+    "confidence": 0.001,
+    "iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+    "candidate_actions": ["original", "q90", "roi"],
+    "checkpoint_interval": 128
+  },
+  "advantage_gate": {
+    "maximum_harmful_roi_rate": 0.1,
+    "candidate_quantiles": 101,
+    "threshold_source": "fit_oof_only",
+    "calibration_used_for_threshold": false
+  },
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 4,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 80,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "boundary_weight": 1.0,
+    "pairs_per_budget": 4000,
+    "seeds": [20260804, 20260805, 20260806]
+  },
+  "workers": {
+    "cache_per_dataset": 24,
+    "training_per_dataset": 6,
+    "torch_threads_per_worker": 1
+  },
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "crossdataset_oq": "paper/experiments/20260807_ena24_oregon_dualhead_crossdataset_v1",
+    "coco_oqr": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1",
+    "coco_roi_diagnostic": "paper/experiments/20260805_coco_actionvalue_roi_contribution_diagnostic_v1"
+  },
+  "forbidden_source_substrings": [
+    "20260727_oregon_o2m_cloudv2_paper_evaluation",
+    "cloudv2",
+    "Cloud-V2",
+    "/final/",
+    "registered_final"
+  ],
+  "final_accessed": false,
+  "detector_inference": false,
+  "gpu_inference": false
+}

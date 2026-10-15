@@ -1,0 +1,122 @@
+{
+  "protocol_id": "three_dataset_legacy_style_rebuilt32d_control_v1",
+  "output_role": "exploratory_paper_level",
+  "datasets": ["coco", "ena24", "oregon"],
+  "rankers": [
+    "Random",
+    "Confidence",
+    "ClassGainPrior",
+    "M2E",
+    "Confidence-Residual M2E",
+    "SemanticRank",
+    "MORIC-style",
+    "GEC-style",
+    "Current-Controlled-32D",
+    "Legacy-Style-Rebuilt-32D"
+  ],
+  "constrained_rankers": [
+    "Confidence",
+    "ClassGainPrior",
+    "M2E",
+    "Confidence-Residual M2E",
+    "SemanticRank",
+    "MORIC-style",
+    "GEC-style",
+    "Current-Controlled-32D",
+    "Legacy-Style-Rebuilt-32D"
+  ],
+  "policies": [
+    "SharedAction",
+    "CostEligible-AllROI",
+    "GBDT-Hierarchical"
+  ],
+  "fixed_call_budgets": [0.05, 0.1, 0.15, 0.25, 0.4, 0.5, 0.65, 0.8],
+  "primary_call_budgets": [0.1, 0.25, 0.4],
+  "online_targets": [0.1, 0.25, 0.4],
+  "fixed_byte_budgets": [0.05, 0.1, 0.2, 0.4],
+  "threshold_fractions": [0.0, 0.0025, 0.005, 0.01, 0.02, 0.03, 0.05, 0.075, 0.1, 0.15, 0.2, 0.3, 0.4, 0.5, 0.7, 1.0],
+  "ap_tolerance": 0.001,
+  "reproduction_tolerance": 1e-12,
+  "random_seeds": 50,
+  "random_seed_base": 20260720,
+  "gbdt_seed": 20260722,
+  "controlled_32d_seed": 20260720,
+  "bootstrap_replicates": 200,
+  "bootstrap_seed_base": 20260720,
+  "bootstrap_unit": "image",
+  "final_used_for_selection": false,
+  "legacy_in_primary_matrix": false,
+  "oregon_result_status": "posthoc_exploratory_final_reuse",
+  "controlled_32d": {
+    "input": "current canonical pca32 only",
+    "target": "current sample target=max frozen-action gain",
+    "optimizer": "canonical SemanticRank pairwise ranker",
+    "epochs": 80,
+    "learning_rate": 0.03,
+    "l2": 0.001,
+    "max_pairs": 20000,
+    "seed_source": "current protocol ranker_hyperparameters.train_seed",
+    "selector_latency_ms_per_image": 0.08,
+    "selector_parameter_accounting": "shared action heads + 32 rank weights"
+  },
+  "legacy_style_rebuilt_32d": {
+    "input": "current canonical pca32 only",
+    "anchor": "current frozen ClassGainPrior score",
+    "target": "current sample target=max frozen-action gain",
+    "optimizer": "historical budget-residual pairwise ranker",
+    "pair_budgets": [0.1, 0.25, 0.4],
+    "epochs": 80,
+    "learning_rate": 0.03,
+    "l2": 0.001,
+    "max_pairs": 20000,
+    "seed": 20263911,
+    "score_scale": 0.25,
+    "selector_latency_ms_per_image": 0.08,
+    "selector_parameter_accounting": "shared action heads + 32 residual rank weights",
+    "compatibility": "rebuild on current fit role; not Legacy-Frozen-32D outside ENA24 bridge"
+  },
+  "saferoi_gbdt": {
+    "feature_dim": 54,
+    "feature_order": "current49, q90/original_bytes, roi/original_bytes, roi_area_ratio, q90_available, roi_available",
+    "label": "ROI quality >= actual SharedAction base quality - 0.02 and ROI bytes < actual base bytes",
+    "fit_role": "fit only",
+    "learning_rate": 0.05,
+    "max_iter": 150,
+    "max_depth": 3,
+    "max_leaf_nodes": 15,
+    "min_samples_leaf": 20,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "class_weighting": "balanced sample weights",
+    "action_inference_cost_accounting": "same convention as 20260722 ENA24 TriAction; GBDT overhead reported, not added to E2E"
+  },
+  "fixed_byte_selection": {
+    "lambda_per_ranker_policy_threshold_budget": true,
+    "lambda_objective": "maximum canonical teacher gain, then lower bytes, then lower lambda",
+    "shared_roi_threshold_objective": "maximum mean Official AP subject to every constrained point delta >= -0.001, then lower mean bytes",
+    "final_lambda_source": "calibration only"
+  },
+  "bootstrap_comparison": "GBDT-Hierarchical - SharedAction",
+  "bootstrap_seed_policy": "same seed 20260720 for every comparison within a dataset",
+  "expected_role_sizes": {
+    "coco": {"fit": 9678, "calibration": 571, "final": 5000},
+    "ena24": {"fit": 1400, "calibration": 400, "final": 1758},
+    "oregon": {"fit": 9923, "calibration": 4961, "final": 4962}
+  },
+  "legacy_appendix": {
+    "enabled": true,
+    "execution": "reuse exact ENA24 completed result; document COCO/Oregon incompatibility unless separately authorized as transfer",
+    "primary": false,
+    "shared_threshold_constraint": false,
+    "method": "Legacy-Frozen-32D",
+    "ena24": "exact-compatible bridge only",
+    "coco": "historical YOLO26s 896D transfer only",
+    "oregon": "old checkpoint/split taxonomy transfer only"
+  },
+  "expected_rows_per_dataset": {
+    "main": 429,
+    "per_ranker_ablation": 135,
+    "random_seed_rows": 1200,
+    "bootstrap_comparisons": 27
+  }
+}

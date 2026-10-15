@@ -1,0 +1,371 @@
+{
+  "assets": [
+    {
+      "path": "configs/protocol.json",
+      "sha256": "d296fec2329d3288a174cc663e9cc2db9e90c08b3de328790adc2c37055f6a61",
+      "size": 4217
+    },
+    {
+      "path": "configs/rknn_helpers_manifest.json",
+      "sha256": "e905b2b417f4d667a716fc9d49c46d520e08be451d6926bce27916aba364872f",
+      "size": 366
+    },
+    {
+      "path": "controls/always_original/100.json",
+      "sha256": "6f37909b720e702b718bd8398b23db44b680f6bf651ae7764be011a8079600ec",
+      "size": 59296
+    },
+    {
+      "path": "controls/cavs_oq/10.json",
+      "sha256": "134fb50b520011bd5e1e056605a7dcef9651f51141fc5870897e0ea7a375e82a",
+      "size": 7683
+    },
+    {
+      "path": "controls/cavs_oq/25.json",
+      "sha256": "f09898a0cefe8fed0bbabd703f06f2f9ded17eeba2a7c02c8d5683c184a3bf37",
+      "size": 7729
+    },
+    {
+      "path": "controls/cavs_oq/40.json",
+      "sha256": "bcd3be3f5aa532e31fc2e13ffec7e553983a12107f7d08ae97645b98ab683930",
+      "size": 7729
+    },
+    {
+      "path": "controls/cavs_oq_static/10.json",
+      "sha256": "09258368d73794fbe4559d38fe4a243689ff5ded5c4802e252b227d3874732db",
+      "size": 70264
+    },
+    {
+      "path": "controls/cavs_oq_static/25.json",
+      "sha256": "8a1c3091c7cfa817eb1ba4a8aae47280a3f75aae006bd44a195186314469a7d8",
+      "size": 70811
+    },
+    {
+      "path": "controls/cavs_oq_static/40.json",
+      "sha256": "cb331f4a117cda74c769fcc7327ebf2721040b2ec5a28614ce798baf7abc88be",
+      "size": 70638
+    },
+    {
+      "path": "controls/cavs_oqr/10.json",
+      "sha256": "f2508118f02b987f747ed73e00460c573314f56d04b819ef526dc70b816e7b89",
+      "size": 7985
+    },
+    {
+      "path": "controls/cavs_oqr/25.json",
+      "sha256": "f77ded0976df9d0aee8c3261ad3b9e7f3851d00d51bb304eace970a5f714a603",
+      "size": 8021
+    },
+    {
+      "path": "controls/cavs_oqr/40.json",
+      "sha256": "b022c66fa56582f28f668d99ca7db7b4bfe1b6275fbfc4a9b21dedffe49bc96b",
+      "size": 8027
+    },
+    {
+      "path": "controls/cavs_oqr_primal_dual/10.json",
+      "sha256": "989c3a5223a18acc4eb8493eba810bbe5aff517a150b31e40e75f24c6312a6db",
+      "size": 9646
+    },
+    {
+      "path": "controls/cavs_oqr_primal_dual/25.json",
+      "sha256": "c1718c2110013fee29c04c76d9aac560e57baf2a3d62721b5a1c2344aa1d893c",
+      "size": 9689
+    },
+    {
+      "path": "controls/cavs_oqr_primal_dual/40.json",
+      "sha256": "c50fa418841f81f963952e66f3fbb73ba3f09442174a71385e435f8694c5b196",
+      "size": 9698
+    },
+    {
+      "path": "controls/cavs_oqr_static/10.json",
+      "sha256": "c1ad77a88a51c40cd29718b155cc4d87df4a9af575db7476089caefbd87c68b2",
+      "size": 75836
+    },
+    {
+      "path": "controls/cavs_oqr_static/25.json",
+      "sha256": "65023586aa03fa60359a416ef68cbbb36824e13def5faca43facb71bf5e18801",
+      "size": 76366
+    },
+    {
+      "path": "controls/cavs_oqr_static/40.json",
+      "sha256": "eab50ca671291b2224e041793af0e9c4ac7c51fb012739c452061ec94362d140",
+      "size": 76226
+    },
+    {
+      "path": "controls/confidence/10.json",
+      "sha256": "8b9e0e579596b1840dc1690980d83bdefd78c53634c848faead8a06de141ea37",
+      "size": 66689
+    },
+    {
+      "path": "controls/confidence/25.json",
+      "sha256": "756aaaf148188a48daeabe632923cc1227410af5140321aa8526dbe54820c50d",
+      "size": 67424
+    },
+    {
+      "path": "controls/confidence/40.json",
+      "sha256": "4cd8d969557f6b4fdae686f3cd4ac2a1c4b022cd23f3b842eb328f0b91802949",
+      "size": 67278
+    },
+    {
+      "path": "controls/edge_only/100.json",
+      "sha256": "1f4bac18d946afad742b8c7e7f1fd58eccb6c863b491f8cf91be9fb9dd70ed87",
+      "size": 55376
+    },
+    {
+      "path": "controls/moric/10.json",
+      "sha256": "beb25d4606c2e9dc5d31b29613735d98a524a0da35dfda8b43904c2f9cc1bec7",
+      "size": 67429
+    },
+    {
+      "path": "controls/moric/25.json",
+      "sha256": "d5a5b79cec125be1a8722da29387d4b7ab4e34c0927cb9feface54bb5286a534",
+      "size": 68068
+    },
+    {
+      "path": "controls/moric/40.json",
+      "sha256": "15ad8924a3d7e4801fd9eff6f3d403bff0b86c786870dbecdce5be45827f2b20",
+      "size": 67893
+    },
+    {
+      "path": "controls/oric/10.json",
+      "sha256": "054ff46fba182ae028e044326af72791174e860a553437590cf3c91556a93020",
+      "size": 66941
+    },
+    {
+      "path": "controls/oric/25.json",
+      "sha256": "9fc7f1989f6107269ff415ab02949087c5409ad2e34563f0a0e8371a53121a03",
+      "size": 67509
+    },
+    {
+      "path": "controls/oric/40.json",
+      "sha256": "af4fadc5983cccc91f25d0744a6b2afd8a0a7250625864d75e75598cfb64d929",
+      "size": 67289
+    },
+    {
+      "path": "controls/random/10.json",
+      "sha256": "26e3bc0026e05ddd24f752d78149768bea2be1d3f0514e4a14cdff79a319ac7b",
+      "size": 67374
+    },
+    {
+      "path": "controls/random/25.json",
+      "sha256": "55ec29e5e53b5966590955d84de682706c8624dfe9e6744d95e7243459a7a2a4",
+      "size": 68071
+    },
+    {
+      "path": "controls/random/40.json",
+      "sha256": "8523cac28df56efa5b14aa3fb596bbdbfffb1e056fe51c79f99c62df28df88db",
+      "size": 67880
+    },
+    {
+      "path": "controls/random_seed_20260720/10.json",
+      "sha256": "8ef66ac9a4ada3ea95edd47f92730e2ff917be516c5fc51c8c618a6bb59e8d56",
+      "size": 67380
+    },
+    {
+      "path": "controls/random_seed_20260720/25.json",
+      "sha256": "d5cdc4d7bbf52cbcf927e4cbcfe74d062bb1c1129c90f3cc853a9872923c18b4",
+      "size": 68077
+    },
+    {
+      "path": "controls/random_seed_20260720/40.json",
+      "sha256": "638cbf9e30deb8671afd8a3b88b3dbc5eb2d20ca6cc3b658bc7c17774e0b8de9",
+      "size": 67886
+    },
+    {
+      "path": "controls/random_seed_20260721/10.json",
+      "sha256": "5a7733ab684fbaa0925ff25cdd9df2ae033a89b70afc3672efc67d24793da754",
+      "size": 67198
+    },
+    {
+      "path": "controls/random_seed_20260721/25.json",
+      "sha256": "3d049d6bd162ac0f8422f077c3bec7aa42b14240c8b8a9ce9bcee573def9c781",
+      "size": 67899
+    },
+    {
+      "path": "controls/random_seed_20260721/40.json",
+      "sha256": "74b1ff65600bcc29ae1afaaa24ddb1233e05626dc458076eae944cc30df3d8ef",
+      "size": 67720
+    },
+    {
+      "path": "controls/random_seed_20260722/10.json",
+      "sha256": "b2e4d9c3796d9e1bff06d0f728b559d68235e88a277737e3a3d9fec2dcf51d0b",
+      "size": 67411
+    },
+    {
+      "path": "controls/random_seed_20260722/25.json",
+      "sha256": "a740bed76806d4d839b5947830f582c7c456326d7333568c407bb7f6d98e22cb",
+      "size": 68080
+    },
+    {
+      "path": "controls/random_seed_20260722/40.json",
+      "sha256": "29068e21ee28d974fdc58db7e945e2b757661d67e62d9c7c13a51a5a535e96df",
+      "size": 67905
+    },
+    {
+      "path": "controls/random_seed_20260723/10.json",
+      "sha256": "257c1ef13978dc7baff2ccd416d5cce73f8bfa1e7e8982079128d226690e4bc5",
+      "size": 67369
+    },
+    {
+      "path": "controls/random_seed_20260723/25.json",
+      "sha256": "d408f8126e8ab07fe309654b61bc9d1fa45874b4088c6fc07867043df586d117",
+      "size": 68078
+    },
+    {
+      "path": "controls/random_seed_20260723/40.json",
+      "sha256": "2d48bd7d6c080576e9380cbfddc5c9cb188cfe8ba9ff1ca30f1871d18ab7e6cd",
+      "size": 67890
+    },
+    {
+      "path": "controls/random_seed_20260724/10.json",
+      "sha256": "b81948b04fc47ccce0a8d4d45ef4fd681702e1969759725bd258b3bbaf43f831",
+      "size": 67362
+    },
+    {
+      "path": "controls/random_seed_20260724/25.json",
+      "sha256": "e35bd8b04b4a9f21bd605b41b711e4a8e9c805666565588629f649c5193e3d94",
+      "size": 68043
+    },
+    {
+      "path": "controls/random_seed_20260724/40.json",
+      "sha256": "3097e668b839f28ebdc9a78806c78ff29580b7adcfdabf8cf7bcc6531c9df603",
+      "size": 67882
+    },
+    {
+      "path": "policies/cavs_oq/manifest.json",
+      "sha256": "279d5039e26dbe12ddb19fef3d7cd7fb65e9aa167c305ac34abf024d0c916aab",
+      "size": 2713
+    },
+    {
+      "path": "policies/cavs_oq/seed_20260809.npz",
+      "sha256": "40ebe97134fa35ebed48f57d5144a5646b118190d972a3037dff886cc580ae65",
+      "size": 70810
+    },
+    {
+      "path": "policies/cavs_oq/seed_20260810.npz",
+      "sha256": "e004a6255942ecd7813632cbb181bb1eeb911611c35dbf1fefecd9ee7a6a6939",
+      "size": 70834
+    },
+    {
+      "path": "policies/cavs_oq/seed_20260811.npz",
+      "sha256": "98979ca34511538cf1980d321c3f3664f03bebe61bf1da6e6376270e3d7f7a20",
+      "size": 70922
+    },
+    {
+      "path": "policies/cavs_oqr/manifest.json",
+      "sha256": "1f057ff5f5417cdeabd7c35706b5c5d2493039655fdf01381e602c10f57111c6",
+      "size": 2949
+    },
+    {
+      "path": "policies/cavs_oqr/seed_20260809.npz",
+      "sha256": "3f4c753c2ad210a538388abc08e327f7d21ef62d4f6cfbfe412494aef1d834e3",
+      "size": 70841
+    },
+    {
+      "path": "policies/cavs_oqr/seed_20260810.npz",
+      "sha256": "83cba892df32777c6a5712f715f7bc6b4426b930dfcffaac434d86ab757d2692",
+      "size": 70935
+    },
+    {
+      "path": "policies/cavs_oqr/seed_20260811.npz",
+      "sha256": "3781e84b54f7bdb5a57bf7acae8a53bf605b34d6c227cca35b57e6fe1579ee5c",
+      "size": 70951
+    },
+    {
+      "path": "policies/external/manifest.json",
+      "sha256": "2cf88041b1886818cef599a09b04022b9ed88a5adbe07b8e3afdd69939c2e48e",
+      "size": 6021
+    },
+    {
+      "path": "policies/external/moric_seed_20260809.npz",
+      "sha256": "d0e12f8369f6cdd5715c5e62d227e95ea8efb18e23db363a2de8d00870490541",
+      "size": 22173
+    },
+    {
+      "path": "policies/external/moric_seed_20260810.npz",
+      "sha256": "d0abf6acf6a465e846dae14d999cb19246167ee831c1d4dbeed2f3c8796113e8",
+      "size": 22104
+    },
+    {
+      "path": "policies/external/moric_seed_20260811.npz",
+      "sha256": "d224dde6477964f25751271fd10b61bf1c50b28579bfd0f0553cc9097fa0401c",
+      "size": 22148
+    },
+    {
+      "path": "policies/external/oric_seed_20260809.npz",
+      "sha256": "14ad8e0aac3a1ee1b4be6ed3d891f5b4b863be2d18b568caea5e113dc1aadfcb",
+      "size": 22147
+    },
+    {
+      "path": "policies/external/oric_seed_20260810.npz",
+      "sha256": "e58eda015eb4a32503b5989bfa2a00be0723190ef12b1fd25d8a4f7fc6b27d7e",
+      "size": 22143
+    },
+    {
+      "path": "policies/external/oric_seed_20260811.npz",
+      "sha256": "7c84c8e6b02c7de5be503787ebb75eeef7bc31028779e8db479e4c2590cc2801",
+      "size": 22132
+    },
+    {
+      "path": "run_online.sh",
+      "sha256": "9c8bf4237e1d246c7a6e4841cd9b0ad6580d298398664d845d5bb74dcf9929ae",
+      "size": 401
+    },
+    {
+      "path": "scripts/baseline_numpy.py",
+      "sha256": "09b239d8e37fda3928bf72c710db2f73eaa0e0d06d2caa62bf75c90ddab73811",
+      "size": 8532
+    },
+    {
+      "path": "scripts/cavs_numpy.py",
+      "sha256": "b616e187a96cb0d9a3a67b7be92d8d52f53bb3fe4fc09d8522d811884048e012",
+      "size": 12192
+    },
+    {
+      "path": "scripts/fusion.py",
+      "sha256": "6c62909736ccb6bb40af41006f562152ca9828d1ad83ee0fe7f5318b22a006f3",
+      "size": 1838
+    },
+    {
+      "path": "scripts/online_control.py",
+      "sha256": "6c0c94935c416cac65175469db4adc85e962c8b1bc0e7be7972e6d8e00adef7f",
+      "size": 12151
+    },
+    {
+      "path": "scripts/online_methods.py",
+      "sha256": "b7d06bb45b8ca92f9df3989de27bd9bf57ed6b842f7b1a66378e49d1aa1eeb27",
+      "size": 4185
+    },
+    {
+      "path": "scripts/online_runner.py",
+      "sha256": "bfe00085bdd19546c9467ad9780d14041cef324e79c2a72a437cb2bdce2319ce",
+      "size": 38493
+    },
+    {
+      "path": "scripts/online_stream.py",
+      "sha256": "60d55f35aa5d4f3988d9e568d9f593cb499934eb5c12287f0b683e252090097b",
+      "size": 2191
+    },
+    {
+      "path": "scripts/protocol.py",
+      "sha256": "953979a77e436e27be1cbd603caf132fd174f115921e7eee6aa784f47ca1d5d8",
+      "size": 7141
+    },
+    {
+      "path": "scripts/run_contract.py",
+      "sha256": "68a4188e0921569f09d7da6ada6deccc51ca77546579efc7e969ebc1a1864880",
+      "size": 15397
+    },
+    {
+      "path": "scripts/verify_bundle.py",
+      "sha256": "2a741beadd3392b5dac38aa5eb33f1ea80485a1a37049d209e83835fcf04b008",
+      "size": 4401
+    },
+    {
+      "path": "sequences/coco_val2017_sequence.json",
+      "sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67",
+      "size": 589352
+    }
+  ],
+  "root": "board_bundle",
+  "schema": "cavs_online_runtime_bundle_v1"
+}

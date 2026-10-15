@@ -1,0 +1,21 @@
+{
+  "protocol_id": "coco_actionvalue_roi_contribution_diagnostic_v1",
+  "source_experiment": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1",
+  "roles": {"fit_oof": 9678, "calibration": 571},
+  "budgets": [0.1, 0.25, 0.4],
+  "methods": [
+    "ActionValue-OQ",
+    "ActionValue-OQR",
+    "ActionValue-OQR-OracleRelativeGate"
+  ],
+  "minimum_ap_gain": 0.001,
+  "required_gain_points": 2,
+  "maximum_other_loss": 0.001,
+  "capacity_tolerance_bytes": 0.001,
+  "oracle_uses_contextual_reward": true,
+  "calibration_used_for_selection": false,
+  "audit_accessed": false,
+  "final_accessed": false,
+  "registered_final_accessed": false
+}
+

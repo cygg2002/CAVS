@@ -1,0 +1,71 @@
+{
+  "protocol_id": "coco_oregon_cavs_oqr_unified_paper_v1",
+  "status": "posthoc_paper_benchmark_final_reuse",
+  "datasets": {
+    "coco": {
+      "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+      "cloud_model_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+      "cavs_source": "paper/experiments/20260811_coco_currentoqr12_profile_scale_extension_v1",
+      "score_source": "paper/experiments/20260805_coco_noroi_fullranker_canonical9678_v1",
+      "dcsb_source": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines",
+      "model_seeds": [20260809, 20260810, 20260811],
+      "fold_seed": 20260806,
+      "bootstrap_units": ["image"]
+    },
+    "oregon": {
+      "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+      "cloud_model_sha256": "d3890a57fc7d567880a5b01b7eb949387d9b7058ce7ee25bdb9471d9bb4642d9",
+      "cavs_source": "paper/experiments/20260811_oregon_cloudv3_currentoqr_single640_extension_v1",
+      "cloud_source": "paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1",
+      "dcsb_source": "paper/experiments/20260811_coco_oregon_cavs_paper_completeness_v1",
+      "model_seeds": [20260810, 20260811, 20260812],
+      "fold_seed": 20260810,
+      "bootstrap_units": ["event", "image"]
+    }
+  },
+  "action_spaces": {
+    "O": ["edge", "original"],
+    "OQ": ["edge", "original", "q90"],
+    "OQR": ["edge", "original", "q90", "current@640"]
+  },
+  "primary_roi_action": "current@640",
+  "primary_roi_fusion": "Reversible",
+  "reversible_fusion": {"match_iou": 0.3, "score_margin": 0.0, "add_threshold": 0.1},
+  "cavs_methods": ["CAVS-O", "CAVS-OQ", "CAVS-OQR"],
+  "scalar_methods": [
+    "Random", "Confidence", "DCSB-Score-Adapted",
+    "ORIC-AP50", "MORIC-AP50", "ORIC-AP5095", "MORIC-AP5095"
+  ],
+  "primary_external_methods": ["ORIC-AP5095", "MORIC-AP5095"],
+  "scalar_policy": "SharedAction-OQR",
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "fold_count": 5,
+  "random": {"seeds": 50, "base_seed": 20260720},
+  "shared_action": {
+    "epsilon": 0.001,
+    "action_fractions": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0],
+    "maximum_calibration_ap_loss": 0.001,
+    "fit_only_training": true,
+    "calibration_only_thresholds": true
+  },
+  "fixed_byte_scheduler": {
+    "strategy": "shared_capacity_solver",
+    "score_normalization": "calibration_reference_empirical_percentile"
+  },
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260812,
+    "workers": 16,
+    "comparators": [
+      "CAVS-OQ", "Confidence", "DCSB-Score-Adapted", "Random",
+      "ORIC-AP5095", "MORIC-AP5095", "Strongest-External"
+    ]
+  },
+  "cpu": {"point_workers": 24, "torch_threads_per_worker": 1},
+  "fit_only_training": true,
+  "calibration_only_controls": true,
+  "final_is_hidden": false,
+  "final_used_for_training_or_selection": false,
+  "source_experiments_modified": false
+}

@@ -1,0 +1,223 @@
+{
+  "version": "V0_4_speciesnet_gt",
+  "source_file": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/JRTIP_MANUSCRIPT_DRAFT_V0_4_ZH.md",
+  "organized_dir": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/manuscript_versions/V0_4_speciesnet_gt",
+  "manuscript_files": [
+    "manuscript.md",
+    "JRTIP_MANUSCRIPT_DRAFT_V0_4_ZH.md"
+  ],
+  "figures": [
+    {
+      "index": 1,
+      "alt": "图 3. COCO full 上的精度-上传量-计算量折中。",
+      "original_ref": "experiments/E16_paper_result_synthesis/figures/e16_fig1_accuracy_cost_tradeoff.svg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E16_paper_result_synthesis/figures/e16_fig1_accuracy_cost_tradeoff.svg",
+      "exists": true,
+      "copied_to": "figures/fig_01_e16_fig1_accuracy_cost_tradeoff.svg"
+    },
+    {
+      "index": 2,
+      "alt": "图 4. 弱网条件下的实时性折中。",
+      "original_ref": "experiments/E16_paper_result_synthesis/figures/e16_fig2_realtime_tradeoff.svg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E16_paper_result_synthesis/figures/e16_fig2_realtime_tradeoff.svg",
+      "exists": true,
+      "copied_to": "figures/fig_02_e16_fig2_realtime_tradeoff.svg"
+    },
+    {
+      "index": 3,
+      "alt": "图 5. 困难子集上的融合收益。",
+      "original_ref": "experiments/E16_paper_result_synthesis/figures/e16_fig3_difficult_subset_gain.svg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E16_paper_result_synthesis/figures/e16_fig3_difficult_subset_gain.svg",
+      "exists": true,
+      "copied_to": "figures/fig_03_e16_fig3_difficult_subset_gain.svg"
+    },
+    {
+      "index": 4,
+      "alt": "图 6. official/deploy 指标口径对结论解释的影响。",
+      "original_ref": "experiments/E16_paper_result_synthesis/figures/e16_fig4_metric_fairness.svg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E16_paper_result_synthesis/figures/e16_fig4_metric_fairness.svg",
+      "exists": true,
+      "copied_to": "figures/fig_04_e16_fig4_metric_fairness.svg"
+    },
+    {
+      "index": 5,
+      "alt": "图 7(a). 定性案例 1：Edge、Cloud 与 Fused 检测差异。",
+      "original_ref": "experiments/E13_visual_case_study/figures/case_01_000000393838.jpg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E13_visual_case_study/figures/case_01_000000393838.jpg",
+      "exists": true,
+      "copied_to": "figures/fig_05_case_01_000000393838.jpg"
+    },
+    {
+      "index": 6,
+      "alt": "图 7(b). 定性案例 2：Edge、Cloud 与 Fused 检测差异。",
+      "original_ref": "experiments/E13_visual_case_study/figures/case_02_000000435081.jpg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E13_visual_case_study/figures/case_02_000000435081.jpg",
+      "exists": true,
+      "copied_to": "figures/fig_06_case_02_000000435081.jpg"
+    },
+    {
+      "index": 7,
+      "alt": "图 8. T41 real100 中 SpeciesNet 自动 GT 示例。",
+      "original_ref": "experiments/E23_t41_real_eval_learned_policy_queue/annotation/speciesnet_real100/preview_person_conf025/sample_000.jpg",
+      "source_path": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/E23_t41_real_eval_learned_policy_queue/annotation/speciesnet_real100/preview_person_conf025/sample_000.jpg",
+      "exists": true,
+      "copied_to": "figures/fig_07_sample_000.jpg"
+    }
+  ],
+  "mermaid_blocks": [
+    {
+      "index": 1,
+      "line_start": 108,
+      "line_end": 130,
+      "copied_to": "mermaid/mermaid_01_lines_108_130.mmd"
+    },
+    {
+      "index": 2,
+      "line_start": 326,
+      "line_end": 358,
+      "copied_to": "mermaid/mermaid_02_lines_326_358.mmd"
+    }
+  ],
+  "tables": [
+    {
+      "index": 1,
+      "caption": "",
+      "line_start": 24,
+      "line_end": 43,
+      "copied_to": "tables/table_01_table_01.md"
+    },
+    {
+      "index": 2,
+      "caption": "",
+      "line_start": 388,
+      "line_end": 395,
+      "copied_to": "tables/table_02_table_02.md"
+    },
+    {
+      "index": 3,
+      "caption": "",
+      "line_start": 434,
+      "line_end": 441,
+      "copied_to": "tables/table_03_table_03.md"
+    },
+    {
+      "index": 4,
+      "caption": "表 1. COCO full 主结果与可调工作点。",
+      "line_start": 453,
+      "line_end": 461,
+      "copied_to": "tables/table_04_表_1._COCO_full_主结果与可调工作点.md"
+    },
+    {
+      "index": 5,
+      "caption": "表 2. 核心消融实验汇总。",
+      "line_start": 478,
+      "line_end": 483,
+      "copied_to": "tables/table_05_表_2._核心消融实验汇总.md"
+    },
+    {
+      "index": 6,
+      "caption": "",
+      "line_start": 488,
+      "line_end": 493,
+      "copied_to": "tables/table_06_table_06.md"
+    },
+    {
+      "index": 7,
+      "caption": "",
+      "line_start": 498,
+      "line_end": 501,
+      "copied_to": "tables/table_07_table_07.md"
+    },
+    {
+      "index": 8,
+      "caption": "",
+      "line_start": 506,
+      "line_end": 512,
+      "copied_to": "tables/table_08_table_08.md"
+    },
+    {
+      "index": 9,
+      "caption": "",
+      "line_start": 517,
+      "line_end": 523,
+      "copied_to": "tables/table_09_table_09.md"
+    },
+    {
+      "index": 10,
+      "caption": "表 3. 弱网延迟与连续帧队列实时性。",
+      "line_start": 532,
+      "line_end": 539,
+      "copied_to": "tables/table_10_表_3._弱网延迟与连续帧队列实时性.md"
+    },
+    {
+      "index": 11,
+      "caption": "",
+      "line_start": 544,
+      "line_end": 551,
+      "copied_to": "tables/table_11_table_11.md"
+    },
+    {
+      "index": 12,
+      "caption": "表 4. 困难子集和上传选择性分析。",
+      "line_start": 562,
+      "line_end": 572,
+      "copied_to": "tables/table_12_表_4._困难子集和上传选择性分析.md"
+    },
+    {
+      "index": 13,
+      "caption": "表 5. official mAP 与部署阈值口径的公平性检查。",
+      "line_start": 585,
+      "line_end": 591,
+      "copied_to": "tables/table_13_表_5._official_mAP_与部署阈值口径的公平性检查.md"
+    },
+    {
+      "index": 14,
+      "caption": "表 6. T41 真实 JPEG 上传成本。",
+      "line_start": 610,
+      "line_end": 616,
+      "copied_to": "tables/table_14_表_6._T41_真实_JPEG_上传成本.md"
+    },
+    {
+      "index": 15,
+      "caption": "表 7. T41 异步云端管线与队列实验。",
+      "line_start": 622,
+      "line_end": 627,
+      "copied_to": "tables/table_15_表_7._T41_异步云端管线与队列实验.md"
+    },
+    {
+      "index": 16,
+      "caption": "表 8. T41 YOLO26s/YOLO26n NNA 稳定性和成功样本延迟。",
+      "line_start": 635,
+      "line_end": 638,
+      "copied_to": "tables/table_16_表_8._T41_YOLO26s_YOLO26n_NNA_稳定性和成功样本延迟.md"
+    },
+    {
+      "index": 17,
+      "caption": "表 9. T41 规则选择性端云闭环实验。",
+      "line_start": 644,
+      "line_end": 648,
+      "copied_to": "tables/table_17_表_9._T41_规则选择性端云闭环实验.md"
+    },
+    {
+      "index": 18,
+      "caption": "表 10(a). T41 Learned v2 上传器上板结果。",
+      "line_start": 654,
+      "line_end": 658,
+      "copied_to": "tables/table_18_表_10_a_._T41_Learned_v2_上传器上板结果.md"
+    },
+    {
+      "index": 19,
+      "caption": "表 10(b). T41 deadline-aware 队列实验。",
+      "line_start": 664,
+      "line_end": 671,
+      "copied_to": "tables/table_19_表_10_b_._T41_deadline-aware_队列实验.md"
+    },
+    {
+      "index": 20,
+      "caption": "表 10(c). T41 real100 SpeciesNet-GT 检测评估。",
+      "line_start": 677,
+      "line_end": 681,
+      "copied_to": "tables/table_20_表_10_c_._T41_real100_SpeciesNet-GT_检测评估.md"
+    }
+  ]
+}

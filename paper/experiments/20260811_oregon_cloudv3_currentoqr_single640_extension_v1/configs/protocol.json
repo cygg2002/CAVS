@@ -1,0 +1,20 @@
+{
+  "protocol_id": "oregon_cloudv3_currentoqr_single640_posthoc_v1",
+  "status": "posthoc_exploratory_final_reuse",
+  "confirmatory": false,
+  "dataset": "oregon",
+  "source_experiment": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260810_oregon_cloudv3_full_scheduler_afpd_paper_v1",
+  "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+  "method": "CurrentActionValue-OQR-Current640",
+  "action_space": ["edge", "original", "q90", "current@640"],
+  "comparators": ["CurrentActionValue-OQ", "CurrentActionValue-OQR12"],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "fold_count": 5,
+  "model_seeds": [20260810, 20260811, 20260812],
+  "cpu": {"training_workers": 10, "bootstrap_workers": 10, "torch_threads_per_worker": 1},
+  "bootstrap": {"replicates": 1000, "seed": 20260811, "units": ["event", "image"]},
+  "final_is_hidden": false,
+  "final_used_for_training_or_selection": false,
+  "old_learner_checkpoints_allowed": false
+}

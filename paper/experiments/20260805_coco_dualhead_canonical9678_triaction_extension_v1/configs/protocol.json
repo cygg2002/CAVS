@@ -1,0 +1,64 @@
+{
+  "protocol_id": "coco_dualhead_canonical9678_triaction_extension_v1",
+  "dataset": "coco",
+  "result_status": "posthoc_canonical_val2017_action_extension",
+  "source_experiments": {
+    "rankers": "paper/experiments/20260804_coco_dualhead_canonical9678_val2017_paper_v1",
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "triaction": "paper/experiments/20260723_three_dataset_nineranker_triaction_paper_exploration",
+    "external_scheduler": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines"
+  },
+  "roles": {
+    "fit": 9678,
+    "calibration": 571,
+    "registered_final": 5000
+  },
+  "methods": [
+    "ORIC-AP50",
+    "MORIC-AP50",
+    "ORIC-AP5095",
+    "MORIC-AP5095",
+    "Current-BudgetSet",
+    "SetValue",
+    "DualHead"
+  ],
+  "external_methods": [
+    "ORIC-AP50",
+    "MORIC-AP50",
+    "ORIC-AP5095",
+    "MORIC-AP5095"
+  ],
+  "primary_candidate": "DualHead",
+  "payload_policies": [
+    "SharedAction",
+    "CostEligible-AllROI",
+    "GBDT-Hierarchical"
+  ],
+  "actions": ["edge", "original", "q90", "roi"],
+  "work_points": {
+    "fixed_call": [0.1, 0.25, 0.4],
+    "fixed_byte": [0.1, 0.25, 0.4]
+  },
+  "expected_final_rows": 126,
+  "source_readiness": "frozen_checkpoint_and_point_selections",
+  "cpu_workers": {
+    "point": 16,
+    "bootstrap": 24
+  },
+  "runtime": {
+    "sklearn_site_packages": "/home/111_wcy/anaconda3/envs/cameratrapai/lib/python3.10/site-packages",
+    "sklearn_version": "1.7.1"
+  },
+  "ranker_checkpoint_retrained": false,
+  "action_models_retrained": false,
+  "gbdt_thresholds_reselected": false,
+  "fixed_byte_lambda_source": "calibration_only_per_ranker_policy_budget",
+  "final_used_for_selection": false,
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260805,
+    "confidence": 0.95,
+    "mode": "fixed_byte",
+    "comparisons": 9
+  }
+}

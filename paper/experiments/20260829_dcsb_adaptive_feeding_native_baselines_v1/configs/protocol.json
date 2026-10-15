@@ -1,0 +1,85 @@
+{
+  "protocol_id": "dcsb_adaptive_feeding_native_baselines_v1",
+  "status": "source_oriented_external_baseline_completion",
+  "datasets": {
+    "coco": {
+      "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+      "top_k": 50,
+      "top_k_basis": "Adaptive Feeding COCO protocol",
+      "cloud_model_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92"
+    },
+    "oregon": {
+      "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+      "top_k": 25,
+      "top_k_basis": "frozen cross-domain transfer default; no Oregon setting exists in the paper",
+      "cloud_model_sha256": "d3890a57fc7d567880a5b01b7eb949387d9b7058ce7ee25bdb9471d9bb4642d9"
+    },
+    "voc": {
+      "roles": {"fit": 15629, "calibration": 922, "final": 4952},
+      "top_k": 25,
+      "top_k_basis": "Adaptive Feeding PASCAL VOC protocol",
+      "cloud_model_sha256": "dd69338a24b8d7381807e247652bdc356325bcbaf1cd3e092e00e0a1a58706bf"
+    }
+  },
+  "roles": ["fit", "calibration", "final"],
+  "evaluation_roles": ["calibration", "final"],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "payload_actions": ["edge", "original"],
+  "adaptive_feeding": {
+    "feature": "class_histogram_plus_topk_confidence_xmin_ymin_width_height",
+    "proposal_source": "frozen_current_edge_detector_outputs",
+    "original_paper_proposal_source": "Tiny-YOLO",
+    "label": "cloud_image_voc07_map50_strictly_greater_than_edge",
+    "svm": "LinearSVC",
+    "C": 1.0,
+    "dual": false,
+    "positive_weight": 3.0,
+    "native_threshold": 0.0
+  },
+  "dcsb": {
+    "detector_confidence": 0.5,
+    "count_thresholds": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    "area_threshold_start": 0.2,
+    "area_threshold_stop_exclusive": 0.9,
+    "area_threshold_step": 0.01,
+    "fit_count_area_features": "ground_truth",
+    "native_label": "cloud_conf05_count_strictly_greater_than_edge_conf05_count"
+  },
+  "methods": {
+    "native": ["DCSB-Native", "AdaptiveFeeding-Native-w3"],
+    "budget_matched": ["DCSB-Margin-BudgetMatched", "AdaptiveFeeding-Margin-BudgetMatched"],
+    "references": ["Edge-only", "Cloud-only"]
+  },
+  "budget_matching": {
+    "fixed_call": "descending_external_margin",
+    "fixed_byte": "descending_external_margin_greedy_original_only",
+    "is_source_native": false
+  },
+  "fold_count": 5,
+  "fold_seed": 20260829,
+  "literature_sources": {
+    "dcsb": {
+      "paper": "https://arxiv.org/abs/2108.12858",
+      "doi": "10.1109/ICDCS57875.2023.00062",
+      "comparison_code": "https://github.com/qiujiaming315/edgeml-object-detection",
+      "comparison_code_commit": "859f70240aa090359ba827b374b68ca7821b7d55"
+    },
+    "adaptive_feeding": {
+      "paper": "https://openaccess.thecvf.com/content_ICCV_2017/html/Zhou_Adaptive_Feeding_Achieving_ICCV_2017_paper.html",
+      "doi": "10.1109/ICCV.2017.379",
+      "official_code": "https://github.com/funnyzhou/Adaptive_Feeding",
+      "official_code_commit": "9c78182331d8c0ea28de47226e805776c638d46f"
+    }
+  },
+  "fit_only_training": true,
+  "calibration_used_for_model_training": false,
+  "final_used_for_training_or_selection": false,
+  "source_experiments_modified": false,
+  "cavs_components_allowed": false,
+  "shared_action_allowed": false,
+  "q90_allowed": false,
+  "roi_allowed": false,
+  "maur_allowed": false,
+  "expected_rows_per_dataset": 32
+}

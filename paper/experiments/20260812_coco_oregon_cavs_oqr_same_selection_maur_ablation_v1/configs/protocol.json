@@ -1,0 +1,37 @@
+{
+  "protocol_id": "coco_oregon_cavs_oqr_same_selection_maur_ablation_v1",
+  "status": "posthoc_same_selection_fusion_ablation",
+  "source_unified_experiment": "paper/experiments/20260812_coco_oregon_cavs_oqr_unified_paper_v1",
+  "datasets": {
+    "coco": {
+      "roles": {"calibration": 571, "final": 5000},
+      "bootstrap_units": ["image"]
+    },
+    "oregon": {
+      "roles": {"calibration": 4961, "final": 4962},
+      "bootstrap_units": ["event", "image"]
+    }
+  },
+  "method": "CAVS-OQR",
+  "policy": "Joint-OQR",
+  "roi_action": "current@640",
+  "fusions": ["Reversible", "MAUR"],
+  "roles": ["calibration", "final"],
+  "modes": ["fixed_byte", "fixed_call"],
+  "budgets": [0.1, 0.25, 0.4],
+  "detector_confidence": 0.001,
+  "maur": {"duplicate_iou": 0.5, "nms_iou": 0.7},
+  "bootstrap": {"replicates": 1000, "seed": 20260812, "workers": 4},
+  "resource": {
+    "maximum_workers": 4,
+    "torch_threads_per_worker": 1,
+    "nice": 15,
+    "wait_seconds": 30
+  },
+  "fit_only_training": true,
+  "training_performed": false,
+  "detector_inference_required": false,
+  "final_is_hidden": false,
+  "final_used_for_training_or_selection": false,
+  "source_experiments_modified": false
+}

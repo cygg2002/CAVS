@@ -1,0 +1,17 @@
+{
+  "actions": [
+    "edge",
+    "original",
+    "q90",
+    "current@640"
+  ],
+  "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+  "final_used_for_control": false,
+  "policy_manifest_sha256": "1b172e30ec1ea744cfbc6d77b07f45077f5475304c1f463d49e53d85329a3f44",
+  "policy_source": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/20260816_coco_rknn_cavs_oqr_deployment_retrain_v1/runs/backends/int8-heads/export/policy",
+  "protocol_id": "coco_rknn_int8_heads_causal_online_hil_v1",
+  "rknn_sha256": "9da11e627d5086c99b089a59cfe1c8089046704aeebd7bf27fc675410d9a2ad5",
+  "schema": "cavs_int8_heads_online_hil_setup_v1",
+  "source_bundle": "/Users/cygg_macmini/work/Codex/ultralytics-main/paper/experiments/20260828_coco_rknn_fp16_online_hil_final_v2/board_bundle",
+  "source_bundle_runtime_sha256": "bfe00085bdd19546c9467ad9780d14041cef324e79c2a72a437cb2bdce2319ce"
+}

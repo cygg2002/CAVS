@@ -1,0 +1,38 @@
+{
+  "protocol_id": "coco_afpd_forced_fullval_posthoc_v1",
+  "status": "posthoc_full_val_paper_format_independent_retrain",
+  "confirmatory": false,
+  "calibration_gate_failed": true,
+  "final_is_hidden": false,
+  "source_experiment": "paper/experiments/20260810_coco_afpd_occupancy_paper_protocol_v1",
+  "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+  "methods": [
+    "Current-OQ",
+    "Current-OQR",
+    "AFPD-OQ",
+    "AFPD-OQR",
+    "AFPD-OQR+OccupancyFree",
+    "AFPD-OQR+OccupancyAware"
+  ],
+  "modes": ["fixed_byte", "fixed_call"],
+  "budgets": [0.1, 0.25, 0.4],
+  "bootstrap_comparisons": [
+    "AFPD_vs_RawActionValue",
+    "AFPD_vs_MORIC",
+    "AFPD_vs_ORIC",
+    "OccupancyFree_vs_AFPD",
+    "OccupancyAware_vs_AFPD"
+  ],
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 20260810,
+  "seeds": [20260809, 20260810, 20260811],
+  "fold_count": 5,
+  "fit_only_training": true,
+  "independent_retrain": true,
+  "source_checkpoint_reuse": false,
+  "full_val_evaluation_unconditional": true,
+  "training_allowed": true,
+  "tuning_allowed": false,
+  "final_used_for_selection": false,
+  "gpu_required": false
+}

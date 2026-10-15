@@ -1,0 +1,45 @@
+{
+  "protocol_id": "coco5000_cavs_oqr_perframe_live_v1",
+  "status": "posthoc_deployment_consistent_real_system",
+  "dataset": {
+    "images": "/Users/cygg_macmini/work/datasets/coco/images/val2017",
+    "annotations": "/Users/cygg_macmini/work/datasets/coco/annotations/instances_val2017.json",
+    "expected_images": 5000,
+    "native_jpeg_total_bytes": 814705164
+  },
+  "models": {
+    "edge": "/Users/cygg_macmini/work/Codex/ultralytics-main/yolo26n.pt",
+    "edge_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+    "policy": "inputs/policy/manifest.json"
+  },
+  "paper_artifacts": {
+    "samples": "inputs/paper_samples.json",
+    "selections": "inputs/paper_selections.json",
+    "results": "inputs/paper_results.csv",
+    "theoretical": "inputs/theoretical.json"
+  },
+  "runtime": {
+    "edge_device": "mps",
+    "edge_imgsz": 640,
+    "edge_half": false,
+    "cloud_imgsz": 640,
+    "confidence": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "cloud_url": "http://127.0.0.1:8767/infer",
+    "cloud_timeout_seconds": 60.0,
+    "warmup_runs": 2,
+    "request_retries": 3
+  },
+  "codec": {"q90_quality": 90, "optimize": true, "subsampling": 2, "long_side": 640},
+  "cloud_protocols": {
+    "original": {"end2end": false, "rect": true, "scaleup": false, "half": false, "multi_label": true},
+    "q90": {"end2end": false, "rect": true, "scaleup": false, "half": false, "multi_label": true},
+    "current@640": {"end2end": false, "rect": true, "scaleup": true, "half": true, "multi_label": false}
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "source_experiments_modified": false,
+  "learner_retrained": true
+}
+

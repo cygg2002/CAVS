@@ -1,0 +1,144 @@
+{
+  "protocol_id": "voc_gluoncv_crossarchitecture_cavs_paper_v1",
+  "status": "preregistered_fixed_external_pretrained_crossarchitecture_benchmark",
+  "confirmatory": false,
+  "dataset": "voc2007_2012",
+  "roles": {"fit": 15629, "calibration": 922, "final": 4952},
+  "split_seed": 20260824,
+  "fold_count": 5,
+  "fold_seed": 20260824,
+  "model_seeds": [20260824, 20260825, 20260826],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "action_spaces": {
+    "O": ["edge", "original"],
+    "OQ": ["edge", "original", "q90"]
+  },
+  "data": {
+    "archive_root": "/home/111_wcy/work/datasets/VOC/.archives",
+    "archives": {
+      "VOCtrainval_06-Nov-2007.tar": {"bytes": 460032000, "sha256": "7d8cd951101b0957ddfd7a530bdc8a94f06121cfc1e511bb5937e973020c7508"},
+      "VOCtest_06-Nov-2007.tar": {"bytes": 451020800, "sha256": "6836888e2e01dca84577a849d339fa4f73e1e4f135d312430c4856b5609b4892"},
+      "VOCtrainval_11-May-2012.tar": {"bytes": 1999639040, "sha256": "e14f763270cf193d0b5f74b169f44157a4b0c6efa708f4dd0ff78ee691763bcb"}
+    },
+    "train_sources": [["2007", "trainval"], ["2012", "trainval"]],
+    "final_source": ["2007", "test"],
+    "category_names": [
+      "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
+      "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person",
+      "pottedplant", "sheep", "sofa", "train", "tvmonitor"
+    ]
+  },
+  "detectors": {
+    "edge": {
+      "model": "center_net_resnet18_v1b_voc",
+      "url": "https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/gluon/models/center_net_resnet18_v1b_voc-38c509d4.zip",
+      "official_sha1": "38c509d456a6e14e4c54e961ed43bffe8cf62840",
+      "preprocess": "CenterNetDefaultValTransform_fixed_square_affine",
+      "input_size": 512,
+      "published_voc07_ap50_no_flip": 0.668
+    },
+    "cloud": {
+      "model": "faster_rcnn_resnet50_v1b_voc",
+      "url": "https://apache-mxnet.s3-accelerate.dualstack.amazonaws.com/gluon/models/faster_rcnn_resnet50_v1b_voc-447328d8.zip",
+      "official_sha1": "447328d89d70ae1e2ca49226b8d834e5a5456df3",
+      "short": 600,
+      "max_size": 1000,
+      "published_voc07_ap50": 0.783
+    }
+  },
+  "inference": {
+    "device": 0,
+    "score_floor": 0.0001,
+    "jpeg_quality": 90,
+    "jpeg_optimize": true,
+    "jpeg_subsampling": 2,
+    "chunk_size": 128,
+    "minimum_free_gpu_mib": 12000
+  },
+  "metric": {
+    "iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+    "primary_interpolation_points": 101,
+    "voc07_interpolation_points": 11,
+    "ignore_difficult": true
+  },
+  "reward": {
+    "context_size": 32,
+    "fold_contained": true,
+    "workers": 24,
+    "checkpoint_interval": 100
+  },
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 3,
+    "deploy_confidence": 0.0001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "relation_hidden_dim": 64,
+    "relation_heads": 4,
+    "relation_layers": 2,
+    "relation_ff_dim": 128,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "path_loss_weight": 0.5,
+    "boundary_path_loss_weight": 0.8,
+    "path_temperature": 0.03,
+    "boundary_temperature": 0.02,
+    "boundary_scale": 0.03,
+    "boundary_boost": 2.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0,
+    "gradient_clip": 5.0
+  },
+  "external_mlp": {
+    "top_k": 25,
+    "hidden_dims": [16, 16, 16, 16],
+    "dropout": 0.1,
+    "epochs": 100,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.00005,
+    "milestones": [60, 75, 90],
+    "gamma": 0.5,
+    "fit_validation_fraction": 0.1
+  },
+  "shared_action": {
+    "epsilon": 0.001,
+    "action_fractions": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0],
+    "maximum_calibration_ap_loss": 0.001
+  },
+  "dcsb": {
+    "detector_confidence": 0.25,
+    "count_thresholds": [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20],
+    "area_threshold_start": 0.0001,
+    "area_threshold_stop": 0.05,
+    "area_threshold_step": 0.0005
+  },
+  "random": {"seeds": 50, "base_seed": 20260824},
+  "bootstrap": {
+    "replicates": 1000,
+    "seed": 20260824,
+    "primary_mode": "fixed_byte",
+    "nested_random": true,
+    "workers": 24
+  },
+  "resource": {
+    "nice": 19,
+    "training_workers": 12,
+    "torch_threads_per_worker": 1
+  },
+  "final_is_hidden": false,
+  "detector_publishers_exposed_final": true,
+  "final_used_for_training_or_selection": false,
+  "old_detector_checkpoint_reuse_required": true,
+  "old_learner_checkpoints_allowed": false
+}

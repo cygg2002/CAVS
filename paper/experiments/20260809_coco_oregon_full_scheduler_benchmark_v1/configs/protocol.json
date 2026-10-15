@@ -1,0 +1,64 @@
+{
+  "protocol_id": "coco_oregon_full_scheduler_benchmark_v1",
+  "result_status": "posthoc_final_reuse_full_benchmark",
+  "datasets": {
+    "coco": {
+      "canonical_run": "canonical_v1",
+      "roles": {"fit": 9678, "calibration": 571, "final": 5000},
+      "final_alias": "final",
+      "detector_protocol": "cloud_v1"
+    },
+    "oregon": {
+      "canonical_run": "canonical_oregon_event_v1",
+      "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+      "final_alias": "final",
+      "detector_protocol": "cloud_v1"
+    }
+  },
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "primary_mode": "fixed_byte",
+  "primary_actions": ["edge", "original", "q90"],
+  "primary_candidates": ["Raw-ActionValue-OQ", "PerAction-Isotonic-OQ"],
+  "internal_rankers": ["Current-BudgetSet", "SetValue", "DualHead"],
+  "historical_rankers": [
+    "Random", "Confidence", "ClassGainPrior", "M2E",
+    "Confidence-Residual M2E", "SemanticRank", "MORIC-style", "GEC-style",
+    "Current-Controlled-32D"
+  ],
+  "external_methods": ["DCSB-Native", "DCSB-Score-Adapted", "ORIC-MLP", "MORIC-MLP"],
+  "scalar_payload_policies": ["Original-only", "SharedAction-NoROI"],
+  "action_extension_policies": ["SharedAction", "CostEligible-AllROI", "GBDT-Hierarchical"],
+  "random": {"seeds": 50, "base_seed": 20260720},
+  "bootstrap": {"replicates": 1000, "seed": 20260809, "workers_per_dataset": 16},
+  "workers": {"dataset_processes": 2, "point_per_dataset": 24, "torch_threads_per_process": 1},
+  "success_gate": {
+    "minimum_delta": -0.001,
+    "gain_delta": 0.001,
+    "required_gain_points": 4,
+    "required_gain_per_dataset": 1,
+    "minimum_capacity_utilization": 0.98
+  },
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "nineranker": "paper/experiments/20260723_three_dataset_nineranker_triaction_paper_exploration",
+    "external": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines",
+    "coco_noroi": "paper/experiments/20260805_coco_noroi_fullranker_canonical9678_v1",
+    "coco_triaction": "paper/experiments/20260805_coco_dualhead_canonical9678_triaction_extension_v1",
+    "crossdataset": "paper/experiments/20260807_ena24_oregon_dualhead_crossdataset_v1",
+    "roi_gate": "paper/experiments/20260807_three_dataset_actionvalue_roi_gate_v1",
+    "cross_action_calibration": "paper/experiments/20260809_three_dataset_cross_action_calibration_v1",
+    "cloudv2_scan": "paper/experiments/20260728_oregon_cloudv2_roi_profile_scale_scan",
+    "cloudv2_fusion": "paper/experiments/20260728_oregon_cloudv2_joint_action_reversible_fusion",
+    "dualhead_v2": "paper/experiments/20260806_coco_dualheadv2_noroi_oof_v1",
+    "relational": "paper/experiments/20260806_coco_relational_actionvalue_oof_v1",
+    "factorized": "paper/experiments/20260806_coco_factorized_global_actionrank_oof_v1"
+  },
+  "forbidden_primary_source_substrings": ["cloudv2", "cloud-v2", "o2m_cloudv2"],
+  "fit_only_training": true,
+  "calibration_only_controls": true,
+  "final_used_for_training_or_selection": false,
+  "detector_inference": false,
+  "gpu_required": false,
+  "dualhead_v3_defined": false
+}

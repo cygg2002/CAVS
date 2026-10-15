@@ -1,0 +1,88 @@
+{
+  "protocol_id": "ena24_oregon_dualhead_crossdataset_v1",
+  "result_status": "posthoc_crossdataset_extension",
+  "datasets": {
+    "ena24": {
+      "canonical_run": "canonical_v1",
+      "roles": {"fit": 1400, "calibration": 400, "final": 1758},
+      "track_b_status": "posthoc_canonical_final_reuse",
+      "gbdt_fixed_call_threshold": 0.9028747070995273
+    },
+    "oregon": {
+      "canonical_run": "canonical_oregon_event_v1",
+      "roles": {"fit": 9923, "calibration": 4961, "final": 4962},
+      "track_b_status": "posthoc_exploratory_final_reuse",
+      "gbdt_fixed_call_threshold": 0.9724118058752602
+    }
+  },
+  "track_a": {
+    "methods": [
+      "Current-BudgetSet-SharedAction",
+      "SetValue-SharedAction",
+      "DualHead-SharedAction",
+      "ActionValue-OQ-Joint"
+    ],
+    "roles": ["fit_oof", "calibration"],
+    "actions": ["edge", "original", "q90"],
+    "modes": ["fixed_byte", "fixed_call"],
+    "budgets": [0.1, 0.25, 0.4],
+    "fold_count": 5,
+    "fold_seed": 20260805,
+    "final_accessed": false
+  },
+  "track_b": {
+    "method": "DualHead-Value",
+    "policies": ["SharedAction", "CostEligible-AllROI", "GBDT-Hierarchical"],
+    "mode": "fixed_call",
+    "budgets": [0.1, 0.25, 0.4],
+    "bootstrap_replicates": 200,
+    "bootstrap_seed": 20260720,
+    "final_used_for_training_or_selection": false
+  },
+  "reward": {
+    "context_size": 32,
+    "context_seed": 20260804,
+    "confidence": 0.001,
+    "iou_thresholds": [0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95],
+    "candidate_actions": ["original", "q90"],
+    "checkpoint_interval": 128
+  },
+  "model": {
+    "max_boxes": 64,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 80,
+    "patience": 10,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "boundary_weight": 1.0,
+    "pairs_per_budget": 4000,
+    "seeds": [20260804, 20260805, 20260806]
+  },
+  "workers": {
+    "cache_per_dataset": 24,
+    "training_per_dataset": 6,
+    "torch_threads_per_worker": 1,
+    "bootstrap_per_dataset": 12
+  },
+  "source_experiments": {
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e",
+    "nineranker_triaction": "paper/experiments/20260723_three_dataset_nineranker_triaction_paper_exploration",
+    "reward_teacher": "paper/experiments/20260805_coco_selection_context_jointaction_teacher_v1",
+    "dualhead": "paper/experiments/20260804_coco_dualhead_fixedbyte_registered_v1",
+    "actionvalue": "paper/experiments/20260805_coco_actionconditioned_valuerisk_oof_v1",
+    "external": "paper/experiments/20260728_three_dataset_dcsb_oric_moric_external_baselines"
+  },
+  "forbidden_source_substrings": [
+    "20260727_oregon_o2m_cloudv2_paper_evaluation",
+    "cloudv2",
+    "Cloud-V2"
+  ]
+}

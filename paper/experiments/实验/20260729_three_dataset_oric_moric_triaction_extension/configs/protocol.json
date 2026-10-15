@@ -1,0 +1,27 @@
+{
+  "protocol_id": "three_dataset_oric_moric_triaction_extension_v1",
+  "output_role": "isolated_exploratory_paper_level_extension",
+  "datasets": ["coco", "ena24", "oregon"],
+  "rankers": ["ORIC-MLP", "MORIC-MLP"],
+  "payload_policies": ["CostEligible-AllROI", "GBDT-Hierarchical"],
+  "work_points": {
+    "fixed_call": [0.1, 0.25, 0.4],
+    "online": [0.1, 0.25, 0.4],
+    "fixed_byte": [0.05, 0.1, 0.2, 0.4]
+  },
+  "expected_role_sizes": {
+    "coco": {"calibration": 571, "final": 5000},
+    "ena24": {"calibration": 400, "final": 1758},
+    "oregon": {"calibration": 4961, "final": 4962}
+  },
+  "expected_rows_per_dataset": 40,
+  "control_payload_policies": ["Original", "SharedAction"],
+  "control_reproduction_tolerance": 1e-12,
+  "gbdt_threshold_source": "frozen_shared_8ranker_calibration",
+  "gbdt_thresholds_reselected": false,
+  "external_rankers_retrained": false,
+  "fixed_byte_lambda_source": "calibration_only_per_ranker_policy_budget",
+  "final_used_for_selection": false,
+  "oregon_result_status": "posthoc_exploratory_final_reuse",
+  "source_experiments_modified": false
+}

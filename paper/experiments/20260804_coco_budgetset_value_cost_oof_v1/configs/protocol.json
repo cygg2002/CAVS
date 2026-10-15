@@ -1,0 +1,16 @@
+{
+  "protocol_id": "coco_budgetset_value_cost_oof_v1",
+  "source_experiment": "20260804_coco_budgetset_registered_paper_v1",
+  "source_role": "development",
+  "expected_images": 5000,
+  "fold_count": 5,
+  "fold_seed": 20260804,
+  "budgets": [0.1, 0.25, 0.4],
+  "methods": ["Current-BudgetSet", "SetValue", "DualHead", "ORIC-AP50", "MORIC-AP50", "ORIC-AP5095", "MORIC-AP5095"],
+  "minimum_gain": 0.001,
+  "required_gain_points": 2,
+  "maximum_other_loss": 0.001,
+  "audit_accessed": false,
+  "registered_final_accessed": false,
+  "reward_context_may_cross_oof_folds": true
+}

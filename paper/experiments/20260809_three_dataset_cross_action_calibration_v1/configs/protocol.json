@@ -1,0 +1,52 @@
+{
+  "protocol_id": "three_dataset_cross_action_calibration_v1",
+  "result_status": "development_oof_and_frozen_calibration",
+  "datasets": {
+    "coco": {"canonical_run": "canonical_v1", "roles": {"fit": 9678, "calibration": 571}},
+    "ena24": {"canonical_run": "canonical_v1", "roles": {"fit": 1400, "calibration": 400}},
+    "oregon": {"canonical_run": "canonical_oregon_event_v1", "roles": {"fit": 9923, "calibration": 4961}}
+  },
+  "roles": ["fit_oof", "calibration"],
+  "modes": ["fixed_byte", "fixed_call"],
+  "budgets": [0.1, 0.25, 0.4],
+  "actions": ["edge", "original", "q90"],
+  "methods": [
+    "Raw-ActionValue-OQ",
+    "PerAction-Isotonic-OQ",
+    "CalibratedMembership-OracleAction",
+    "OracleMembership-CalibratedAction",
+    "FullOracle-OQ"
+  ],
+  "deployable_methods": ["Raw-ActionValue-OQ", "PerAction-Isotonic-OQ"],
+  "calibration": {
+    "source": "fit_oof_only",
+    "crossfit_folds": 5,
+    "bins": 64,
+    "actions": ["original", "q90"],
+    "calibration_used_for_fit_or_selection": false
+  },
+  "success_gate": {
+    "minimum_fixed_byte_delta": -0.001,
+    "minimum_ena24_40_ap": 0.7095,
+    "minimum_oregon_fixed_byte_delta": -0.001,
+    "minimum_fixed_call_delta": -0.001,
+    "dataset_gain_threshold": 0.001,
+    "required_gain_points_per_supporting_dataset": 2,
+    "required_supporting_datasets": 2
+  },
+  "source_experiments": {
+    "actionvalue_roi_gate": "paper/experiments/20260807_three_dataset_actionvalue_roi_gate_v1",
+    "canonical": "paper/experiments/20260720_frozen_detector_multiranker_contextm2e"
+  },
+  "forbidden_source_substrings": [
+    "20260727_oregon_o2m_cloudv2_paper_evaluation",
+    "cloudv2",
+    "cloud-v2",
+    "/final/",
+    "registered_final"
+  ],
+  "final_accessed": false,
+  "detector_inference": false,
+  "gpu_inference": false,
+  "parallel": {"datasets": 3, "torch_threads_per_process": 1}
+}

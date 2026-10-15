@@ -1,0 +1,107 @@
+{
+  "protocol_id": "voc_torchvision_coco_crossarchitecture_gate_v1",
+  "status": "preregistered_preflight_gate_only",
+  "allowed_roles": ["fit", "calibration"],
+  "final_access_allowed": false,
+  "source_experiment": "../20260824_voc_gluoncv_crossarchitecture_cavs_paper_v1",
+  "source_metric_sha256": "1f01782b828077668ccf4751849f28fef0bce2f651e981200dc64fedee556236",
+  "roles": {
+    "fit": {
+      "images": 15629,
+      "gt_sha256": "90b38673ac9bc2721099b813de925e947884bfc8ec7d7fd935b8c90909dd7f00",
+      "images_sha256": "5c81a38801638d44a407066b33dd63e951ac80f35af143295cb958bb8a2057f2",
+      "identity_sha256": "392c4e32b841da57f64945fab06bd6d199538a0960b7cba11f02a4789cf8f8da"
+    },
+    "calibration": {
+      "images": 922,
+      "gt_sha256": "2ce145110cb50bf9929e339ffab2a97773b17add278a6d446ae1b34dd16a913b",
+      "images_sha256": "81f8e431e4528f5b6d6b2705a5b150964009ee97f5e2511230b0e9f8df235c5a",
+      "identity_sha256": "a603dab0af9bbc79cfeb9a6f446c12590e4c5b8a73090da7ab9adfa79c8009ec"
+    }
+  },
+  "detectors": {
+    "edge": {
+      "builder": "ssdlite320_mobilenet_v3_large",
+      "weights_enum": "SSDLite320_MobileNet_V3_Large_Weights.COCO_V1",
+      "training_dataset": "COCO train2017",
+      "official_box_map": 0.213,
+      "official_num_params": 3440060,
+      "official_gflops": 0.583
+    },
+    "cloud": {
+      "builder": "fasterrcnn_resnet50_fpn_v2",
+      "weights_enum": "FasterRCNN_ResNet50_FPN_V2_Weights.COCO_V1",
+      "training_dataset": "COCO train2017",
+      "official_box_map": 0.467,
+      "official_num_params": 43712278,
+      "official_gflops": 280.371
+    }
+  },
+  "runtime": {
+    "python": "3.10",
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "device": "cuda:0",
+    "batch_size": 1,
+    "score_threshold": 0.001,
+    "detections_per_image": 300,
+    "deterministic": true
+  },
+  "resource_gate": {
+    "minimum_free_gpu_mib": 18000,
+    "maximum_utilization_percent": 5,
+    "consecutive_polls": 3,
+    "poll_seconds": 60
+  },
+  "jpeg_q90": {
+    "quality": 90,
+    "optimize": true,
+    "subsampling": 2
+  },
+  "smoke": {
+    "images": 200,
+    "seed": 20260825
+  },
+  "folds": {
+    "count": 5,
+    "seed": 20260825
+  },
+  "gate": {
+    "minimum_cloud_edge_map50_95": 0.02,
+    "require_all_fit_folds_positive": true,
+    "require_cloud_ap75_not_lower": true,
+    "paired_bootstrap_replicates": 1000,
+    "paired_bootstrap_seed": 20260825,
+    "paired_bootstrap_workers": 16,
+    "paired_bootstrap_checkpoint_interval": 25,
+    "minimum_bootstrap_ci_lower": 0.0,
+    "minimum_q90_byte_savings_fraction": 0.20,
+    "maximum_q90_map50_95_loss": 0.01
+  },
+  "category_mapping": {
+    "airplane": "aeroplane",
+    "bicycle": "bicycle",
+    "bird": "bird",
+    "boat": "boat",
+    "bottle": "bottle",
+    "bus": "bus",
+    "car": "car",
+    "cat": "cat",
+    "chair": "chair",
+    "cow": "cow",
+    "dining table": "diningtable",
+    "dog": "dog",
+    "horse": "horse",
+    "motorcycle": "motorbike",
+    "person": "person",
+    "potted plant": "pottedplant",
+    "sheep": "sheep",
+    "couch": "sofa",
+    "train": "train",
+    "tv": "tvmonitor"
+  },
+  "sources": [
+    "https://docs.pytorch.org/vision/master/models.html#object-detection",
+    "https://pytorch.org/blog/torchvision-ssdlite-implementation/"
+  ]
+}

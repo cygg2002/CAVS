@@ -1,0 +1,88 @@
+{
+  "protocol_id": "oregon_cloudv2_joint_action_reversible_fusion_v1",
+  "seed": 20260728,
+  "dataset": "oregon",
+  "source_cloudv2_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260727_oregon_o2m_cloudv2_paper_evaluation",
+  "source_scan_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260728_oregon_cloudv2_roi_profile_scale_scan",
+  "output_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260728_oregon_cloudv2_joint_action_reversible_fusion",
+  "cloud_model": {
+    "path": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_o2m_finetune/finetune20_batch8_from_e18_restart2/weights/best.pt",
+    "sha256": "8944137e1a1324b064ed487ab780c1a410ac55f5be36d0c95192bdfdb52f1fdd"
+  },
+  "roles": {
+    "fit": 9923,
+    "calibration": 4961,
+    "audit": 9923
+  },
+  "profiles": [
+    "current",
+    "moderate",
+    "historical_cost",
+    "fixed_1_8"
+  ],
+  "imgsz": [160, 320, 640],
+  "geometry": {
+    "edge_conf": 0.25,
+    "max_area_ratio": 0.65,
+    "jpeg_quality": 90,
+    "encode_workers": 4
+  },
+  "inference": {
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "rect": true,
+    "end2end": false,
+    "device": 0,
+    "batch": 4,
+    "chunk_size": 256,
+    "half": false
+  },
+  "model": {
+    "feature_dim": 70,
+    "epsilon": 0.02,
+    "learning_rate": 0.05,
+    "max_iter": 180,
+    "max_depth": 4,
+    "max_leaf_nodes": 31,
+    "min_samples_leaf": 30,
+    "l2_regularization": 1.0
+  },
+  "fusion": {
+    "reversible_grid": [
+      {"match_iou": 0.3, "score_margin": -0.05, "add_threshold": 0.10},
+      {"match_iou": 0.3, "score_margin": 0.00, "add_threshold": 0.10},
+      {"match_iou": 0.3, "score_margin": 0.00, "add_threshold": 0.25},
+      {"match_iou": 0.5, "score_margin": -0.05, "add_threshold": 0.10},
+      {"match_iou": 0.5, "score_margin": 0.00, "add_threshold": 0.10},
+      {"match_iou": 0.5, "score_margin": 0.00, "add_threshold": 0.25}
+    ]
+  },
+  "scheduler": {
+    "roi_budgets": [0.10, 0.25, 0.40],
+    "safe_thresholds": [0.50, 0.60, 0.70, 0.80, 0.90],
+    "cost_weights": [0.0, 0.0025, 0.005, 0.01, 0.02],
+    "base_modes": ["frozen_q90_original", "joint_q90_original"]
+  },
+  "evaluation": {
+    "official_conf": 0.001,
+    "iou": 0.7,
+    "ap_tolerance": 0.001,
+    "bootstrap_replicates": 200,
+    "bootstrap_seed": 20260728,
+    "minimum_class_instances": 50,
+    "class_negative_delta": -0.01
+  },
+  "resource_gate": {
+    "minimum_free_gpu_mib": 6144,
+    "maximum_gpu_utilization_percent": 35,
+    "poll_seconds": 30
+  },
+  "execution": {
+    "fit_cache_python": "/home/111_wcy/anaconda3/envs/yolo26/bin/python",
+    "analysis_python": "/home/111_wcy/anaconda3/envs/yoloe/bin/python",
+    "analysis_sklearn_version": "1.7.0"
+  },
+  "registered_final_allowed": false,
+  "final_used_for_selection": false
+}

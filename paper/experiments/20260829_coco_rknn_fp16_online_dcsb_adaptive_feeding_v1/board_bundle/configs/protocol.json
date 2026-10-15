@@ -1,0 +1,92 @@
+{
+  "budgets": [
+    0.1,
+    0.25,
+    0.4
+  ],
+  "controller": {
+    "controls": "controls/{method}/{budget_label}.json",
+    "id": "calibration_frozen_fixed_lambda",
+    "upload": "selected payload is sent before the next image is opened"
+  },
+  "dataset": {
+    "expected_images": 5000,
+    "images_dir": "../yolo26n_coco_val/coco_val2017/images",
+    "sequence": "sequences/coco_val2017_sequence.json",
+    "sequence_file_sha256": "930cff19321c3cafb9d205f6d12d2cde7c17f74901077d099299a98a8f57dd67",
+    "sequence_records_sha256": "aa36e57fb97291562937947c9cebe221c330a0f8da89d5fc865cd8eee66d058b",
+    "source_annotations_sha256": "e8c7f7908f1d7278341fae127d0da654f102f11bd7b21d8aeefa635b8c810b6f"
+  },
+  "experiment_variant": "dcsb_adaptive_feeding_rknn_aligned_causal_online_extension_v1",
+  "final_used_for_training_or_control": false,
+  "global_plan": false,
+  "methods": {
+    "adaptive_feeding_budget": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/dcsb_adaptive_feeding/manifest.json",
+      "policy_sha256": "553253a00d14533e73c885137b25043304e7425037642980126ecc2ad5f822e5",
+      "score": "calibration_empirical_percentile"
+    },
+    "adaptive_feeding_native": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/dcsb_adaptive_feeding/manifest.json",
+      "policy_sha256": "553253a00d14533e73c885137b25043304e7425037642980126ecc2ad5f822e5",
+      "score": "paper_native_raw_margin",
+      "threshold": 0.0
+    },
+    "dcsb_budget": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/dcsb_adaptive_feeding/manifest.json",
+      "policy_sha256": "553253a00d14533e73c885137b25043304e7425037642980126ecc2ad5f822e5",
+      "score": "calibration_empirical_percentile"
+    },
+    "dcsb_native": {
+      "actions": [
+        "edge",
+        "original"
+      ],
+      "policy": "policies/dcsb_adaptive_feeding/manifest.json",
+      "policy_sha256": "553253a00d14533e73c885137b25043304e7425037642980126ecc2ad5f822e5",
+      "score": "paper_native_raw_margin",
+      "threshold": 0.0
+    }
+  },
+  "models": {
+    "cloud_sha256": "9fdd44a31c504547ffb81d2c6d9e6dac3493c8eaa8b0398d3f43bae6c7003e92",
+    "fp16": {
+      "path": "../yolo26n_coco_val/models/yolo26n-rk3588-fp16.rknn",
+      "sha256": "0915a99235c3be5723fcfeda45b06775ecccc2908cc5b490f093f23bbdede12d"
+    }
+  },
+  "native_work_points": true,
+  "protocol_id": "coco_rknn_fp16_causal_online_hil_final_v2",
+  "runtime": {
+    "buffer_frames": 0,
+    "cloud_timeout_seconds": 60.0,
+    "core": "0",
+    "global_plan": false,
+    "progress_every": 100,
+    "request_retries": 3,
+    "rknn_helpers_dir": "../yolo26n_coco_val",
+    "zero_lookahead": true
+  },
+  "source_experiment": "20260829_coco_rknn_fp16_online_dcsb_adaptive_feeding_v1",
+  "transport": {
+    "base64": false,
+    "budget_accounting": "jpeg_payload_bytes",
+    "magic_ascii": "CAVSHIL2",
+    "media_type": "application/vnd.cavs-hil.v2+octet-stream",
+    "schema": "cavs_hil_binary_request_v2",
+    "secondary_accounting": "http_request_body_bytes"
+  },
+  "zero_lookahead": true
+}

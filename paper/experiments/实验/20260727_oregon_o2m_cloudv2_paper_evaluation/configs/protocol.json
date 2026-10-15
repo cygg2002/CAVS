@@ -1,0 +1,61 @@
+{
+  "protocol_id": "oregon_o2m_cloudv2_posthoc_paper_evaluation_v1",
+  "status": "exploratory_paper_level_posthoc_detector_update",
+  "dataset": "oregon",
+  "source_canonical_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260720_frozen_detector_multiranker_contextm2e/runs/canonical_oregon_event_v1",
+  "output_root": "/home/111_wcy/work/yolo26/ultralytics-main/paper/experiments/20260727_oregon_o2m_cloudv2_paper_evaluation",
+  "new_cloud_model": {
+    "path": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_o2m_finetune/finetune20_batch8_from_e18_restart2/weights/best.pt",
+    "sha256": "8944137e1a1324b064ed487ab780c1a410ac55f5be36d0c95192bdfdb52f1fdd",
+    "results_csv": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_o2m_finetune/finetune20_batch8_from_e18_restart2/results.csv",
+    "training_best_epoch_one_based": 20,
+    "training_map50_95": 0.52760,
+    "end2end": false
+  },
+  "old_cloud_model_sha256": "e405929d7791752f27848c81cf021df65c1e12a7805124a0c57c8d30d8f4acd1",
+  "edge_model_sha256": "b975f9f8035ddeb7c3f66e0ffa62d4030d40ec6c8c9d75c08ba517312f0a2c4b",
+  "roles": {
+    "fit": 9923,
+    "calibration": 4961,
+    "audit": 9923,
+    "final": 4962
+  },
+  "dev_roles": ["fit", "calibration", "audit"],
+  "final_role": "final",
+  "inference": {
+    "imgsz": 640,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "rect": true,
+    "end2end": false,
+    "device": 0,
+    "batch": 4,
+    "workers": 2,
+    "encode_workers": 4
+  },
+  "budgets": {
+    "fixed_call": [0.05, 0.10, 0.15, 0.25, 0.40, 0.50, 0.65, 0.80],
+    "primary_fixed_call": [0.10, 0.25, 0.40],
+    "online": [0.10, 0.25, 0.40],
+    "fixed_byte": [0.05, 0.10, 0.20, 0.40]
+  },
+  "random_seeds": 50,
+  "paired_bootstrap_replicates": 200,
+  "final_used_for_selection": false,
+  "final_claim": "posthoc_detector_update_final_reuse",
+  "resource_gate": {
+    "minimum_free_gpu_mib": 6144,
+    "blocked_process_substring": "run_bootstrap_workpoint.py",
+    "poll_seconds": 30,
+    "cpu_threads": 4,
+    "nice": 10
+  },
+  "audit_reuse": {
+    "root": "/home/111_wcy/work/yolo26/yoloe26/runs/oregon_yolo26x_epoch18_vs_o2m_end2end_false_20260727",
+    "original_map50_95": 0.519185963149817,
+    "q90_map50_95": 0.5032868050996038,
+    "roi_fallback_map50_95": 0.46507331095274185
+  }
+}
+

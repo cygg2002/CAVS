@@ -1,0 +1,26 @@
+{
+  "protocol_id": "three_dataset_costaware_submission_extensions_v1",
+  "output_role": "posthoc_diagnostic_not_confirmatory",
+  "datasets": ["coco", "ena24", "oregon"],
+  "ap_tolerance": 0.001,
+  "bootstrap_seed": 20260720,
+  "bootstrap_checkpoints": [200, 1000, 2000],
+  "bootstrap_unit": "image",
+  "bootstrap_interval": "percentile_2.5_97.5",
+  "bootstrap_comparison": "frozen_provisional_vs_frozen_reference",
+  "bootstrap_strategy_refit": false,
+  "bootstrap_pointwise_not_simultaneous": true,
+  "random_seed_base": 20260720,
+  "random_seeds": 50,
+  "random_action_policy": "SharedAction",
+  "random_online_threshold_source": "same_seed_calibration_scores_only",
+  "random_fixed_byte_scheduler": "random_priority_greedy_packing",
+  "work_points": {
+    "online": [0.1, 0.25, 0.4],
+    "fixed_byte": [0.05, 0.1, 0.2, 0.4]
+  },
+  "final_used_for_selection": false,
+  "final_interpretation": "already_seen_posthoc_random_band_only",
+  "bca_status": "not_run_no_preregistered_feasible_acceleration_estimator_for_nondecomposable_official_ap",
+  "ltt_status": "not_run_no_preregistered_valid_pvalue_construction_or_fixed_sequence_order"
+}

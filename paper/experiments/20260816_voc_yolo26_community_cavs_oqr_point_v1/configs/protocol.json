@@ -1,0 +1,142 @@
+{
+  "protocol_id": "voc_yolo26_community_cavs_oqr_point_v1",
+  "status": "posthoc_community_detector_point_benchmark",
+  "confirmatory": false,
+  "dataset": "voc2007_2012",
+  "roles": {"fit": 15629, "calibration": 922, "final": 4952},
+  "split_seed": 20260816,
+  "fold_count": 5,
+  "fold_seed": 20260816,
+  "model_seeds": [20260816, 20260817, 20260818],
+  "random": {"seeds": 50, "base_seed": 20260816},
+  "checkpoints": {
+    "edge": {
+      "file": "assets/yolo26n-voc.pt",
+      "sha256": "8c90f61fc274cfb4f91759377cac06f4b12cad27dcdf3aff5b2b82b3f777c52a"
+    },
+    "cloud": {
+      "file": "assets/yolo26x-voc.pt",
+      "sha256": "79fdf98d1c6a42f5234fb23bdb9282bf6cf0a53f8560522d0b71ae695f0462c9"
+    }
+  },
+  "data": {
+    "archive_root": "/home/111_wcy/work/datasets/VOC/.archives",
+    "archives": [
+      "VOCtrainval_06-Nov-2007.tar",
+      "VOCtest_06-Nov-2007.tar",
+      "VOCtrainval_11-May-2012.tar"
+    ],
+    "archive_sizes": {
+      "VOCtrainval_06-Nov-2007.tar": 460032000,
+      "VOCtest_06-Nov-2007.tar": 451020800,
+      "VOCtrainval_11-May-2012.tar": 1999639040
+    },
+    "train_sources": [["2007", "trainval"], ["2012", "trainval"]],
+    "final_source": ["2007", "test"],
+    "category_names": [
+      "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
+      "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person",
+      "pottedplant", "sheep", "sofa", "train", "tvmonitor"
+    ]
+  },
+  "actions": ["edge", "original", "q90", "current@640"],
+  "budgets": [0.1, 0.25, 0.4],
+  "modes": ["fixed_byte", "fixed_call"],
+  "methods": [
+    "CAVS-OQR-MAUR", "CAVS-OQ-from-OQR",
+    "ORIC-AP5095", "MORIC-AP5095", "ORIC-AP50", "MORIC-AP50",
+    "DCSB-Score-Adapted", "Confidence", "Random"
+  ],
+  "inference": {
+    "imgsz": 640,
+    "conf": 0.001,
+    "iou": 0.7,
+    "max_det": 300,
+    "rect": true,
+    "end2end": false,
+    "device": 0,
+    "edge_batch": 32,
+    "cloud_batch": 4,
+    "half": true,
+    "chunk_size": 128
+  },
+  "geometry": {
+    "profile": "current",
+    "imgsz": 640,
+    "edge_conf": 0.25,
+    "max_area_ratio": 0.65,
+    "jpeg_quality": 90,
+    "encode_workers": 8
+  },
+  "fusion": {"name": "MAUR", "nms_iou": 0.7},
+  "reward": {
+    "context_size": 32,
+    "fold_contained": true,
+    "workers": 16,
+    "checkpoint_interval": 100
+  },
+  "model": {
+    "max_boxes": 64,
+    "max_actions": 4,
+    "deploy_confidence": 0.001,
+    "class_embedding_dim": 8,
+    "box_hidden_dim": 32,
+    "relation_hidden_dim": 64,
+    "relation_heads": 4,
+    "relation_layers": 2,
+    "relation_ff_dim": 128,
+    "action_hidden_dim": 32,
+    "joint_hidden_dim": 64,
+    "dropout": 0.05,
+    "epochs": 50,
+    "patience": 8,
+    "batch_size": 192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "validation_fraction": 0.1,
+    "reward_loss_weight": 0.5,
+    "within_action_weight": 0.5,
+    "path_loss_weight": 0.5,
+    "boundary_path_loss_weight": 0.8,
+    "path_temperature": 0.03,
+    "boundary_temperature": 0.02,
+    "boundary_scale": 0.03,
+    "boundary_boost": 2.0,
+    "frontier_relative_offset": 0.01,
+    "frontier_maximum_price": 5.0,
+    "gradient_clip": 5.0
+  },
+  "external_mlp": {
+    "top_k": 25,
+    "hidden_dims": [16, 16, 16, 16],
+    "dropout": 0.1,
+    "epochs": 100,
+    "batch_size": 64,
+    "learning_rate": 0.005,
+    "weight_decay": 0.00005,
+    "milestones": [60, 75, 90],
+    "gamma": 0.5,
+    "fit_validation_fraction": 0.1
+  },
+  "shared_action": {
+    "epsilon": 0.001,
+    "action_fractions": [0.0, 0.01, 0.025, 0.05, 0.1, 0.2, 0.4, 0.6, 1.0],
+    "maximum_calibration_ap_loss": 0.001
+  },
+  "dcsb": {
+    "detector_confidence": 0.25,
+    "count_thresholds": [0, 1, 2, 3, 4, 5, 6, 8, 10, 12, 16, 20],
+    "area_threshold_start": 0.0001,
+    "area_threshold_stop": 0.05,
+    "area_threshold_step": 0.0005
+  },
+  "resource": {
+    "nice": 19,
+    "training_workers": 8,
+    "torch_threads_per_worker": 1,
+    "minimum_free_gpu_mib": 12000
+  },
+  "bootstrap": {"replicates": 0},
+  "final_used_for_training_or_selection": false,
+  "old_learner_checkpoints_allowed": false
+}
